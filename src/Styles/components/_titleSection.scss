@@ -1,0 +1,18 @@
+@import "../_global.scss";
+
+.titleSection {
+  @include flexbox(row, flex-start, flex-start, 24px);
+  width: 100%;
+  padding-block: 1em;
+
+  .titleSectionMarker {
+    width: 0.625em;
+    height: 3em;
+    background-color: $color-primary-80;
+    border-radius: 2px 4px 4px 2px;
+  }
+  .titleSectionContent {
+    @include flexbox(column, center, flex-start, 12px);
+    width: fit-content;
+  }
+}
