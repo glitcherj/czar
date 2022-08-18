@@ -48,8 +48,12 @@ section {
       color: $color-grey-10;
       opacity: 0.8;
       text-decoration: none;
+      padding-block: 8px;
+      box-shadow: 0 8px 0 -8px $color-grey-10;
       &:hover {
         opacity: 1;
+        box-shadow: 0 8px 0 -6px $color-grey-10;
+        transition: all 0.2s ease;
       }
     }
     .footerColumnsContentRow {

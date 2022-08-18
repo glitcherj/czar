@@ -32,15 +32,19 @@
       white-space: nowrap;
       color: $color-grey-100;
       text-decoration: none;
+      font-weight: 500;
+      padding: 8px;
+      box-shadow: 0 8px 0 -14px $color-primary-100;
 
       &:hover {
-        text-decoration: underline;
         color: $color-primary-100;
+        box-shadow: 0 10px 0 -8px $color-primary-100;
+        transition: all 0.2s ease;
       }
     }
   }
   .menu {
-    @include flexbox(row, inherit, center, 40px);
+    @include flexbox(row, inherit, center, 24px);
     order: 2;
     @media (max-width: $screen-xl) {
       order: 4;
