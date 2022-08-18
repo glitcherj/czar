@@ -1,0 +1,104 @@
+@import "../../Styles/global.scss";
+
+footer {
+  position: relative;
+  background-color: $color-grey-100;
+  color: $color-grey-10;
+  padding: 40px 8%;
+  font-size: 14px;
+  @include flexbox(column, inherit, inherit, 40px);
+  overflow: hidden;
+}
+
+section {
+  @include flexbox(row, space-between, flex-start, 10%);
+  row-gap: 24px;
+  @media (max-width: $screen-lg) {
+    @include flexbox(column, inherit, flex-start, 40px);
+  }
+
+  .aboutCompany {
+    @include flexbox(column, inherit, flex-start, 0);
+    min-width: 200px;
+    width: clamp(400px, 20%, 200px);
+    color: $color-grey-10;
+    margin-inline-start: -1em;
+    span {
+      opacity: 0.8;
+      padding-inline: 1em;
+    }
+  }
+}
+
+.footerColumns {
+  color: $color-grey-10;
+  @include flexbox(column, inherit, flex-start, 20px);
+
+  .footerColumnTitle {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .footerColumnsContent {
+    @include flexbox(column, inherit, flex-start, 12px);
+    @media (max-width: $screen-lg) {
+      @include flexbox(column, inherit, flex-start, 16px);
+    }
+    a {
+      white-space: nowrap;
+      color: $color-grey-10;
+      opacity: 0.8;
+      text-decoration: none;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .footerColumnsContentRow {
+      @include flexbox(row, inherit, inherit, 8px);
+      @media (max-width: $screen-lg) {
+        @include flexbox(column, inherit, inherit, 8px);
+      }
+      .footerColumnsContentTitle {
+        min-width: 8em;
+        opacity: 0.5;
+      }
+      .footerColumnsContentDescription {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.footerBottom {
+  @include flexbox(column, center, center, 16px);
+
+  .footerBottomContent {
+    @include flexbox(row, space-between, center, 24px);
+    border: 1px solid $color-grey-20;
+    border-radius: 8px;
+    padding: 16px 24px;
+    width: 100%;
+    .socialLinks {
+      @include flexbox(row, inherit, center, 16px);
+      a {
+        line-height: 0;
+      }
+    }
+  }
+  .copyright {
+    opacity: 0.6;
+    font-size: 0.8em;
+  }
+}
+
+.TL {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.BR {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  transform: translate(-68%, 68%);
+}
