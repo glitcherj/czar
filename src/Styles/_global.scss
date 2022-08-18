@@ -1,0 +1,50 @@
+// Base
+@import "./Base/_base.scss";
+@import "./Base/_typography.scss";
+
+// Layout
+
+// Abstract
+@import "./Abstract/_colors.scss";
+@import "./Abstract/_mixins.scss";
+@import "./Abstract/_variables.scss";
+
+// Components
+
+// Pages
+
+// Themes
+
+.primaryBtn {
+  @include flexbox(row, center, center, 8px);
+  background-color: $color-primary-100;
+  color: $color-grey-10 !important;
+  white-space: nowrap;
+  padding: 16px 24px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 14px;
+  &:hover,
+  &:focus {
+    background-color: $color-primary-80;
+    transition: 0.2s all ease;
+    cursor: pointer;
+  }
+}
+
+.secondaryBtn {
+  @include flexbox(row, center, center, 8px);
+  background-color: $color-primary-100;
+  color: $color-grey-10;
+  white-space: nowrap;
+  padding: 14px 22px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 14px;
+  &:hover,
+  &:focus {
+    background-color: $color-primary-80;
+    transition: 0.2s all ease;
+    cursor: pointer;
+  }
+}
