@@ -34,16 +34,16 @@
 
 .secondaryBtn {
   @include flexbox(row, center, center, 8px);
-  background-color: $color-primary-100;
-  color: $color-grey-10;
+  background-color: transparent;
+  color: $color-primary-100;
   white-space: nowrap;
   padding: 14px 22px;
-  border: 0;
+  border: 2px solid $color-primary-100;
   border-radius: 8px;
   font-size: 14px;
   &:hover,
   &:focus {
-    background-color: $color-primary-80;
+    background-color: $color-primary-20;
     transition: 0.2s all ease;
     cursor: pointer;
   }

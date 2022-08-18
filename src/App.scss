@@ -1,0 +1,53 @@
+@import "./Styles/_global.scss";
+
+.App {
+  padding-inline: 8%;
+  @include flexbox(column, inherit, center, 40px);
+  padding-block: 40px;
+}
+
+.hero {
+  @include flexbox(row, space-between, center, 24px);
+  @media (max-width: $screen-xl) {
+    flex-direction: column;
+  }
+
+  .heroTextArea {
+    @include flexbox(column, center, flex-start, 40px);
+
+    .heroText {
+      @include flexbox(column, center, flex-start, 16px);
+
+      span {
+        font-size: 1.3rem;
+      }
+    }
+
+    .scrollDown {
+      @include flexbox(row, center, center, 16px);
+      font-weight: 600;
+      width: clamp(20rem, 2rem, 10rem);
+      svg {
+        height: 14px;
+        width: 14px;
+        rotate: 90deg;
+      }
+    }
+  }
+  .homepageBannerImg {
+    // transform: scale(0.9);
+    width: 40%;
+    @media (max-width: $screen-xl) {
+      width: 100%;
+    }
+  }
+  .trustpilotMini {
+    margin-inline: -1em;
+  }
+}
+
+.trustedBy {
+  .rideSharingCompanies {
+    @include flexbox(row, center, space-between, 24px);
+  }
+}

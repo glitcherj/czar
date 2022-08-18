@@ -1,10 +1,10 @@
 import "../../Styles/components/_footer.scss";
-import logoBW from "../../assets/logoBW.svg";
-import logoBG from "../../assets/LogoBG.svg";
-import facebook from "../../assets/socials/facebook.svg";
-import instagram from "../../assets/socials/instagram.svg";
-import twitter from "../../assets/socials/twitter.svg";
-import youtube from "../../assets/socials/youtube.svg";
+import { ReactComponent as LogoBW } from "../../assets/logoBW.svg";
+import { ReactComponent as LogoBG } from "../../assets/LogoBG.svg";
+import { ReactComponent as Facebook } from "../../assets/socials/facebook.svg";
+import { ReactComponent as Instagram } from "../../assets/socials/instagram.svg";
+import { ReactComponent as Twitter } from "../../assets/socials/twitter.svg";
+import { ReactComponent as Youtube } from "../../assets/socials/youtube.svg";
 
 export function Footer() {
   return (
@@ -12,7 +12,7 @@ export function Footer() {
       <section>
         <div className="aboutCompany">
           <a href="/">
-            <img className="appLogo" src={logoBW} alt="logo" />
+            <LogoBW />
           </a>
           <span>
             CZAR PCO Ltd. is a leading London taxi hire firm established in
@@ -85,16 +85,16 @@ export function Footer() {
           <span>© 2022 CZAR PCO Ltd. All rights reserved.</span>
           <div className="socialLinks">
             <a href="twitter.com/czarpco/">
-              <img src={twitter} alt="twitter" />
+              <Twitter />
             </a>
             <a href="facebook.com/czarpco/">
-              <img src={facebook} alt="facebook" />
+              <Facebook />
             </a>
             <a href="instagram.com/czarpco/">
-              <img src={instagram} alt="instagram" />
+              <Instagram />
             </a>
             <a href="youtube.com/czarpco/">
-              <img src={youtube} alt="youtube" />
+              <Youtube />
             </a>
           </div>
         </div>
@@ -103,8 +103,12 @@ export function Footer() {
           Conduct Authority (FCA). FCA Reference Number: 245190
         </span>
       </section>
-      <img src={logoBG} alt="logo" className="logoBG TL" />
-      <img src={logoBG} alt="logo" className="logoBG BR" />
+      <div className="TL">
+        <LogoBG />
+      </div>
+      <div className="BR">
+        <LogoBG />
+      </div>
     </footer>
   );
 }

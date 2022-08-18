@@ -1,7 +1,6 @@
 @import "../../Styles/_global.scss";
 
 .appHeader {
-  box-shadow: 0 16px 8px -8px $color-grey-10;
   @include flexbox(row, space-between, center, 24px);
   @media (max-width: $screen-xl) {
     flex-wrap: wrap;
@@ -9,6 +8,7 @@
   margin-inline: 8%;
   padding: 16px 0;
   font-size: 14px;
+  box-shadow: 0 16px 8px -8px $color-grey-10;
 
   .appLogo {
     margin-inline-start: -1em;
@@ -53,7 +53,7 @@
 }
 
 .whatsapp {
-  background-color: transparent !important;
+  background-color: transparent;
   color: $color-green-100 !important;
   border: 2px solid $color-green-100 !important;
   &:hover,
