@@ -103,10 +103,10 @@ export function Footer() {
           Conduct Authority (FCA). FCA Reference Number: 245190
         </span>
       </section>
-      <div className="TL">
+      <div className="TR">
         <LogoBG />
       </div>
-      <div className="BR">
+      <div className="BL">
         <LogoBG />
       </div>
     </footer>

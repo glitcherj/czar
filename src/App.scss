@@ -1,9 +1,12 @@
 @import "./Styles/_global.scss";
 
 .App {
-  padding-inline: 8%;
-  @include flexbox(column, inherit, center, 40px);
   padding-block: 40px;
+  @include flexbox(column, inherit, center, 40px);
+}
+
+.notBanner {
+  padding-inline: 8%;
 }
 
 .hero {
@@ -47,7 +50,35 @@
 }
 
 .trustedBy {
-  .rideSharingCompanies {
-    @include flexbox(row, center, space-between, 24px);
+  @include flexbox(row, space-between, inherit, 24px);
+  @media (max-width: $screen-xl) {
+    flex-direction: column;
+    align-items: flex-start;
   }
+  position: relative;
+  width: -webkit-fill-available;
+  padding-block: 64px;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: $color-primary-10;
+  .rideSharingCompanies {
+    @include flexbox(row, flex-end, center, 40px);
+    @media (max-width: $screen-xl) {
+      justify-content: flex-start;
+    }
+    width: 100%;
+    @media (max-width: $screen-xl) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.BLL {
+  position: absolute;
+  top: 0;
+  right: 0;
+  rotate: 180deg;
+  opacity: 0.1;
+  color: $color-primary-100;
+  line-height: 0;
 }

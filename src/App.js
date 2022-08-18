@@ -1,12 +1,16 @@
 import "./App.scss";
 import HomepageBanner from "./assets/images/HomepageBanner.png";
 import trustpilotMini from "./assets/images/trustpilotMini.png";
+import rideSharing_bolt from "./assets/images/rideSharing_bolt.png";
+import rideSharing_freenow from "./assets/images/rideSharing_freenow.png";
+import rideSharing_ola from "./assets/images/rideSharing_ola.png";
+import rideSharing_uber from "./assets/images/rideSharing_uber.png";
 import { ReactComponent as LogoBG } from "./assets/LogoBG.svg";
 
 function App() {
   return (
     <div className="App">
-      <div className="hero">
+      <div className="hero notBanner">
         <div className="heroTextArea">
           <div className="heroText">
             <span>Your success is our priority, let’s thrive together!</span>
@@ -29,9 +33,17 @@ function App() {
           alt="Happy Czar PCO customer"
         />
       </div>
-      <section className="trustedBy">
+      <section className="trustedBy notBanner">
         <span>We are trusted by:</span>
-        <div className="rideSharingCompanies">scss sss ff</div>
+        <div className="rideSharingCompanies">
+          <img src={rideSharing_uber} alt="Ride Sharing: Uber" />
+          <img src={rideSharing_bolt} alt="Ride Sharing: Bolt" />
+          <img src={rideSharing_ola} alt="Ride Sharing: Ola" />
+          <img src={rideSharing_freenow} alt="Ride Sharing: Freenow" />
+        </div>
+        <div className="BLL">
+          <LogoBG />
+        </div>
       </section>
     </div>
   );
