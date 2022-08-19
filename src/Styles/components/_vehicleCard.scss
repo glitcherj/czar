@@ -1,0 +1,97 @@
+@import "../_global.scss";
+
+.vehicleCard {
+  @include flexbox(column, stretch, stretch, 0);
+  flex: 1;
+  $border-radius: 8px;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, white, $color-primary-20);
+  position: relative;
+  text-decoration: none;
+  color: $color-grey-100;
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  $border: 2px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: $border-radius + 1px;
+    background: linear-gradient(to bottom, #176de400 50%, #176de44d);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s all ease;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+  .vehicleCardContents {
+    @include flexbox(column, center, stretch, 1em);
+    position: relative;
+    padding: 2em 1em 1em 1em;
+
+    .vehicleCardContents__info {
+      @include flexbox(row, center, flex-start, 1em);
+
+      .vehicleCardContents__info__item {
+        @include flexbox(column, center, center, 0.5em);
+        font-size: 0.875em;
+        font-weight: 500;
+      }
+    }
+
+    .vehicleCardContents__price {
+      @include flexbox(row, space-between, center, 1em);
+
+      .vehicleCardContents__priceTag {
+        @include flexbox(row, center, center, 0.5em);
+        strong {
+          font-size: 1.25em !important;
+          font-weight: 700;
+        }
+      }
+      span {
+        font-size: 0.875em;
+        font-weight: 500;
+      }
+      a {
+        font-size: 0.875em;
+        text-decoration: none;
+        padding-block: 4px;
+        color: $color-primary-100;
+        font-weight: 500;
+      }
+    }
+
+    .noCongestionCharge {
+      @include flexbox(row, center, center, 0.5em);
+      position: absolute;
+      background-color: $color-green-100;
+      color: $color-grey-10;
+      font-size: 0.75em;
+      padding: 0.7em 1em;
+      margin: -1em 1em;
+      top: 0;
+      right: 0;
+      border-radius: 0.3em;
+    }
+  }
+  hr {
+    border: 0.5px solid $color-primary-30;
+    background-color: $color-primary-30;
+    opacity: 0.4;
+  }
+}

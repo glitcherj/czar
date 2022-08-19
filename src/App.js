@@ -1,4 +1,5 @@
 import "./App.scss";
+import React, { useState, useRef } from "react";
 import HomepageBanner from "./assets/images/HomepageBanner.png";
 import trustpilotMini from "./assets/images/trustpilotMini.png";
 import rideSharing_bolt from "./assets/images/rideSharing_bolt.png";
@@ -14,8 +15,10 @@ import { ReactComponent as Conditions } from "./assets/icons/Conditions.svg";
 import { ReactComponent as Documents } from "./assets/icons/Documents.svg";
 import { ReactComponent as Whatsapp } from "./assets/socials/whatsapp.svg";
 import { TitleSection, VehicleCard } from "./components";
+import { CarData } from "./components/VehicleCard/data";
 
 function App() {
+  const [SortMode, setSortMode] = useState("fuel");
   return (
     <div className="App">
       <div className="hero notBanner">
@@ -41,7 +44,7 @@ function App() {
           alt="Happy Czar PCO customer"
         />
       </div>
-      <section className="trustedBy notBanner">
+      <section className="trustedBy ">
         <span>We are trusted by:</span>
         <div className="rideSharingCompanies">
           <img src={rideSharing_uber} alt="Ride Sharing: Uber" />
@@ -147,21 +150,73 @@ function App() {
         </div>
       </div>
       <div className="fleet notBanner">
+        {/* <section className="fleetTitleSection"> */}
         <TitleSection
           title={"Our fleet"}
           description={
             "Your success is our main priority, we will help you achieve it. Choose a car from our broad range of vehicles which suits you the most. Contact us anytime for more information."
           }
         />
-        <VehicleCard
-          img={trustpilotMini}
-          name={"CZAR PCO"}
-          fuel={"Full-Electric"}
-          seats={"5"}
-          transmission={"Automatic"}
-          year={"2021"}
-          price={"400"}
-        />
+        <div className="sortMode">
+          <span className="sortMode__title">Sort by:</span>
+          <div className="sortMode__items">
+            <button
+              className={SortMode === "fuel" ? "primaryBtn" : "ghostBtn"}
+              onClick={() => setSortMode("fuel")}
+            >
+              Fuel type
+            </button>
+            <button
+              className={
+                SortMode === "price_high_to_low" ? "primaryBtn" : "ghostBtn"
+              }
+              onClick={() => setSortMode("price_high_to_low")}
+            >
+              Price: High to low
+            </button>
+            <button
+              className={
+                SortMode === "price_low_to_high" ? "primaryBtn" : "ghostBtn"
+              }
+              onClick={() => setSortMode("price_low_to_high")}
+            >
+              Price: Low to high
+            </button>
+          </div>
+        </div>
+        {/* </section> */}
+        <div className="fleetRow">
+          {CarData.sort(
+            (a, b) =>
+              ({
+                price_high_to_low: b.price - a.price,
+                price_low_to_high: a.price - b.price,
+                fuel:
+                  a.fuel === "Full-Electric" && b.fuel === "Full-Electric"
+                    ? a.price < b.price
+                      ? 1
+                      : -1
+                    : a.fuel === "Full-Electric" && b.fuel !== "Full-Electric"
+                    ? -1
+                    : a.fuel !== "Full-Electric" && b.fuel === "Full-Electric"
+                    ? 1
+                    : a.fuel.toLowerCase() < b.fuel.toLowerCase()
+                    ? -1
+                    : 1,
+              }[SortMode])
+          ).map((car) => (
+            <VehicleCard
+              img={car.img}
+              name={car.name}
+              fuel={car.fuel}
+              seats={car.seats}
+              transmission={car.transmission}
+              year={car.year}
+              price={car.price}
+              slug={car.slug}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

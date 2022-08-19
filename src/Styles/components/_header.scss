@@ -5,10 +5,13 @@
   @media (max-width: $screen-xl) {
     flex-wrap: wrap;
   }
-  margin-inline: 8%;
-  padding: 16px 0;
+  padding: 16px 8%;
   font-size: 14px;
-  box-shadow: 0 16px 8px -8px $color-grey-10;
+  // box-shadow: 0 16px 8px -8px $color-grey-10;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   .appLogo {
     margin-inline-start: -1em;

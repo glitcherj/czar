@@ -20,14 +20,13 @@
   background-color: $color-primary-100;
   color: $color-grey-10 !important;
   white-space: nowrap;
-  padding: 16px 24px;
+  padding: 1em 1.5em;
   border: 0;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $color-primary-80;
     transition: 0.2s all ease;
     cursor: pointer;
@@ -39,14 +38,31 @@
   background-color: transparent;
   color: $color-primary-100;
   white-space: nowrap;
-  padding: 14px 22px;
+  padding: 0.85em 1.5em;
   border: 2px solid $color-primary-100;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
-  &:hover,
-  &:focus {
+  &:hover {
+    background-color: $color-primary-20;
+    transition: 0.2s all ease;
+    cursor: pointer;
+  }
+}
+
+.ghostBtn {
+  @include flexbox(row, center, center, 8px);
+  background-color: transparent;
+  color: $color-grey-100;
+  white-space: nowrap;
+  padding: 1em 1.5em;
+  border: 0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  &:hover {
     background-color: $color-primary-20;
     transition: 0.2s all ease;
     cursor: pointer;
