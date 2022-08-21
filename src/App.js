@@ -25,10 +25,12 @@ import {
   VehicleCard,
   BlogCard,
   TestimonialCard,
+  FAQCard,
 } from "./components";
 import { CarData } from "./components/VehicleCard/data";
 import { BlogData } from "./components/BlogCard/data";
 import { TestimonialData } from "./components/TestimonialCard/data";
+import { FAQData } from "./components/FAQCard/data";
 
 function App() {
   const benefitsRef = useRef(null);
@@ -163,7 +165,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="requirementsCTA">
+        <div className="fullWidthCTA">
           <h3>Send your documents to reserve a car now</h3>
           <button className="secondaryBtn whatsapp">
             <Whatsapp />
@@ -288,6 +290,21 @@ function App() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="faq notBanner ">
+        <TitleSection title={"Frequently asked questions"} />
+        <div className="faqItems">
+          {FAQData.HomepageFAQ.map((faq) => (
+            <FAQCard question={faq.question} answer={faq.answer} />
+          ))}
+        </div>
+        <div className="fullWidthCTA">
+          <h3>Still got questions?</h3>
+          <button className="secondaryBtn scrollDown">
+            Visit out FAQ
+            <LogoBG />
+          </button>
+        </div>
       </div>
     </div>
   );

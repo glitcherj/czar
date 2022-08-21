@@ -177,13 +177,13 @@
       }
     }
   }
-  .requirementsCTA {
-    width: 100%;
-    @include flexbox(row, space-between, center, 1.5em);
-    @media (max-width: $screen-md) {
-      flex-direction: column;
-      align-items: stretch;
-    }
+}
+.fullWidthCTA {
+  width: 100%;
+  @include flexbox(row, space-between, center, 1.5em);
+  @media (max-width: $screen-md) {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
@@ -227,14 +227,14 @@
 }
 
 .evBanner {
+  @include flexbox(row, null, null, 3em);
   position: relative;
   background: linear-gradient(
     276.03deg,
     $color-primary-100 0%,
-    $color-primary-30 100%
+    $color-primary-60 100%
   );
   padding: 3em 8%;
-  @include flexbox(row, center, center, 3em);
   @media (max-width: $screen-xl) {
     flex-direction: column;
     align-items: stretch;
@@ -267,7 +267,7 @@
       color: $color-grey-10;
       &:hover {
         background-color: $color-grey-10;
-        color: $color-primary-50;
+        color: $color-primary-70;
       }
       svg {
         height: 14px;
@@ -297,5 +297,25 @@
 }
 
 .testimonials {
-  @include flexbox(column, center, center, 1.5em);
+  @include flexbox(column, null, stretch, 1.5em);
+}
+
+.faq {
+  @include flexbox(column, null, stretch, 1.5em);
+
+  .faqItems {
+    border: 2px solid $color-primary-20;
+    border-radius: 0.5em;
+  }
+
+  .scrollDown {
+    @include flexbox(row, center, center, 1em);
+    font-weight: 600;
+    max-width: 30em;
+    width: 100%;
+    svg {
+      height: 14px;
+      width: 14px;
+    }
+  }
 }

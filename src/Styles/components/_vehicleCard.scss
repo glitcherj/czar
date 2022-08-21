@@ -5,7 +5,7 @@
   flex: 1;
   $border-radius: 8px;
   border-radius: 8px;
-  background-image: linear-gradient(to bottom, white, $color-primary-20);
+  background-image: linear-gradient(to bottom, white, $color-primary-15);
   position: relative;
   text-decoration: none;
   color: $color-grey-100;
@@ -90,8 +90,8 @@
     }
   }
   hr {
-    border: 0.5px solid $color-primary-30;
-    background-color: $color-primary-30;
+    border: 0.5px solid $color-primary-60;
+    background-color: $color-primary-60;
     opacity: 0.4;
   }
 }
