@@ -9,13 +9,13 @@ h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(3em, 4vw, 5em);
   font-weight: 700;
   line-height: 1;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: clamp(2em, 4vw, 3em);
   font-weight: 700;
   line-height: 1;
 }

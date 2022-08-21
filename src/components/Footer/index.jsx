@@ -9,7 +9,7 @@ import { ReactComponent as Youtube } from "../../assets/socials/youtube.svg";
 export function Footer() {
   return (
     <footer>
-      <section>
+      <section className="footerContainer">
         <div className="aboutCompany">
           <a href="/">
             <LogoBW />

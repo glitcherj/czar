@@ -17,7 +17,7 @@ export const CarData = [
     transmission: "Automatic",
     year: "2022",
     price: "270",
-    slug: "KiaNiro",
+    link: "KiaNiro",
   },
   {
     img: MercedesBenz,
@@ -27,7 +27,7 @@ export const CarData = [
     transmission: "Automatic",
     year: "2015",
     price: "400",
-    slug: "MercedesBenz",
+    link: "MercedesBenz",
   },
   {
     img: MG5,
@@ -37,7 +37,7 @@ export const CarData = [
     transmission: "Automatic",
     year: "2021",
     price: "250",
-    slug: "MG5",
+    link: "MG5",
   },
   {
     img: NissanLeaf,
@@ -47,7 +47,7 @@ export const CarData = [
     transmission: "Automatic",
     year: "2020",
     price: "250",
-    slug: "NissanLeaf",
+    link: "NissanLeaf",
   },
   {
     img: ToyotaCorollaHybrid,
@@ -57,7 +57,7 @@ export const CarData = [
     transmission: "Automatic",
     year: "2019",
     price: "210",
-    slug: "ToyotaCorollaHybrid",
+    link: "ToyotaCorollaHybrid",
   },
   {
     img: ToyotaPriusPlugIn,
@@ -67,7 +67,7 @@ export const CarData = [
     transmission: "Automatic",
     year: "2020",
     price: "230",
-    slug: "ToyotaPriusPlugIn",
+    link: "ToyotaPriusPlugIn",
   },
   {
     img: ToyotaPriusPlusHybrid,
@@ -77,7 +77,7 @@ export const CarData = [
     transmission: "Automatic",
     year: "2019",
     price: "220",
-    slug: "ToyotaPriusPlusHybrid",
+    link: "ToyotaPriusPlusHybrid",
   },
   {
     img: VolkswagenID3,
@@ -87,7 +87,7 @@ export const CarData = [
     transmission: "Automatic",
     year: "2022",
     price: "250",
-    slug: "VolkswagenID3",
+    link: "VolkswagenID3",
   },
   {
     img: Tesla3,
@@ -97,6 +97,6 @@ export const CarData = [
     transmission: "Automatic",
     year: "2022",
     price: "349",
-    slug: "Tesla3",
+    link: "Tesla3",
   },
 ];

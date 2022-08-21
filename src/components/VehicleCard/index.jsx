@@ -13,10 +13,10 @@ export function VehicleCard({
   transmission,
   year,
   price,
-  slug,
+  link,
 }) {
   return (
-    <a href={slug} className="vehicleCard">
+    <a href={link} className="vehicleCard">
       <img src={img} alt={name} />
       <div className="vehicleCardContents">
         <h3>{name}</h3>
@@ -46,7 +46,7 @@ export function VehicleCard({
             <strong>£ {price}</strong>
             <span>Per week</span>
           </div>
-          <a href={slug}>More details {">"}</a>
+          <a href={link}>More details {">"}</a>
         </div>
 
         {fuel === "Full-Electric" ? (

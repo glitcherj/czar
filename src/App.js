@@ -1,5 +1,11 @@
 import "./App.scss";
 import React, { useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
+import "swiper/css/autoplay";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import HomepageBanner from "./assets/images/HomepageBanner.png";
 import trustpilotMini from "./assets/images/trustpilotMini.png";
 import rideSharing_bolt from "./assets/images/rideSharing_bolt.png";
@@ -14,10 +20,18 @@ import { ReactComponent as BenefitsAdminFees } from "./assets/icons/BenefitsAdmi
 import { ReactComponent as Conditions } from "./assets/icons/Conditions.svg";
 import { ReactComponent as Documents } from "./assets/icons/Documents.svg";
 import { ReactComponent as Whatsapp } from "./assets/socials/whatsapp.svg";
-import { TitleSection, VehicleCard } from "./components";
+import {
+  TitleSection,
+  VehicleCard,
+  BlogCard,
+  TestimonialCard,
+} from "./components";
 import { CarData } from "./components/VehicleCard/data";
+import { BlogData } from "./components/BlogCard/data";
+import { TestimonialData } from "./components/TestimonialCard/data";
 
 function App() {
+  const benefitsRef = useRef(null);
   const [SortMode, setSortMode] = useState("fuel");
   return (
     <div className="App">
@@ -33,7 +47,15 @@ function App() {
             className="trustpilotMini"
             alt="Trustpilot rating: 4.8 out of 5 stars"
           />
-          <button className="secondaryBtn scrollDown">
+          <button
+            className="secondaryBtn scrollDown"
+            onClick={() =>
+              benefitsRef.current.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              })
+            }
+          >
             <span>Discover more about us</span>
             <LogoBG />
           </button>
@@ -56,7 +78,7 @@ function App() {
           <LogoBG />
         </div>
       </section>
-      <div className="ourBenefits notBanner">
+      <div className="ourBenefits notBanner" ref={benefitsRef}>
         <TitleSection
           title={"Our benefits"}
           description={"What makes us different from other taxi hire companies"}
@@ -150,11 +172,10 @@ function App() {
         </div>
       </div>
       <div className="fleet notBanner">
-        {/* <section className="fleetTitleSection"> */}
         <TitleSection
           title={"Our fleet"}
           description={
-            "Your success is our main priority, we will help you achieve it. Choose a car from our broad range of vehicles which suits you the most. Contact us anytime for more information."
+            "Choose a car from our broad range of vehicles which suits you the most. Contact us anytime for more information."
           }
         />
         <div className="sortMode">
@@ -184,7 +205,6 @@ function App() {
             </button>
           </div>
         </div>
-        {/* </section> */}
         <div className="fleetRow">
           {CarData.sort(
             (a, b) =>
@@ -213,10 +233,61 @@ function App() {
               transmission={car.transmission}
               year={car.year}
               price={car.price}
-              slug={car.slug}
+              link={car.link}
             />
           ))}
         </div>
+      </div>
+      <section className="evBanner">
+        <div className="evBanner__text">
+          <h2>Why should you join our EV fleet?</h2>
+          <span>
+            Join the thousands of Ride-Hailing drivers who have already switched
+            to an Electric Vehicle with us. We are committed to providing the
+            best Electric Vehicles for the Ride-Hailing market and supporting
+            drivers every step of the way.
+          </span>
+          <button className="secondaryBtn Link">
+            <span>Visit our EV fleet</span>
+            <LogoBG />
+          </button>
+        </div>
+        <div className="evBanner__cards">
+          {BlogData.slice(0, 2).map((blog) => (
+            <BlogCard
+              date={blog.date}
+              img={blog.img}
+              title={blog.title}
+              description={blog.description}
+              link={blog.link}
+            />
+          ))}
+        </div>
+      </section>
+      <div className="testimonials notBanner">
+        <TitleSection title={"What our customers say about us"} />
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          autoPlay={{ delay: 500, pauseOnMouseEnter: true }}
+          style={{ width: "100%" }}
+        >
+          {TestimonialData.map((testimonial) => (
+            <SwiperSlide>
+              <TestimonialCard
+                img={testimonial.img}
+                title={testimonial.title}
+                fullName={testimonial.fullName}
+                commentL1={testimonial.commentL1}
+                commentL2={testimonial.commentL2}
+                commentL3={testimonial.commentL3}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

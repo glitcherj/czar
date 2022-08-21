@@ -1,0 +1,72 @@
+@import "../_global.scss";
+
+.testimonialCard {
+  @include flexbox(row, center, stretch, 2em);
+  padding: 0 8%;
+  flex: 1;
+
+  @media (max-width: $screen-lg) {
+    flex-direction: column;
+    img {
+      width: 100% !important;
+      height: 64vw !important;
+    }
+    gap: 1em;
+    padding: 0;
+    margin-inline: 0.5em;
+  }
+
+  img {
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    transition: 0.3s all ease;
+    border-radius: 0.5em;
+  }
+
+  .testimonialCard__content {
+    @include flexbox(column, center, stretch, 1em);
+    background-color: $color-primary-10;
+    padding: 2em;
+    border-radius: 0.5em;
+
+    strong {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    sub {
+      margin-block: -0.75em 0em;
+    }
+
+    .testimonialCard__content__comment {
+      @include flexbox(column, flex-start, stretch, 0.5em);
+    }
+  }
+}
+
+.swiper-pagination {
+  position: unset;
+  margin-block: 1em;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  margin-top: calc(0px - var(--swiper-navigation-size));
+
+  @media (max-width: $screen-lg) {
+    display: none;
+  }
+}
+
+.swiper-button-next:after {
+  content: url("../../assets/icons/arrowRight.svg");
+}
+
+.swiper-button-prev:after {
+  content: url("../../assets/icons/arrowLeft.svg");
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}

@@ -1,0 +1,57 @@
+@import "../_global.scss";
+
+.blogCard {
+  @include flexbox(column, center, stretch, 0);
+  background-color: $color-grey-10;
+  color: $color-grey-100;
+  border-radius: 0.5em;
+  text-decoration: none;
+
+  img {
+    border-radius: 0.5em 0.5em 0 0;
+    height: 14vw;
+    object-fit: cover;
+    @media (max-width: $screen-xl) and (min-width: $screen-md) {
+      height: 22vw;
+    }
+    @media (max-width: $screen-md) {
+      height: 40vw;
+    }
+  }
+
+  .blogCardContent {
+    @include flexbox(column, center, stretch, 0.5em);
+    padding: 1em;
+
+    time {
+      opacity: 0.6;
+      font-size: 0.75em;
+    }
+
+    .blogCardContent__Title {
+      font-weight: 700;
+      font-size: 1.5em;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .blogCardContent__Description {
+      font-size: 0.875em;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .blogCardContent__ReadMore {
+      color: $color-primary-100;
+      font-size: 0.875em;
+      font-weight: 600;
+      text-align: end;
+      margin-top: 1em;
+    }
+  }
+}
