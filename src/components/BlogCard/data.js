@@ -10,7 +10,7 @@ export const BlogData = [
     title: "Why PCO Drivers Should Switch to Electric Vehicles",
     date: "02 April 2022",
     description:
-      "You may have observed the rising number of electric vehicles in the UK, especially for PCO cars. This is because the benefits of electric vehicles ...",
+      "You may have observed the rising number of electric vehicles in the UK, especially for PCO cars. This is because the benefits of electric vehicles are becoming more and more apparent. Read on to find out why PCO drivers should switch to electric vehicles.",
     link: "/blog/why-pco-drivers-should-switch-to-electric-vehicles",
     tags: [],
   },
@@ -19,7 +19,7 @@ export const BlogData = [
     title: "The Complete User Guide for Driving Electric Vehicles",
     date: "12 December 2021",
     description:
-      "The revolution is happening in the way we power the automobiles we drive; electric cars are becoming an increasingly popular medium ...",
+      "The revolution is happening in the way we power the automobiles we drive; electric cars are becoming an increasingly popular medium to travel in the UK and across the world. With major manufacturers like GM, VW, Ford, and Tesla launching new models every year, the automotive landscape is shifting to reflect the go-green change.",
     link: "/blog/the-complete-user-guide-for-driving-electric-vehicles",
     tags: [],
   },
@@ -28,7 +28,7 @@ export const BlogData = [
     title: "Top 10 Uber Destinations in London",
     date: "13 May 2021",
     description:
-      "No matter which platform PCO drivers use, most of them often seek more popular destinations which can ultimately increase their income.",
+      "No matter which platform PCO drivers use, most of them often seek more popular destinations which can ultimately increase their income. This is not an exception for Uber drivers, so here at G&M Direct Hire, we decided to have a deep investigation on Top Uber destinations as a bonus for our readers to make them have a higher daily income.",
     link: "/blog/top-10-uber-destinations-in-london",
     tags: ["Uber", "London"],
   },
@@ -47,7 +47,7 @@ export const BlogData = [
     title: "UBER CLEAN AIR PLAN -Everything you need to know",
     date: "29 February 2021",
     description:
-      "A Clean Air fee will be added to every trip a driver takes through Uber in London. The fee of 3p a mile is an additional charge to passengers, and doesn’t take away from drivers’ earnings.",
+      "A Clean Air fee will be added to every trip a driver takes through Uber in London. The fee of £0.3 a mile is an additional charge to passengers, and doesn’t take away from drivers’ earnings.",
     link: "/blog/uber-clean-air-plan",
     tags: ["Uber", "Uber clean air"],
   },
