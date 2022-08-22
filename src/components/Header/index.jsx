@@ -1,12 +1,12 @@
-import logo from "../../assets/Logo.svg";
-import whatsapp from "../../assets/socials/whatsapp.svg";
-import contact from "../../assets/contact.svg";
+import { ReactComponent as Logo } from "../../assets/Logo.svg";
+import { ReactComponent as Whatsapp } from "../../assets/socials/whatsapp.svg";
+import { ReactComponent as Contact } from "../../assets/contact.svg";
 
 export function Header() {
   return (
     <header className="appHeader">
       <a href="/" className="appLogo">
-        <img src={logo} alt="logo" />
+        <Logo />
       </a>
       <div className="links menu">
         <a href="/">Home</a>
@@ -18,11 +18,11 @@ export function Header() {
       </div>
       <div className="links">
         <button className="secondaryBtn whatsapp">
-          <img src={whatsapp} alt="Whatsapp logo" />
+          <Whatsapp />
           <span>Message us</span>
         </button>
         <button className="primaryBtn">
-          <img src={contact} alt="Phone logo" />
+          <Contact />
           <span>Contact us</span>
         </button>
       </div>

@@ -1,3 +1,7 @@
 export function Blog() {
-  return <h3>blog</h3>;
+  return (
+    <div className="bg">
+      <h2>wwww</h2>
+    </div>
+  );
 }
