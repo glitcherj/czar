@@ -1,4 +1,3 @@
-import "../../Styles/components/_footer.scss";
 import { ReactComponent as LogoBW } from "../../assets/logoBW.svg";
 import { ReactComponent as LogoBG } from "../../assets/LogoBG.svg";
 import { ReactComponent as Facebook } from "../../assets/socials/facebook.svg";

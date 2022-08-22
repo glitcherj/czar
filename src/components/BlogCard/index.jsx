@@ -1,4 +1,3 @@
-import "../../Styles/components/_blogCard.scss";
 export function BlogCard({ img, date, title, description, link }) {
   return (
     <a className="blogCard" href={link}>

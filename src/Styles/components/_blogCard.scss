@@ -1,5 +1,3 @@
-@import "../_global.scss";
-
 .blogCard {
   @include flexbox(column, center, stretch, 0);
   background-color: $color-grey-10;

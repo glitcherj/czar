@@ -1,5 +1,3 @@
-@import "../global";
-
 .faqItem {
   @include flexbox(row, null, null, 1em);
   padding: 1em;
