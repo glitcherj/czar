@@ -1,10 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  //   Navigate,
-  //   useNavigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { AboutUs, Blog, EVFleet, Fleet, FAQ, Home } from "../pages";
 export function MainRouter() {
