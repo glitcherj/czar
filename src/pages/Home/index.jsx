@@ -8,7 +8,6 @@ import "swiper/css/autoplay";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
 //  ---Assets---
-import "../../Styles/Pages/_homepage.scss";
 import HomepageBanner from "../../assets/images/HomepageBanner.png";
 import trustpilotMini from "../../assets/images/trustpilotMini.png";
 import rideSharing_bolt from "../../assets/images/rideSharing_bolt.png";

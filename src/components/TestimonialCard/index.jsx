@@ -1,5 +1,3 @@
-import "../../Styles/components/_testimonialCard.scss";
-
 export function TestimonialCard({
   img,
   title,

@@ -1,5 +1,3 @@
-@import "../_global.scss";
-
 .testimonialCard {
   @include flexbox(row, center, stretch, 2em);
   padding: 0 8%;

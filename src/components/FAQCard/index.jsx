@@ -1,5 +1,4 @@
 import { ReactComponent as Arrow } from "../../assets/icons/arrow.svg";
-import "../../Styles/components/_FAQCard.scss";
 
 export function FAQCard({ question, answer }) {
   return (

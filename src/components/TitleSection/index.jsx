@@ -1,4 +1,3 @@
-import "../../Styles/components/_titleSection.scss";
 export function TitleSection({ title, description }) {
   return (
     <div className="titleSection">

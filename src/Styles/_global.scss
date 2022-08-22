@@ -10,8 +10,21 @@
 @import "./Abstract/_variables.scss";
 
 // Components
+@import "./components/_blogCard.scss";
+@import "./components/_FAQCard.scss";
+@import "./components/_footer.scss";
+@import "./components/_header.scss";
+@import "./components/_testimonialCard.scss";
+@import "./components/_titleSection.scss";
+@import "./components/_vehicleCard.scss";
 
 // Pages
+@import "./Pages/_AboutUS.scss";
+@import "./Pages/_Blog.scss";
+@import "./Pages/_EVFleet.scss";
+@import "./Pages/_FAQ.scss";
+@import "./Pages/_Fleet.scss";
+@import "./Pages/_homepage.scss";
 
 // Themes
 

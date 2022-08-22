@@ -1,4 +1,3 @@
-import "../../Styles/components/_header.scss";
 import logo from "../../assets/Logo.svg";
 import whatsapp from "../../assets/socials/whatsapp.svg";
 import contact from "../../assets/contact.svg";

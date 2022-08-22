@@ -1,4 +1,3 @@
-import "../../Styles/components/_vehicleCard.scss";
 import { ReactComponent as Fuel } from "../../assets/icons/Fuel.svg";
 import { ReactComponent as Seats } from "../../assets/icons/Seats.svg";
 import { ReactComponent as Transmission } from "../../assets/icons/Transmission.svg";

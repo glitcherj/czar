@@ -1,5 +1,3 @@
-@import "../../Styles/_global.scss";
-
 .appHeader {
   @include flexbox(row, space-between, center, clamp(1em, 2vw, 1.5em));
   @media (max-width: $screen-xl) {

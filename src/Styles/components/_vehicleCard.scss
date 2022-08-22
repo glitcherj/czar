@@ -1,5 +1,3 @@
-@import "../_global.scss";
-
 .vehicleCard {
   @include flexbox(column, stretch, stretch, 0);
   flex: 1;
