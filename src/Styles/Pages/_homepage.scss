@@ -1,5 +1,5 @@
 .Home {
-  padding-block-start: 40px;
+  padding-block-start: 2.5em;
   @include flexbox(column, null, stretch, clamp(3em, 2vw, 5em));
   color: $color-grey-100;
 }
