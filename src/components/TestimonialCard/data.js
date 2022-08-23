@@ -30,7 +30,7 @@ export const TestimonialData = [
     commentL1:
       "Aune Kamruddin provided me with exceptional customer service while solving my problem.",
     commentL2:
-      "He delivered on every promise he made and was constantly on the phone to me with updates. My calls were never a bother and he always called back when I left messages for him. I really nice gentleman with fantastic work ethics.",
+      "He delivered on every promise he made and was constantly on the phone to me with updates. My calls were never a bother to him.",
     commentL3:
       "I recommend Czar PCO to all PCO drivers because PCO drivers are valued by Czar PCO",
   },
