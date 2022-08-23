@@ -68,18 +68,23 @@ footer {
 }
 
 .footerBottom {
-  @include flexbox(column, center, center, 16px);
+  @include flexbox(column, center, center, 1em);
 
   .footerBottomContent {
-    @include flexbox(row, space-between, center, 24px);
+    @include flexbox(row, space-between, center, 1em);
     border: 1px solid $color-grey-20;
-    border-radius: 8px;
-    padding: 16px 24px;
+    border-radius: 0.5em;
+    padding: 1em 1.5em;
     width: 100%;
+
     .socialLinks {
       @include flexbox(row, null, center, 16px);
       a {
         line-height: 0;
+        transition: 0.2s all ease;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
 
