@@ -44,27 +44,32 @@
 }
 
 .swiper-pagination {
-  position: unset;
-  margin-block: 1em;
+  position: initial !important;
+  margin-block: 1em !important;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  margin-top: calc(0px - var(--swiper-navigation-size));
+  margin-top: calc(0px - var(--swiper-navigation-size)) !important;
 
   @media (max-width: $screen-lg) {
-    display: none;
+    display: none !important;
   }
 }
 
 .swiper-button-next:after {
-  content: url("../../assets/icons/arrowRight.svg");
+  content: url("../../assets/icons/arrowRight.svg") !important;
 }
 
 .swiper-button-prev:after {
-  content: url("../../assets/icons/arrowLeft.svg");
+  content: url("../../assets/icons/arrowLeft.svg") !important;
 }
 
 .swiper-wrapper {
-  align-items: stretch;
+  align-items: stretch !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 1.2em !important;
+  border-radius: 1em !important;
 }

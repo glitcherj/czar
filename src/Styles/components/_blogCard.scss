@@ -1,5 +1,6 @@
 .blogCard {
   @include flexbox(column, center, stretch, 0);
+  flex: 1;
   background-color: $color-grey-10;
   color: $color-grey-100;
   border-radius: 0.5em;

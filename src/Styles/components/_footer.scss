@@ -36,21 +36,19 @@ footer {
     font-weight: bold;
   }
   .footerColumnsContent {
-    @include flexbox(column, null, flex-start, 12px);
+    @include flexbox(column, null, flex-start, 1.5em);
     @media (max-width: $screen-lg) {
-      @include flexbox(column, null, flex-start, 16px);
+      @include flexbox(column, null, flex-start, 1em);
     }
     a {
       white-space: nowrap;
       color: $color-grey-10;
       opacity: 0.8;
       text-decoration: none;
-      padding-block: 8px;
-      box-shadow: 0 8px 0 -8px $color-grey-10;
+      transition: all 0.2s ease;
       &:hover {
         opacity: 1;
-        box-shadow: 0 8px 0 -6px $color-grey-10;
-        transition: all 0.2s ease;
+        text-decoration: underline;
       }
     }
     .footerColumnsContentRow {
