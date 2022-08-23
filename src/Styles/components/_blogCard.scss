@@ -6,15 +6,29 @@
   border-radius: 0.5em;
   text-decoration: none;
 
-  img {
-    border-radius: 0.5em 0.5em 0 0;
+  .imgWrapper {
     height: 14vw;
-    object-fit: cover;
-    @media (max-width: $screen-xl) and (min-width: $screen-md) {
-      height: 22vw;
+    overflow: hidden;
+    border-radius: 0.5em 0.5em 0 0;
+
+    img {
+      object-fit: cover;
+      transition: all 0.2s ease;
+      height: 100%;
+      width: 100%;
+
+      @media (max-width: $screen-xl) and (min-width: $screen-md) {
+        height: 22vw;
+      }
+      @media (max-width: $screen-md) {
+        height: 40vw;
+      }
     }
-    @media (max-width: $screen-md) {
-      height: 40vw;
+  }
+
+  &:hover {
+    img {
+      scale: 1.05;
     }
   }
 
