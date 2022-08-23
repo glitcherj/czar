@@ -13,7 +13,6 @@ export function Header() {
         <a href="/fleet">Fleet</a>
         <a href="/blog">Blog & news</a>
         <a href="/faq">FAQ</a>
-        <a href="/driver-guidelines">Driver guidelines</a>
         <a href="/about-us">About us</a>
       </div>
       <div className="links">

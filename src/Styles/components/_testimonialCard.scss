@@ -1,6 +1,6 @@
 .testimonialCard {
   @include flexbox(row, center, stretch, 2em);
-  padding: 0 8%;
+  margin: 0 8%;
   flex: 1;
 
   @media (max-width: $screen-lg) {
@@ -16,7 +16,7 @@
 
   img {
     width: 30vw;
-    height: 30vw;
+    height: 24vw;
     object-fit: cover;
     transition: 0.3s all ease;
     border-radius: 0.5em;
@@ -44,8 +44,8 @@
 }
 
 .swiper-pagination {
-  position: initial !important;
-  margin-block: 1em !important;
+  position: unset !important;
+  margin-block-start: 1em !important;
 }
 
 .swiper-button-prev,
@@ -70,6 +70,6 @@
 }
 
 .swiper-pagination-bullet-active {
-  width: 1.2em !important;
+  width: 1.5em !important;
   border-radius: 1em !important;
 }
