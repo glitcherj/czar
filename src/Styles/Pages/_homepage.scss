@@ -174,7 +174,7 @@
 }
 .fullWidthCTA {
   width: 100%;
-  @include flexbox(row-reverse, space-between, center, 1.5em);
+  @include flexbox(row, space-between, center, 1.5em);
   @media (max-width: $screen-md) {
     flex-direction: column;
     align-items: stretch;
@@ -316,8 +316,6 @@
   .scrollDown {
     @include flexbox(row, center, center, 1em);
     font-weight: 600;
-    max-width: 30em;
-    width: 100%;
     svg {
       height: 14px;
       width: 14px;
@@ -354,11 +352,17 @@
   .scrollDown {
     @include flexbox(row, center, center, 1em);
     font-weight: 600;
-    max-width: 30em;
-    width: 100%;
     svg {
       height: 14px;
       width: 14px;
+    }
+  }
+
+  .fullWidthCTA {
+    flex-direction: row-reverse;
+    width: 100%;
+    @media (max-width: $screen-md) {
+      align-items: stretch;
     }
   }
 }
