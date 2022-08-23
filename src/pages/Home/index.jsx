@@ -282,7 +282,6 @@ export function Home() {
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
           autoPlay={{ delay: 500, pauseOnMouseEnter: true }}
           style={{ width: "100%" }}
         >

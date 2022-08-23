@@ -45,7 +45,7 @@ export function VehicleCard({
             <strong>£ {price}</strong>
             <span>Per week</span>
           </div>
-          <a href={link}>More details {">"}</a>
+          <span>More details {">"}</span>
         </div>
 
         {fuel === "Full-Electric" ? (
