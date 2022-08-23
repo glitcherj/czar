@@ -1,8 +1,7 @@
 .faqItem {
   @include flexbox(row, null, null, 1em);
   padding: 1em;
-  cursor: pointer;
-  border: 2px solid $color-primary-20;
+  border: 1px solid $color-primary-20;
 
   .faqItem__Content {
     @include flexbox(column, null, null, 0.5em);
@@ -10,8 +9,5 @@
   }
   .faqItem__Answer {
     font-size: 0.875em;
-  }
-  .faqItem__Answer__hidden {
-    display: none;
   }
 }
