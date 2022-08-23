@@ -1,5 +1,5 @@
 .blogCard {
-  @include flexbox(column, center, stretch, 0);
+  @include flexbox(column, flex-start, stretch, 0);
   flex: 1;
   background-color: $color-grey-10;
   color: $color-grey-100;
@@ -19,7 +19,7 @@
   }
 
   .blogCardContent {
-    @include flexbox(column, center, stretch, 0.5em);
+    @include flexbox(column, null, stretch, 0.825em);
     padding: 1em;
 
     time {
@@ -43,6 +43,19 @@
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+    }
+
+    .blogCardContent__Tags {
+      @include flexbox(row, null, null, 1em);
+    }
+
+    .blogCardContent__Tag {
+      color: $color-grey-10;
+      background-color: $color-green-100;
+      border-radius: 4em;
+      font-size: 0.75em;
+      padding: 0.25em 1em;
+      text-decoration: none;
     }
 
     .blogCardContent__ReadMore {

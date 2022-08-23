@@ -24,11 +24,10 @@ export function Footer() {
             <strong>Sitemap</strong>
           </span>
           <div className="footerColumnsContent">
-            <a href="/">Home page</a>
-            <a href="/">Our fleet</a>
-            <a href="/">EV fleet</a>
-            <a href="/">Blog & news</a>
-            <a href="/">About us</a>
+            <a href="/">Home</a>
+            <a href="/fleet">Fleet</a>
+            <a href="/blog">Blog & news</a>
+            <a href="/about-us">About us</a>
           </div>
         </div>
         <div className="footerColumns">
@@ -36,9 +35,9 @@ export function Footer() {
             <strong>Support</strong>
           </span>
           <div className="footerColumnsContent">
-            <a href="/">FAQ</a>
-            <a href="/">Privacy policy</a>
-            <a href="/">Terms & Conditions</a>
+            <a href="/faq">FAQ</a>
+            <a href="/privacy-policy">Privacy policy</a>
+            <a href="/terms">Terms & Conditions</a>
           </div>
         </div>
         <div className="footerColumns">
@@ -63,12 +62,12 @@ export function Footer() {
             </div>
             <div className="footerColumnsContentRow">
               <span className="footerColumnsContentTitle">Email:</span>
-              <span
+              <a
                 className="footerColumnsContentDescription"
                 href="mailto:info@czarpco.co.uk"
               >
                 info@czarpco.co.uk
-              </span>
+              </a>
             </div>
             <div className="footerColumnsContentRow">
               <span className="footerColumnsContentTitle">Opening hours:</span>
@@ -83,22 +82,22 @@ export function Footer() {
         <div className="footerBottomContent">
           <span>© 2022 CZAR PCO Ltd. All rights reserved.</span>
           <div className="socialLinks">
-            <a href="twitter.com/czarpco/">
+            <a href="https://twitter.com/czarpco/" target="blank">
               <Twitter />
             </a>
-            <a href="facebook.com/czarpco/">
+            <a href="https://facebook.com/czarpco/" target="blank">
               <Facebook />
             </a>
-            <a href="instagram.com/czarpco/">
+            <a href="https://instagram.com/czarpco/" target="blank">
               <Instagram />
             </a>
-            <a href="youtube.com/czarpco/">
+            <a href="https://youtube.com/czarpco/" target="blank">
               <Youtube />
             </a>
           </div>
         </div>
         <span className="copyright">
-          Copyright @ 2020 | CZAR PCO is Authorized and Regulated by Financial
+          Copyright @ 2022 | CZAR PCO is Authorized and Regulated by Financial
           Conduct Authority (FCA). FCA Reference Number: 245190
         </span>
       </section>

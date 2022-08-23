@@ -5,3 +5,4 @@ export { VehicleCard } from "./VehicleCard";
 export { BlogCard } from "./BlogCard";
 export { TestimonialCard } from "./TestimonialCard";
 export { FAQCard } from "./FAQCard";
+export { BlogArticleSlideshow } from "./BlogArticleSlideshow";
