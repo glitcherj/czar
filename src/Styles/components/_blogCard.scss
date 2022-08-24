@@ -5,24 +5,24 @@
   color: $color-grey-100;
   border-radius: 0.5em;
   text-decoration: none;
+  min-width: 16em;
 
   .imgWrapper {
     height: 14vw;
     overflow: hidden;
     border-radius: 0.5em 0.5em 0 0;
+    @media (max-width: $screen-xl) and (min-width: $screen-md) {
+      height: 16vw;
+    }
+    @media (max-width: $screen-md) {
+      height: 32vw;
+    }
 
     img {
       object-fit: cover;
       transition: all 0.2s ease;
       height: 100%;
       width: 100%;
-
-      @media (max-width: $screen-xl) and (min-width: $screen-md) {
-        height: 22vw;
-      }
-      @media (max-width: $screen-md) {
-        height: 40vw;
-      }
     }
   }
 
