@@ -12,5 +12,8 @@
   .titleSectionContent {
     @include flexbox(column, center, flex-start, 0.75em);
     width: fit-content;
+    @media (max-width: $screen-md) {
+      font-size: clamp(0.875em, 2vw, 1em);
+    }
   }
 }

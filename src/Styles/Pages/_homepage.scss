@@ -115,6 +115,9 @@
         }
         .benefitDescription {
           font-weight: 400;
+          @media (max-width: $screen-md) {
+            font-size: clamp(0.875em, 2vw, 1em);
+          }
         }
       }
 
@@ -266,6 +269,12 @@
       svg {
         height: 14px;
         width: 14px;
+      }
+    }
+
+    span {
+      @media (max-width: $screen-md) {
+        font-size: clamp(0.875em, 2vw, 1em);
       }
     }
   }

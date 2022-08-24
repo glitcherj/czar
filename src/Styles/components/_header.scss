@@ -3,15 +3,9 @@ Header {
   @media (max-width: $screen-xl) {
     flex-wrap: wrap;
   }
-  @media (max-width: $screen-md) {
-    padding: 0.5em 4%;
-    .appLogo img {
-      margin-inline-start: 0.5em;
-    }
-  }
 
   .appLogo {
-    margin-inline-start: -1em;
+    margin-inline-start: -0.75em;
     order: 1;
     line-height: 0;
     color: $color-primary-100;
@@ -50,7 +44,12 @@ Header {
 
     @media (max-width: $screen-xl) {
       order: 4;
-      overflow: auto;
+    }
+    @media (max-width: $screen-sm) {
+      order: 4;
+      width: 100%;
+      gap: 0;
+      justify-content: space-between;
     }
   }
 }
@@ -74,6 +73,12 @@ Header {
   position: sticky;
   top: 0;
   z-index: 100;
+  @media (max-width: $screen-md) {
+    padding: 0.5em 4%;
+    .appLogo img {
+      margin-inline-start: 0.5em;
+    }
+  }
 
   .links a {
     color: $color-grey-100;
@@ -93,6 +98,13 @@ Header {
   right: 0;
   left: 0;
   z-index: 100;
+  backdrop-filter: blur(1em);
+  @media (max-width: $screen-md) {
+    padding: 0.5em 4%;
+    .appLogo img {
+      margin-inline-start: 0.5em;
+    }
+  }
 
   .appLogo {
     color: $color-grey-10;
