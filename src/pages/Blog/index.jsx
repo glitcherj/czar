@@ -49,7 +49,7 @@ export function Blog() {
           </form>
           <span className="scrollDown">
             Scroll down to see more
-            <img src={ScrollDown} />{" "}
+            <img src={ScrollDown} alt="" />{" "}
           </span>
         </div>
       </div>

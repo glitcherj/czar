@@ -1,13 +1,24 @@
+// ---Assets---
 import { ReactComponent as LogoBW } from "../../assets/logoBW.svg";
 import { ReactComponent as LogoBG } from "../../assets/LogoBG.svg";
 import { ReactComponent as Facebook } from "../../assets/socials/facebook.svg";
 import { ReactComponent as Instagram } from "../../assets/socials/instagram.svg";
 import { ReactComponent as Twitter } from "../../assets/socials/twitter.svg";
 import { ReactComponent as Youtube } from "../../assets/socials/youtube.svg";
+import { ReactComponent as Arrow } from "../../assets/icons/arrow.svg";
 
 export function Footer() {
   return (
     <footer>
+      <section
+        className="backTop"
+        onClick={() => {
+          window.scrollTo({ top: "0", behavior: "smooth" });
+        }}
+      >
+        <Arrow />
+        Back to top
+      </section>
       <section className="footerContainer">
         <div className="aboutCompany">
           <a href="/">

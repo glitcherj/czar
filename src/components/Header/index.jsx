@@ -1,3 +1,4 @@
+// ---Assets---
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { ReactComponent as Whatsapp } from "../../assets/socials/whatsapp.svg";
 import { ReactComponent as Contact } from "../../assets/contact.svg";
