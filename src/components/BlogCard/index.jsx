@@ -1,7 +1,9 @@
 export function BlogCard({ img, date, title, description, link, tags }) {
   return (
     <a className="blogCard" href={link}>
-      <img src={img} alt={title} />
+      <div className="imgWrapper">
+        <img src={img} alt={title} />
+      </div>
       <div className="blogCardContent">
         <time>{date}</time>
         <strong className="blogCardContent__Title">{title}</strong>

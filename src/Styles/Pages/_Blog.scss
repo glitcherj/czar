@@ -1,11 +1,24 @@
 .bg {
   background: url("../../assets/images/blogBG.jpg") center no-repeat #1c1d1c;
   background-size: cover;
+  @media (max-width: $screen-sm) {
+    background-position-x: -32em;
+  }
 
   .bgContent {
     @include flexbox(column, center, null, 2em);
-    padding: 16vw 8%;
-    backdrop-filter: brightness(0.6);
+    padding-inline: 8%;
+    padding-block: 16vw 12vw;
+    background-image: radial-gradient(
+      circle at 80%,
+      transparent 20%,
+      black 110%
+    );
+
+    @media (max-width: $screen-lg) {
+      padding-inline: 8%;
+      padding-block: 22em 2.5em;
+    }
 
     .bgContent__Heading {
       @include flexbox(column, null, null, 1em);
@@ -50,7 +63,16 @@
         border-left: 0;
         margin: 0;
         line-height: 0;
-        width: 8em;
+        min-width: 8vw;
+      }
+    }
+
+    .scrollDown {
+      @include flexbox(row, null, center, 1em);
+      margin-top: 2vw;
+      color: $color-grey-10;
+      img {
+        width: 2em;
       }
     }
   }

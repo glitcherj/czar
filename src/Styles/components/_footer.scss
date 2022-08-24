@@ -114,3 +114,23 @@ footer {
   opacity: 0.1;
   color: $color-grey-10;
 }
+
+.backTop {
+  display: inherit;
+  align-items: center;
+  gap: 0.5em;
+  z-index: 20;
+
+  position: absolute;
+  padding: 0.825em 1.25em 0.825em 0.75em;
+  border-radius: 0 0 0.5em 0.5em;
+  background-color: $color-primary-100;
+  cursor: pointer;
+
+  top: 0;
+  right: 8%;
+
+  svg {
+    rotate: -90deg;
+  }
+}

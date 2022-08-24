@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+
 //  ---Swiperjs---
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -300,7 +301,10 @@ export function Home() {
         </Swiper>
       </div>
       <div className="faq notBanner ">
-        <TitleSection title={"Frequently asked questions"} />
+        <TitleSection
+          title={"Frequently asked questions"}
+          description={"What do you got on your mind?"}
+        />
         <div className="faqList">
           {FAQData.HomepageFAQ.map((faq) => (
             <FAQCard question={faq.question} answer={faq.answer} />
@@ -315,7 +319,10 @@ export function Home() {
         </div>
       </div>
       <div className="blog">
-        <TitleSection title={"Our latest blog posts"} />
+        <TitleSection
+          title={"Our latest blog posts"}
+          description={"Stay at the top of the PCO news."}
+        />
         <div className="blogItems">
           {BlogData.slice(2, 5).map((blog) => (
             <BlogCard

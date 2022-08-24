@@ -39,6 +39,7 @@
 
     .testimonialCard__content__comment {
       @include flexbox(column, flex-start, stretch, 0.5em);
+      font-size: 0.875em;
     }
   }
 }

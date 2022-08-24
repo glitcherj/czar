@@ -1,10 +1,17 @@
+// ---Assets---
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { ReactComponent as Whatsapp } from "../../assets/socials/whatsapp.svg";
 import { ReactComponent as Contact } from "../../assets/contact.svg";
 
 export function Header() {
   return (
-    <header className="appHeader">
+    <header
+      className={
+        window.location.pathname !== "/blog"
+          ? "headerWhite"
+          : "headerTransparent"
+      }
+    >
       <a href="/" className="appLogo">
         <Logo />
       </a>
@@ -16,11 +23,16 @@ export function Header() {
         <a href="/about-us">About us</a>
       </div>
       <div className="links">
-        <button className="secondaryBtn whatsapp">
+        <button className="secondaryBtn whatsapp" id="whatsapp">
           <Whatsapp />
           <span>Message us</span>
         </button>
-        <button className="primaryBtn">
+        <button
+          className={
+            window.location.pathname !== "/blog" ? "primaryBtn" : "secondaryBtn"
+          }
+          id="contact"
+        >
           <Contact />
           <span>Contact us</span>
         </button>
