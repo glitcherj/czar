@@ -1,0 +1,17 @@
+.evHeading {
+  //   @include flexbox(row, space-between, center, null);
+  //   padding-block-start: 2.5em;
+
+  .homeHeroImg {
+    width: 64% !important;
+  }
+}
+
+// .whyEV {
+//   @include flexbox(column, center, center, 1.5em);
+
+//   .whyEVRow {
+//     @include flexbox(row, flex-start, stretch, 1.5em);
+
+//   }
+// }
