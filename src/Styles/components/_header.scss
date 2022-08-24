@@ -106,12 +106,14 @@ Header {
 
     #whatsapp {
       background-color: #0096654d;
+      &:hover {
+        background-color: #0096654d !important;
+      }
     }
 
     #contact {
       background-color: #004fa333;
       &:hover {
-        mix-blend-mode: multiply !important;
       }
     }
 

@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom";
+
+//  ---Assets---
 import { ReactComponent as Search } from "../../assets/icons/search.svg";
+import ScrollDown from "../../assets/scrollDown.gif";
 
 //  ---Swiperjs---
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -44,6 +47,10 @@ export function Blog() {
               <Search />
             </button>
           </form>
+          <span className="scrollDown">
+            Scroll down to see more
+            <img src={ScrollDown} />{" "}
+          </span>
         </div>
       </div>
       <div className="blog">
