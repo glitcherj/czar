@@ -4,7 +4,7 @@
 
   .bgContent {
     @include flexbox(column, center, null, 2em);
-    padding: 16vw 8%;
+    padding: 22vw 8%;
     backdrop-filter: brightness(0.6);
 
     .bgContent__Heading {
