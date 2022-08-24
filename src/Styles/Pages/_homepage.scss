@@ -24,12 +24,15 @@
       @include flexbox(column, center, flex-start, 1em);
 
       span {
-        font-size: clamp(1em, 2vw, 1.3em);
+        font-size: clamp(0.875em, 2vw, 1em);
       }
     }
 
     img {
-      width: 16em;
+      width: 14em;
+      @media (max-width: $screen-md) {
+        width: 12em;
+      }
     }
 
     .scrollDown {
@@ -43,7 +46,7 @@
       }
     }
   }
-  .homepageBannerImg {
+  .homeHeroImg {
     width: 40%;
     @media (max-width: $screen-xl) {
       width: 100%;
@@ -95,7 +98,7 @@
   .ourBenefitsRow {
     @include flexbox(row, space-between, flex-start, 1.5em);
     @media (max-width: $screen-md) {
-      flex-direction: column;
+      flex-wrap: wrap;
     }
 
     .benefit {

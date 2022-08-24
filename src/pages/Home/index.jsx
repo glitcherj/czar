@@ -9,7 +9,7 @@ import "swiper/css/autoplay";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
 //  ---Assets---
-import HomepageBanner from "../../assets/images/HomepageBanner.png";
+import HomeHero from "../../assets/images/HomeHero.png";
 import trustpilotMini from "../../assets/images/trustpilotMini.png";
 import rideSharing_bolt from "../../assets/images/rideSharing_bolt.png";
 import rideSharing_freenow from "../../assets/images/rideSharing_freenow.png";
@@ -70,8 +70,8 @@ export function Home() {
           </button>
         </div>
         <img
-          src={HomepageBanner}
-          className="homepageBannerImg"
+          src={HomeHero}
+          className="homeHeroImg"
           alt="Happy Czar PCO customer"
         />
       </div>
@@ -259,7 +259,7 @@ export function Home() {
             best Electric Vehicles for the Ride-Hailing market and supporting
             drivers every step of the way.
           </span>
-          <a className="secondaryBtn Link" href="/EV">
+          <a className="secondaryBtn Link" href="/ev-fleet">
             <span>Visit our EV fleet</span>
             <LogoBG />
           </a>
