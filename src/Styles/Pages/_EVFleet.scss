@@ -7,11 +7,22 @@
   }
 }
 
-// .whyEV {
-//   @include flexbox(column, center, center, 1.5em);
+.CTA_row {
+  @include flexbox(row, stretch, stretch, 8%);
+  padding-block: 2em;
+  background-color: $color-primary-15;
+}
 
-//   .whyEVRow {
-//     @include flexbox(row, flex-start, stretch, 1.5em);
-
-//   }
-// }
+.scrollDown {
+  @include flexbox(row, center, center, 1em);
+  font-weight: 600;
+  max-width: 30em;
+  // svg {
+  //   height: 14px;
+  //   width: 14px;
+  // }
+  :not(#Contact) {
+    height: 14px;
+    width: 14px;
+  }
+}

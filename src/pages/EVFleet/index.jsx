@@ -8,12 +8,16 @@ import { ReactComponent as EVCharge } from "../../assets/icons/EVCharge.svg";
 import { ReactComponent as EVEfficiency } from "../../assets/icons/EVEfficiency.svg";
 import { ReactComponent as EVFuel } from "../../assets/icons/EVFuel.svg";
 import { ReactComponent as EVPollution } from "../../assets/icons/EVPollution.svg";
+import { ReactComponent as Contact } from "../../assets/contact.svg";
+
+//  ---StaticData---
+import { CarData } from "../../components/VehicleCard/data";
 
 //  ---Components---
 import { TitleSection, VehicleCard } from "../../components";
 
 export function EVFleet() {
-  const benefitsRef = useRef(null);
+  const evFleet = useRef(null);
 
   return (
     <div className="Home evFleet">
@@ -37,7 +41,7 @@ export function EVFleet() {
           <button
             className="secondaryBtn scrollDown"
             onClick={() =>
-              benefitsRef.current.scrollIntoView({
+              evFleet.current.scrollIntoView({
                 behavior: "smooth",
                 block: "center",
               })
@@ -53,7 +57,7 @@ export function EVFleet() {
           alt="Happy Czar PCO customer"
         />
       </div>
-      <div className="ourBenefits whyEV notBanner">
+      <div className="blog ourBenefits whyEV notBanner" ref={evFleet}>
         <TitleSection
           title={"Why electric vehicles are better"}
           description={"Discover more about our Full-Electric fleet"}
@@ -112,6 +116,43 @@ export function EVFleet() {
               </span>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="fleet notBanner">
+        <TitleSection
+          title={"Our electric vehicles"}
+          // description={"Discover more about our Full-Electric fleet"}
+        />
+
+        <div className="fleetRow">
+          {CarData.filter((car) => car.fuel === "Full-Electric").map((car) => (
+            <VehicleCard
+              img={car.img}
+              name={car.name}
+              fuel={car.fuel}
+              seats={car.seats}
+              transmission={car.transmission}
+              year={car.year}
+              price={car.price}
+              link={car.link}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="CTA_row notBanner">
+        <div className="fullWidthCTA">
+          <h3>Contact us for renting car</h3>
+          <a className="secondaryBtn scrollDown" href="/FAQ">
+            <Contact id="Contact" />
+            Contact us
+          </a>
+        </div>
+        <div className="fullWidthCTA">
+          <h3>Got any questions?</h3>
+          <a className="secondaryBtn scrollDown" href="/FAQ">
+            Visit our FAQ page
+            <LogoBG />
+          </a>
         </div>
       </div>
     </div>

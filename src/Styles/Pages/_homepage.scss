@@ -12,7 +12,7 @@
 }
 
 .hero {
-  @include flexbox(row, space-between, center, 1.5em);
+  @include flexbox(row, space-between, center, clamp(2em, 4vw, 4em));
   @media (max-width: $screen-xl) {
     flex-direction: column;
   }
