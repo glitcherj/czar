@@ -9,7 +9,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import "swiper/css/autoplay";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
 //  ---Static Data---
@@ -49,7 +48,7 @@ export function Blog() {
           </form>
           <span className="scrollDown">
             Scroll down to see more
-            <img src={ScrollDown} alt="" />{" "}
+            <img src={ScrollDown} alt="" id="Contact" />{" "}
           </span>
         </div>
       </div>
@@ -63,9 +62,13 @@ export function Blog() {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           navigation
+          loop
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          autoPlay={{ delay: 500, pauseOnMouseEnter: true }}
+          autoplay={{
+            delay: 3000,
+            pauseOnMouseEnter: true,
+          }}
           style={{ width: "100%" }}
         >
           {BlogData.slice(1, 4).map((testimonial) => (

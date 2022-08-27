@@ -18,12 +18,29 @@ Header {
     @include flexbox(row, null, center, clamp(1em, 2vw, 1.5em));
     order: 3;
 
-    button {
+    .btn {
       @media (max-width: $screen-sm) {
         padding: 0.5em;
         span {
           display: none;
         }
+      }
+    }
+  }
+  .menu {
+    @include flexbox(row, null, center, clamp(1em, 2vw, 1.5em));
+    order: 2;
+
+    @media (max-width: $screen-xl) {
+      order: 4;
+    }
+    @media (max-width: $screen-sm) {
+      order: 4;
+      width: 100%;
+      gap: 0;
+      justify-content: space-between;
+      .menuItems {
+        font-size: 0.75em;
       }
     }
 
@@ -37,19 +54,6 @@ Header {
       &:hover {
         transition: all 0.2s ease;
       }
-    }
-  }
-  .menu {
-    order: 2;
-
-    @media (max-width: $screen-xl) {
-      order: 4;
-    }
-    @media (max-width: $screen-sm) {
-      order: 4;
-      width: 100%;
-      gap: 0;
-      justify-content: space-between;
     }
   }
 }
@@ -80,7 +84,7 @@ Header {
     }
   }
 
-  .links a {
+  .menu a {
     color: $color-grey-100;
     box-shadow: 0 8px 0 -14px $color-primary-100;
 
@@ -110,8 +114,19 @@ Header {
     color: $color-grey-10;
   }
 
+  .menu {
+    a {
+      color: $color-grey-40;
+      box-shadow: 0 8px 0 -14px $color-grey-10;
+
+      &:hover {
+        color: $color-primary-10;
+        box-shadow: 0 10px 0 -8px $color-grey-10;
+      }
+    }
+  }
   .links {
-    button {
+    .btn {
       color: white !important;
       font-weight: normal;
     }
@@ -126,16 +141,6 @@ Header {
     #contact {
       background-color: #004fa333;
       &:hover {
-      }
-    }
-
-    a {
-      color: $color-grey-40;
-      box-shadow: 0 8px 0 -14px $color-grey-10;
-
-      &:hover {
-        color: $color-primary-10;
-        box-shadow: 0 10px 0 -8px $color-grey-10;
       }
     }
   }
