@@ -2,7 +2,7 @@
   "name": "czar",
   "version": "0.3.5",
   "private": true,
-  "homepage": "https://glitcherj.github.io/czar",
+  "homepage": "https://glitcherj.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
