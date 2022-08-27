@@ -65,7 +65,7 @@ export function Home() {
               })
             }
           >
-            <span>Discover more about us</span>
+            <span id="Contact">Discover more about us</span>
             <LogoBG />
           </button>
         </div>
@@ -283,7 +283,10 @@ export function Home() {
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          autoPlay={{ delay: 500, pauseOnMouseEnter: true }}
+          autoplay={{
+            delay: 3000,
+            pauseOnMouseEnter: true,
+          }}
           style={{ width: "100%" }}
         >
           {TestimonialData.map((testimonial) => (
