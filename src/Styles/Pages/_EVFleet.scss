@@ -14,7 +14,7 @@
 }
 
 .scrollDown {
-  @include flexbox(row, center, center, 1em);
+  @include flexbox(row, flex-start, null, 1em);
   font-weight: 600;
   max-width: 30em;
   // svg {
