@@ -259,7 +259,7 @@ export function Home() {
             best Electric Vehicles for the Ride-Hailing market and supporting
             drivers every step of the way.
           </span>
-          <a className="secondaryBtn Link" href="/czar/ev-fleet">
+          <a className="secondaryBtn Link" href="/ev-fleet">
             <span>Visit our EV fleet</span>
             <LogoBG />
           </a>
@@ -315,7 +315,7 @@ export function Home() {
         </div>
         <div className="fullWidthCTA">
           <h3>Still got questions?</h3>
-          <a className="secondaryBtn scrollDown" href="/czar/FAQ">
+          <a className="secondaryBtn scrollDown" href="/FAQ">
             Visit our FAQ page
             <LogoBG />
           </a>
@@ -338,7 +338,7 @@ export function Home() {
           ))}
         </div>
         <div className="fullWidthCTA">
-          <a className="secondaryBtn scrollDown" href="/czar/blog">
+          <a className="secondaryBtn scrollDown" href="/blog">
             Visit our Blog page
             <LogoBG />
           </a>
