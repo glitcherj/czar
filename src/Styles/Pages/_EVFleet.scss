@@ -1,0 +1,28 @@
+.evHeading {
+  //   @include flexbox(row, space-between, center, null);
+  //   padding-block-start: 2.5em;
+
+  .homeHeroImg {
+    width: 64% !important;
+  }
+}
+
+.CTA_row {
+  @include flexbox(row, stretch, stretch, 8%);
+  padding-block: 2em;
+  background-color: $color-primary-15;
+}
+
+.scrollDown {
+  @include flexbox(row, center, center, 1em);
+  font-weight: 600;
+  max-width: 30em;
+  // svg {
+  //   height: 14px;
+  //   width: 14px;
+  // }
+  :not(#Contact) {
+    height: 14px;
+    width: 14px;
+  }
+}

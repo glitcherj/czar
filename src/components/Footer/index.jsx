@@ -37,6 +37,7 @@ export function Footer() {
           <div className="footerColumnsContent">
             <a href="/">Home</a>
             <a href="/fleet">Fleet</a>
+            <a href="/ev-fleet">EV Fleet</a>
             <a href="/blog">Blog & news</a>
             <a href="/about-us">About us</a>
           </div>

@@ -1,3 +1,21 @@
+import { useRef } from "react";
+
+// ---Assets---
+import EVFleetHero from "../../assets/images/evFleetHero.png";
+import trustpilotMini from "../../assets/images/trustpilotMini.png";
+import { ReactComponent as LogoBG } from "../../assets/LogoBG.svg";
+import { ReactComponent as EVCharge } from "../../assets/icons/EVCharge.svg";
+import { ReactComponent as EVEfficiency } from "../../assets/icons/EVEfficiency.svg";
+import { ReactComponent as EVFuel } from "../../assets/icons/EVFuel.svg";
+import { ReactComponent as EVPollution } from "../../assets/icons/EVPollution.svg";
+import { ReactComponent as Contact } from "../../assets/contact.svg";
+
+//  ---StaticData---
+import { CarData } from "../../components/VehicleCard/data";
+
+//  ---Components---
+import { TitleSection, VehicleCard } from "../../components";
+
 export function EVFleet() {
   const evFleet = useRef(null);
 
@@ -29,7 +47,7 @@ export function EVFleet() {
               })
             }
           >
-            <span id="Contact">Discover more</span>
+            <span>Discover more</span>
             <LogoBG />
           </button>
         </div>
