@@ -47,7 +47,7 @@ export function EVFleet() {
               })
             }
           >
-            <span>Discover more</span>
+            <span id="Contact">Discover more</span>
             <LogoBG />
           </button>
         </div>
@@ -125,18 +125,20 @@ export function EVFleet() {
         />
 
         <div className="fleetRow">
-          {CarData.filter((car) => car.fuel === "Full-Electric").map((car) => (
-            <VehicleCard
-              img={car.img}
-              name={car.name}
-              fuel={car.fuel}
-              seats={car.seats}
-              transmission={car.transmission}
-              year={car.year}
-              price={car.price}
-              link={car.link}
-            />
-          ))}
+          {CarData.filter((car) => car.fuel === "Full-Electric")
+            .sort((a, b) => b.price - a.price)
+            .map((car) => (
+              <VehicleCard
+                img={car.img}
+                name={car.name}
+                fuel={car.fuel}
+                seats={car.seats}
+                transmission={car.transmission}
+                year={car.year}
+                price={car.price}
+                link={car.link}
+              />
+            ))}
         </div>
       </div>
       <div className="CTA_row notBanner">
