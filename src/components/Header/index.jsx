@@ -7,31 +7,31 @@ export function Header() {
   return (
     <header
       className={
-        window.location.pathname !== "/czar/blog"
+        window.location.pathname !== "/blog"
           ? "headerWhite"
           : "headerTransparent"
       }
     >
-      <a href="/czar" className="appLogo">
+      <a href="/" className="appLogo">
         <Logo />
       </a>
       <div className="menu">
-        <a className="menuItems" href="/czar/">
+        <a className="menuItems" href="/">
           Home
         </a>
-        <a className="menuItems" href="/czar/fleet">
+        <a className="menuItems" href="/fleet">
           Fleet
         </a>
-        <a className="menuItems" href="/czar/ev-fleet">
+        <a className="menuItems" href="/ev-fleet">
           EV Fleet
         </a>
-        <a className="menuItems" href="/czar/blog">
+        <a className="menuItems" href="/blog">
           Blog & news
         </a>
-        <a className="menuItems" href="/czar/faq">
+        <a className="menuItems" href="/faq">
           FAQ
         </a>
-        <a className="menuItems" href="/czar/about-us">
+        <a className="menuItems" href="/about-us">
           About us
         </a>
       </div>
@@ -46,7 +46,7 @@ export function Header() {
         </a>
         <a
           className={
-            window.location.pathname !== "/czar/blog"
+            window.location.pathname !== "/blog"
               ? "primaryBtn btn"
               : "secondaryBtn btn"
           }
