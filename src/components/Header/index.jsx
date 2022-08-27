@@ -15,28 +15,47 @@ export function Header() {
       <a href="/" className="appLogo">
         <Logo />
       </a>
-      <div className="links menu">
-        <a href="/">Home</a>
-        <a href="/fleet">Fleet</a>
-        <a href="/ev-fleet">EV Fleet</a>
-        <a href="/blog">Blog & news</a>
-        <a href="/faq">FAQ</a>
-        <a href="/about-us">About us</a>
+      <div className="menu">
+        <a className="menuItems" href="/">
+          Home
+        </a>
+        <a className="menuItems" href="/fleet">
+          Fleet
+        </a>
+        <a className="menuItems" href="/ev-fleet">
+          EV Fleet
+        </a>
+        <a className="menuItems" href="/blog">
+          Blog & news
+        </a>
+        <a className="menuItems" href="/faq">
+          FAQ
+        </a>
+        <a className="menuItems" href="/about-us">
+          About us
+        </a>
       </div>
       <div className="links">
-        <button className="secondaryBtn whatsapp" id="whatsapp">
+        <a
+          className="secondaryBtn whatsapp btn"
+          id="whatsapp"
+          href="https://wa.me/+4407701727142"
+        >
           <Whatsapp />
           <span>Message us</span>
-        </button>
-        <button
+        </a>
+        <a
           className={
-            window.location.pathname !== "/blog" ? "primaryBtn" : "secondaryBtn"
+            window.location.pathname !== "/blog"
+              ? "primaryBtn btn"
+              : "secondaryBtn btn"
           }
           id="contact"
+          href="tel:02089009574"
         >
           <Contact />
           <span>Contact us</span>
-        </button>
+        </a>
       </div>
     </header>
   );
