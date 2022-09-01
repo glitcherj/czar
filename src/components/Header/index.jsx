@@ -3,7 +3,12 @@ import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { ReactComponent as Whatsapp } from "../../assets/socials/whatsapp.svg";
 import { ReactComponent as Contact } from "../../assets/contact.svg";
 
+// ---Static Data---
+import { HeaderData } from "./data";
+
 export function Header() {
+  const path = window.location.pathname;
+  const headerTitle = " | Czar PCO";
   return (
     <header
       className={
@@ -12,6 +17,10 @@ export function Header() {
           : "headerTransparent"
       }
     >
+      <head>
+        <title>{HeaderData[path][0].title + headerTitle}</title>
+        <meta name="description" content={HeaderData[path][1].description} />
+      </head>
       <a href="/" className="appLogo">
         <Logo />
       </a>
