@@ -5,6 +5,7 @@ import {
   Blog,
   EVFleet,
   Fleet,
+  VehiclePage,
   FAQ,
   Home,
   PrivacyPolicy,
@@ -14,14 +15,17 @@ export function MainRouter() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/ev-fleet" element={<EVFleet />} />
-        <Route path="/fleet" element={<Fleet />} />
-        <Route path="/FAQ" element={<FAQ />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms" element={<Terms />} />
+        <Route path="" element={<Home />} />
+        <Route path="about-us" element={<AboutUs />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="ev-fleet" element={<EVFleet />} />
+        <Route path="fleet">
+          <Route index="fleet" element={<Fleet />} />
+          <Route path=":id" element={<VehiclePage />} />
+        </Route>
+        <Route path="FAQ" element={<FAQ />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="terms" element={<Terms />} />
       </Routes>
     </Router>
   );

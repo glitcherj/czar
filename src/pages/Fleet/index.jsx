@@ -1,3 +1,3 @@
 export function Fleet() {
-  return <h3>Fleet</h3>;
+  return <h2 className="Fleet">Fleeeeet</h2>;
 }
