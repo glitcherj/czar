@@ -17,7 +17,6 @@ import { ReactComponent as Contact } from "../../assets/contact.svg";
 
 //  ---Static Data---
 import { VehicleData } from "./data";
-import { TestimonialData } from "../../components/TestimonialCard/data";
 
 export function VehiclePage() {
   const { id } = useParams();
@@ -138,16 +137,17 @@ export function VehiclePage() {
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          slidesPerView={3}
-          loop
+          // slidesPerView={1}
+          // loop
           autoplay={{
             delay: 3000,
             pauseOnMouseEnter: true,
           }}
-          style={{ width: "100%" }}
         >
-          {TestimonialData.map((testimonial) => (
-            <SwiperSlide>222</SwiperSlide>
+          {car.album.map((album) => (
+            <SwiperSlide>
+              <img src={album} alt="" />
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>

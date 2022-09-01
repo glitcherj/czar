@@ -123,4 +123,24 @@
       }
     }
   }
+
+  .vehiclePictures {
+    .swiper-wrapper {
+      height: 22em;
+      img {
+        height: 100%;
+        object-position: center;
+      }
+    }
+    .swiper-slide {
+      text-align: center;
+      // width: auto !important;
+      // margin-inline: 0.5em;
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
 }
