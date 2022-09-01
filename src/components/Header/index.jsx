@@ -18,8 +18,15 @@ export function Header() {
       }
     >
       <head>
-        <title>{HeaderData[path][0].title + headerTitle}</title>
-        <meta name="description" content={HeaderData[path][1].description} />
+        <title>
+          {HeaderData[path]
+            ? HeaderData[path][0].title + headerTitle
+            : "404 | Page not found"}
+        </title>
+        <meta
+          name="description"
+          content={HeaderData[path] ? HeaderData[path][1].description : null}
+        />
       </head>
       <a href="/" className="appLogo">
         <Logo />
