@@ -287,7 +287,6 @@ export function Home() {
             delay: 3000,
             pauseOnMouseEnter: true,
           }}
-          style={{ width: "100%" }}
         >
           {TestimonialData.map((testimonial) => (
             <SwiperSlide>

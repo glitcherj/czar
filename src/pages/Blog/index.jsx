@@ -69,7 +69,6 @@ export function Blog() {
             delay: 3000,
             pauseOnMouseEnter: true,
           }}
-          style={{ width: "100%" }}
         >
           {BlogData.slice(1, 4).map((testimonial) => (
             <SwiperSlide>
