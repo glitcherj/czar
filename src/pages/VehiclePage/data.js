@@ -8,6 +8,8 @@ import ToyotaPriusPlusHybrid from "../../assets/images/carPictures/ToyotaPriusPl
 import VolkswagenID3 from "../../assets/images/carPictures/VolkswagenID3.png";
 import Tesla3 from "../../assets/images/carPictures/Tesla3.png";
 
+import { VehicleImage } from "./images";
+
 export const VehicleData = [
   {
     img: KiaNiro,
@@ -20,6 +22,7 @@ export const VehicleData = [
     bodyType: "Sedan",
     price: "270",
     link: "KiaNiro",
+    album: VehicleImage.KiaNiro,
   },
   {
     img: MercedesBenz,
@@ -32,6 +35,7 @@ export const VehicleData = [
     bodyType: "Sedan",
     price: "400",
     link: "MercedesBenz",
+    album: VehicleImage.MercedesBenz,
   },
   {
     img: MG5,
@@ -44,6 +48,7 @@ export const VehicleData = [
     bodyType: "Sedan",
     price: "250",
     link: "MG5",
+    album: VehicleImage.MG5,
   },
   {
     img: NissanLeaf,
@@ -56,6 +61,7 @@ export const VehicleData = [
     bodyType: "Sedan",
     price: "250",
     link: "NissanLeaf",
+    album: VehicleImage.NissanLeaf,
   },
   {
     img: ToyotaCorollaHybrid,
@@ -68,6 +74,7 @@ export const VehicleData = [
     bodyType: "Sedan",
     price: "210",
     link: "ToyotaCorollaHybrid",
+    album: VehicleImage.ToyotaCorollaHybrid,
   },
   {
     img: ToyotaPriusPlugIn,
@@ -80,6 +87,7 @@ export const VehicleData = [
     bodyType: "Sedan",
     price: "230",
     link: "ToyotaPriusPlugIn",
+    album: VehicleImage.ToyotaPriusPlugIn,
   },
   {
     img: ToyotaPriusPlusHybrid,
@@ -92,6 +100,7 @@ export const VehicleData = [
     bodyType: "Sedan",
     price: "220",
     link: "ToyotaPriusPlusHybrid",
+    album: VehicleImage.ToyotaPriusPlusHybrid,
   },
   {
     img: VolkswagenID3,
@@ -104,6 +113,7 @@ export const VehicleData = [
     bodyType: "Sedan",
     price: "250",
     link: "VolkswagenID3",
+    album: VehicleImage.VolkswagenID3,
   },
   {
     img: Tesla3,
@@ -116,5 +126,6 @@ export const VehicleData = [
     bodyType: "Sedan",
     price: "349",
     link: "Tesla3",
+    album: VehicleImage.Tesla3,
   },
 ];
