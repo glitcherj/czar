@@ -1,6 +1,6 @@
 .vehiclePage {
   @include flexbox(column, null, stretch, clamp(3em, 2vw, 5em));
-  margin-block: 2.5em;
+  margin-block-start: 2.5em;
 
   .hero {
     @media (max-width: $screen-lg) {
@@ -143,6 +143,16 @@
     @include flexbox(column, null, null, 1.5em);
     .testimonialRow {
       @include flexbox(row, null, null, 1em);
+    }
+  }
+
+  .suggestedVehicles {
+    .vehicleCard {
+      background-image: linear-gradient(
+        to bottom,
+        transparent,
+        $color-primary-05
+      );
     }
   }
 }

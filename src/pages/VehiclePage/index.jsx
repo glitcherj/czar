@@ -31,6 +31,9 @@ import { VehicleFAQ } from "../../Static/VehicleFAQ";
 export function VehiclePage() {
   const { id } = useParams();
   const car = VehicleData.filter((car) => car.link === id)[0];
+  const cars = VehicleData.filter((cars) => cars.link !== id)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
   const testimonial = VehiclePageTestimonials[id];
 
   return (
@@ -182,8 +185,22 @@ export function VehiclePage() {
           ))}
         </div>
       </div>
-      <div className="suggestedVehicles blog">
-        <TitleSection title={"What our customers say about us"} />
+      <div className="fleet suggestedVehicles blog">
+        <TitleSection title={"Our other recommended vehicles"} />
+        <div className="fleetRow">
+          {cars.map((car) => (
+            <VehicleCard
+              img={car.img}
+              name={car.name}
+              fuel={car.fuel}
+              seats={car.seats}
+              transmission={car.transmission}
+              year={car.year}
+              price={car.price}
+              link={car.link}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
