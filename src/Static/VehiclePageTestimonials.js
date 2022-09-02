@@ -28,7 +28,7 @@ export const VehiclePageTestimonials = {
   MercedesBenz: [
     {
       title: "Excellent car for executive car in London",
-      name: "",
+      name: "Joel Summers",
       comment: "Excellent price for the car. Definitely worth it.",
     },
     {
@@ -45,7 +45,7 @@ export const VehiclePageTestimonials = {
     },
     {
       title: "Perfect car for executive drivers",
-      name: "",
+      name: "Jonathan Lynch",
       comment:
         "I had the car for 6 weeks now and I really enjoy the car. Excellent customer service.",
     },
@@ -65,13 +65,13 @@ export const VehiclePageTestimonials = {
     },
     {
       title: "Excellent car with no maintenance headache",
-      name: "",
+      name: "Katherine Watkins",
       comment:
         "I have the car for 4 months now, easy to drive, excellent performance and easy to service.",
     },
     {
       title: "Delicate car with lots of space for luggage",
-      name: "",
+      name: "Danielle Winter",
       comment:
         "It is a very good car with good millage coverage. It has a lot of space for luggage and I do not worry about airport jobs.",
     },
