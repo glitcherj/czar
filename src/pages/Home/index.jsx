@@ -173,7 +173,7 @@ export function Home() {
           </div>
         </div>
         <div className="fullWidthCTA">
-          <h3>Send your documents to reserve a car now</h3>
+          <h4>Send your documents to reserve a car now</h4>
           <a
             className="secondaryBtn whatsapp"
             href="https://wa.me/+4407701727142"
@@ -313,7 +313,7 @@ export function Home() {
           ))}
         </div>
         <div className="fullWidthCTA">
-          <h3>Still got questions?</h3>
+          <h4>Still got questions?</h4>
           <a className="secondaryBtn scrollDown" href="/FAQ">
             Visit our FAQ page
             <LogoBG />

@@ -20,11 +20,13 @@ import {
   TitleSection,
   VehicleCard,
   MiniTestimonialCard,
+  FAQCard,
 } from "../../components";
 
 //  ---Static Data---
 import { VehicleData } from "../../Static/VehicleData";
 import { VehiclePageTestimonials } from "../../Static/VehiclePageTestimonials";
+import { VehicleFAQ } from "../../Static/VehicleFAQ";
 
 export function VehiclePage() {
   const { id } = useParams();
@@ -172,8 +174,13 @@ export function VehiclePage() {
           ))}
         </div>
       </div>
-      <div className="vehicleFAQ notBanner">
+      <div className="faq vehicleFAQ notBanner">
         <h3>Frequently asked questions</h3>
+        <div className="faqList">
+          {VehicleFAQ[id].map((faq) => (
+            <FAQCard question={faq.question} answer={faq.answer} />
+          ))}
+        </div>
       </div>
       <div className="suggestedVehicles blog">
         <TitleSection title={"What our customers say about us"} />
