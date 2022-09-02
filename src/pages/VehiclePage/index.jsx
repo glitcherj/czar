@@ -15,12 +15,21 @@ import { ReactComponent as Info } from "../../assets/icons/info.svg";
 import { ReactComponent as Whatsapp } from "../../assets/socials/whatsapp.svg";
 import { ReactComponent as Contact } from "../../assets/contact.svg";
 
+//  ---Components---
+import {
+  TitleSection,
+  VehicleCard,
+  MiniTestimonialCard,
+} from "../../components";
+
 //  ---Static Data---
-import { VehicleData } from "./data";
+import { VehicleData } from "../../Static/VehicleData";
+import { VehiclePageTestimonials } from "../../Static/VehiclePageTestimonials";
 
 export function VehiclePage() {
   const { id } = useParams();
   const car = VehicleData.filter((car) => car.link === id)[0];
+  const testimonial = VehiclePageTestimonials[id];
 
   return (
     <div className="vehiclePage">
@@ -150,6 +159,24 @@ export function VehiclePage() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="vehicleTestimonial notBanner">
+        <h3>What did our customers say about this vehicle?</h3>
+        <div className="testimonialRow">
+          {testimonial.map((testimonialItem) => (
+            <MiniTestimonialCard
+              title={testimonialItem.title}
+              name={testimonialItem.name}
+              comment={testimonialItem.comment}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="vehicleFAQ notBanner">
+        <h3>Frequently asked questions</h3>
+      </div>
+      <div className="suggestedVehicles blog">
+        <TitleSection title={"What our customers say about us"} />
       </div>
     </div>
   );

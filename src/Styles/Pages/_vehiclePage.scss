@@ -138,6 +138,13 @@
       // margin-inline: 0.5em;
     }
   }
+
+  .vehicleTestimonial {
+    @include flexbox(column, null, null, 1.5em);
+    .testimonialRow {
+      @include flexbox(row, null, null, 1em);
+    }
+  }
 }
 
 .swiper {
