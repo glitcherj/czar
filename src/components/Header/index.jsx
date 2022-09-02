@@ -4,7 +4,7 @@ import { ReactComponent as Whatsapp } from "../../assets/socials/whatsapp.svg";
 import { ReactComponent as Contact } from "../../assets/contact.svg";
 
 // ---Static Data---
-import { HeaderData } from "./data";
+import { HeaderData } from "../../Static/HeaderTitles";
 
 export function Header() {
   const path = window.location.pathname;

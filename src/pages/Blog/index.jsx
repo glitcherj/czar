@@ -12,7 +12,7 @@ import "swiper/scss/pagination";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
 //  ---Static Data---
-import { BlogData } from "../../components/BlogCard/data";
+import { BlogData } from "../../Static/BlogCardData";
 
 import { TitleSection, BlogCard, BlogArticleSlideshow } from "../../components";
 

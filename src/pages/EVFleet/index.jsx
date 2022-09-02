@@ -11,7 +11,7 @@ import { ReactComponent as EVPollution } from "../../assets/icons/EVPollution.sv
 import { ReactComponent as Contact } from "../../assets/contact.svg";
 
 //  ---StaticData---
-import { CarData } from "../../components/VehicleCard/data";
+import { VehicleData } from "../../Static/VehicleData";
 
 //  ---Components---
 import { TitleSection, VehicleCard } from "../../components";
@@ -125,7 +125,7 @@ export function EVFleet() {
         />
 
         <div className="fleetRow">
-          {CarData.filter((car) => car.fuel === "Full-Electric")
+          {VehicleData.filter((car) => car.fuel === "Full-Electric")
             .sort((a, b) => b.price - a.price)
             .map((car) => (
               <VehicleCard

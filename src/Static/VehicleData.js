@@ -1,14 +1,14 @@
-import KiaNiro from "../../assets/images/carPictures/KiaNiro.png";
-import MercedesBenz from "../../assets/images/carPictures/MercedesBenz.png";
-import MG5 from "../../assets/images/carPictures/MG5.png";
-import NissanLeaf from "../../assets/images/carPictures/NissanLeaf.png";
-import ToyotaCorollaHybrid from "../../assets/images/carPictures/ToyotaCorollaHybrid.png";
-import ToyotaPriusPlugIn from "../../assets/images/carPictures/ToyotaPriusPlugIn.png";
-import ToyotaPriusPlusHybrid from "../../assets/images/carPictures/ToyotaPriusPlusHybrid.png";
-import VolkswagenID3 from "../../assets/images/carPictures/VolkswagenID3.png";
-import Tesla3 from "../../assets/images/carPictures/Tesla3.png";
+import KiaNiro from "../assets/images/carPictures/KiaNiro.png";
+import MercedesBenz from "../assets/images/carPictures/MercedesBenz.png";
+import MG5 from "../assets/images/carPictures/MG5.png";
+import NissanLeaf from "../assets/images/carPictures/NissanLeaf.png";
+import ToyotaCorollaHybrid from "../assets/images/carPictures/ToyotaCorollaHybrid.png";
+import ToyotaPriusPlugIn from "../assets/images/carPictures/ToyotaPriusPlugIn.png";
+import ToyotaPriusPlusHybrid from "../assets/images/carPictures/ToyotaPriusPlusHybrid.png";
+import VolkswagenID3 from "../assets/images/carPictures/VolkswagenID3.png";
+import Tesla3 from "../assets/images/carPictures/Tesla3.png";
 
-import { VehicleImage } from "./images";
+import { VehicleImage } from "./VehicleImages";
 
 export const VehicleData = [
   {

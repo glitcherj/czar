@@ -1,16 +1,16 @@
-import blogPost01 from "../../assets/images/blogPosts/blogPost01.png";
-import blogPost02 from "../../assets/images/blogPosts/blogPost02.png";
-import blogPost03 from "../../assets/images/blogPosts/blogPost03.png";
-import blogPost04 from "../../assets/images/blogPosts/blogPost04.png";
-import blogPost05 from "../../assets/images/blogPosts/blogPost05.png";
-import blogPost06 from "../../assets/images/blogPosts/blogPost06.png";
-import blogPost07 from "../../assets/images/blogPosts/blogPost07.png";
-import blogPost08 from "../../assets/images/blogPosts/blogPost08.png";
-import blogPost09 from "../../assets/images/blogPosts/blogPost09.png";
-import blogPost10 from "../../assets/images/blogPosts/blogPost10.png";
-import blogPost11 from "../../assets/images/blogPosts/blogPost11.png";
-import blogPost12 from "../../assets/images/blogPosts/blogPost12.png";
-import blogPost13 from "../../assets/images/blogPosts/blogPost13.png";
+import blogPost01 from "../assets/images/blogPosts/blogPost01.png";
+import blogPost02 from "../assets/images/blogPosts/blogPost02.png";
+import blogPost03 from "../assets/images/blogPosts/blogPost03.png";
+import blogPost04 from "../assets/images/blogPosts/blogPost04.png";
+import blogPost05 from "../assets/images/blogPosts/blogPost05.png";
+import blogPost06 from "../assets/images/blogPosts/blogPost06.png";
+import blogPost07 from "../assets/images/blogPosts/blogPost07.png";
+import blogPost08 from "../assets/images/blogPosts/blogPost08.png";
+import blogPost09 from "../assets/images/blogPosts/blogPost09.png";
+import blogPost10 from "../assets/images/blogPosts/blogPost10.png";
+import blogPost11 from "../assets/images/blogPosts/blogPost11.png";
+import blogPost12 from "../assets/images/blogPosts/blogPost12.png";
+import blogPost13 from "../assets/images/blogPosts/blogPost13.png";
 
 export const BlogData = [
   {

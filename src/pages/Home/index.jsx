@@ -34,10 +34,10 @@ import {
 } from "../../components";
 
 //  ---Static Data---
-import { CarData } from "../../components/VehicleCard/data";
-import { BlogData } from "../../components/BlogCard/data";
-import { TestimonialData } from "../../components/TestimonialCard/data";
-import { FAQData } from "../../components/FAQCard/data";
+import { VehicleData } from "../../Static/VehicleData";
+import { BlogData } from "../../Static/BlogCardData";
+import { TestimonialData } from "../../Static/HomepageTestimonials";
+import { FAQData } from "../../Static/FAQ";
 
 export function Home() {
   const benefitsRef = useRef(null);
@@ -218,7 +218,7 @@ export function Home() {
           </div>
         </div>
         <div className="fleetRow">
-          {CarData.sort(
+          {VehicleData.sort(
             (a, b) =>
               ({
                 price_high_to_low: b.price - a.price,
