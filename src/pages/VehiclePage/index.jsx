@@ -151,8 +151,13 @@ export function VehiclePage() {
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          // slidesPerView={1}
-          // loop
+          slidesPerView={1}
+          breakpoints={{
+            1024: {
+              slidesPerView: 2,
+            },
+          }}
+          spaceBetween={8}
           autoplay={{
             delay: 3000,
             pauseOnMouseEnter: true,
