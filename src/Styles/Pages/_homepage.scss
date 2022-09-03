@@ -12,8 +12,8 @@
 }
 
 .hero {
-  @include flexbox(row, space-between, center, clamp(2em, 4vw, 4em));
-  @media (max-width: $screen-xl) {
+  @include flexbox(row, space-between, center, clamp(2em, 4vw, 8em));
+  @media (max-width: $screen-lg) {
     flex-direction: column;
   }
 
@@ -48,7 +48,7 @@
   }
   .homeHeroImg {
     width: 40%;
-    @media (max-width: $screen-xl) {
+    @media (max-width: $screen-lg) {
       width: 100%;
     }
   }
@@ -178,6 +178,7 @@
     }
   }
 }
+
 .fullWidthCTA {
   width: 100%;
   @include flexbox(row, space-between, center, 1.5em);

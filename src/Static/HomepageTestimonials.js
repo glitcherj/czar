@@ -1,6 +1,6 @@
-import customerReviewImg1 from "../../assets/images/customerReview/customerReviewImg1.jpg";
-import customerReviewImg2 from "../../assets/images/customerReview/customerReviewImg2.jpg";
-import customerReviewImg3 from "../../assets/images/customerReview/customerReviewImg3.jpg";
+import customerReviewImg1 from "../assets/images/customerReview/customerReviewImg1.jpg";
+import customerReviewImg2 from "../assets/images/customerReview/customerReviewImg2.jpg";
+import customerReviewImg3 from "../assets/images/customerReview/customerReviewImg3.jpg";
 
 export const TestimonialData = [
   {

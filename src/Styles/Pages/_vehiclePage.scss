@@ -1,0 +1,184 @@
+.vehiclePage {
+  @include flexbox(column, null, stretch, clamp(3em, 2vw, 5em));
+  margin-block-start: 2.5em;
+
+  @media (max-width: $screen-lg) {
+    .blog {
+      padding-block: 2em;
+    }
+  }
+  .hero {
+    @media (max-width: $screen-lg) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .vehicleImgWrapper {
+      width: 60%;
+      overflow-x: hidden;
+      @media (max-width: $screen-lg) {
+        width: 100%;
+      }
+
+      img {
+        width: 130%;
+        height: 100%;
+        @media (max-width: $screen-lg) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .ourServices {
+    h3 {
+      margin-block-end: 0.875em;
+    }
+    .ourServicesList {
+      @include flexbox(column, null, null, 0.875em);
+      .ourServicesItem {
+        @include flexbox(row, null, center, 1em);
+      }
+    }
+  }
+
+  .vehicleDetailsRow {
+    @include flexbox(row, space-between, stretch, 1em);
+    @media (max-width: $screen-xl) {
+      flex-direction: column;
+    }
+
+    .vehicleDetails {
+      @include flexbox(column, null, null, 1em);
+      flex: 1;
+      padding: 2em;
+      background-color: $color-grey-10;
+
+      .pricingRow {
+        @include flexbox(row, null, null, 2em);
+
+        .pricingItem {
+          @include flexbox(column, null, null, null);
+          flex: 1;
+
+          .pricingTitle {
+            font-size: clamp(0.5em, 4vw, 1em);
+          }
+          .price {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: $color-primary-100;
+          }
+        }
+      }
+
+      .depositDescriptions {
+        @include flexbox(row, null, null, 1em);
+        span {
+          width: fit-content;
+          font-size: 0.875em;
+        }
+      }
+
+      .vehiclePageCTA {
+        @include flexbox(row, space-between, center, 1em);
+        white-space: nowrap;
+        .whatsapp {
+          width: 100%;
+        }
+
+        @media (max-width: $screen-md) {
+          flex-direction: column;
+          align-items: stretch;
+          .whatsapp {
+            width: auto;
+          }
+        }
+      }
+    }
+    .Fin {
+      border-radius: 0.5em;
+      background-color: $color-primary-10;
+    }
+
+    .overviewTitle {
+      position: relative;
+      font-weight: 700;
+      &::after {
+        content: "";
+        position: absolute;
+        width: -webkit-fill-available;
+        border: 1px solid $color-grey-40;
+        transform: translate(12px, 12px);
+      }
+    }
+    .overviewItemRow {
+      @include flexbox(row, null, null, null);
+      span {
+        flex: 1;
+        font-size: clamp(0.875em, 2vw, 1em);
+      }
+
+      @media (max-width: $screen-sm) {
+        justify-content: space-between;
+        white-space: nowrap;
+        span {
+          flex: 0;
+        }
+      }
+
+      .overviewItemDesc {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .vehiclePictures {
+    .swiper-wrapper {
+      height: clamp(11em, 40vw, 22em);
+      img {
+        height: 100%;
+        width: inherit;
+        object-fit: cover;
+        border-radius: 0.5em;
+
+        // @media (max-width: $screen-sm) {
+        //   width: 100%;
+        //   object-fit: contain;
+        // }
+      }
+    }
+    .swiper-slide {
+      text-align: center;
+      // width: auto !important;
+      // margin-inline: 0.5em;
+    }
+  }
+
+  .vehicleTestimonial {
+    @include flexbox(column, null, null, 1.5em);
+    .testimonialRow {
+      // @include flexbox(row, null, null, 1em);
+      // @media (max-width: $screen-xl) {
+      //   flex-wrap: wrap;
+      // }
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+      grid-gap: 1.5em;
+    }
+  }
+
+  .suggestedVehicles {
+    .vehicleCard {
+      background-image: linear-gradient(
+        to bottom,
+        transparent,
+        $color-primary-05
+      );
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
