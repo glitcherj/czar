@@ -140,27 +140,16 @@
         width: inherit;
         object-fit: contain;
         border-radius: 0.5em;
-
-        // @media (max-width: $screen-sm) {
-        //   width: 100%;
-        //   object-fit: contain;
-        // }
       }
     }
     .swiper-slide {
       text-align: center;
-      // width: auto !important;
-      // margin-inline: 0.5em;
     }
   }
 
   .vehicleTestimonial {
     @include flexbox(column, null, null, 1.5em);
     .testimonialRow {
-      // @include flexbox(row, null, null, 1em);
-      // @media (max-width: $screen-xl) {
-      //   flex-wrap: wrap;
-      // }
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
       grid-gap: 1.5em;
