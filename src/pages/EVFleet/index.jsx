@@ -11,7 +11,7 @@ import { ReactComponent as EVPollution } from "../../assets/icons/EVPollution.sv
 import { ReactComponent as Contact } from "../../assets/contact.svg";
 
 //  ---StaticData---
-import { CarData } from "../../components/VehicleCard/data";
+import { VehicleData } from "../../Static/VehicleData";
 
 //  ---Components---
 import { TitleSection, VehicleCard } from "../../components";
@@ -120,12 +120,12 @@ export function EVFleet() {
       </div>
       <div className="fleet notBanner">
         <TitleSection
-          title={"Our electric vehicles"}
+          title={"Our Full-Electric fleet"}
           // description={"Discover more about our Full-Electric fleet"}
         />
 
         <div className="fleetRow">
-          {CarData.filter((car) => car.fuel === "Full-Electric")
+          {VehicleData.filter((car) => car.fuel === "Full-Electric")
             .sort((a, b) => b.price - a.price)
             .map((car) => (
               <VehicleCard
@@ -143,14 +143,14 @@ export function EVFleet() {
       </div>
       <div className="CTA_row notBanner">
         <div className="fullWidthCTA">
-          <h3>Contact us for renting car</h3>
+          <h4>Contact us for renting car</h4>
           <a className="secondaryBtn scrollDown" href="/FAQ">
             <Contact id="Contact" />
             Contact us
           </a>
         </div>
         <div className="fullWidthCTA">
-          <h3>Got any questions?</h3>
+          <h4>Got any questions?</h4>
           <a className="secondaryBtn scrollDown" href="/FAQ">
             Visit our FAQ page
             <LogoBG />

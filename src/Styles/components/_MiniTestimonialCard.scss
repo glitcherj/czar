@@ -1,0 +1,41 @@
+.MiniTestimonialCard {
+  @include flexbox(column, null, null, clamp(0.75em, 2vw, 1em));
+  flex: 1;
+  padding: 1em;
+  $border-radius: 8px;
+  border-radius: 8px;
+  position: relative;
+
+  &:nth-child(odd) {
+    background-color: $color-primary-05;
+  }
+  &:nth-child(even) {
+    background-color: $color-grey-00;
+  }
+
+  $border: 2px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: $border-radius + 2px;
+    background: linear-gradient(to bottom, #176de400, #176de44d);
+  }
+  .titleSection {
+    @include flexbox(column, null, null, clamp(0em, 1vw, 0.5em));
+    padding: 0;
+  }
+
+  hr {
+    border: 1px solid $color-primary-20;
+  }
+
+  span {
+    font-size: 0.875em;
+  }
+}

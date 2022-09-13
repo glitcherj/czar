@@ -5,7 +5,7 @@ export function FAQCard({ question, answer }) {
     <div className="faqItem">
       <Arrow />
       <div className="faqItem__Content">
-        <h4>{question}</h4>
+        <h5>{question}</h5>
         <span className="faqItem__Answer">{answer}</span>
       </div>
     </div>

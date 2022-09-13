@@ -34,10 +34,10 @@ import {
 } from "../../components";
 
 //  ---Static Data---
-import { CarData } from "../../components/VehicleCard/data";
-import { BlogData } from "../../components/BlogCard/data";
-import { TestimonialData } from "../../components/TestimonialCard/data";
-import { FAQData } from "../../components/FAQCard/data";
+import { VehicleData } from "../../Static/VehicleData";
+import { BlogData } from "../../Static/BlogCardData";
+import { TestimonialData } from "../../Static/HomepageTestimonials";
+import { FAQData } from "../../Static/FAQ";
 
 export function Home() {
   const benefitsRef = useRef(null);
@@ -173,7 +173,7 @@ export function Home() {
           </div>
         </div>
         <div className="fullWidthCTA">
-          <h3>Send your documents to reserve a car now</h3>
+          <h4>Send your documents to reserve a car now</h4>
           <a
             className="secondaryBtn whatsapp"
             href="https://wa.me/+4407701727142"
@@ -218,7 +218,7 @@ export function Home() {
           </div>
         </div>
         <div className="fleetRow">
-          {CarData.sort(
+          {VehicleData.sort(
             (a, b) =>
               ({
                 price_high_to_low: b.price - a.price,
@@ -287,7 +287,6 @@ export function Home() {
             delay: 3000,
             pauseOnMouseEnter: true,
           }}
-          style={{ width: "100%" }}
         >
           {TestimonialData.map((testimonial) => (
             <SwiperSlide>
@@ -314,7 +313,7 @@ export function Home() {
           ))}
         </div>
         <div className="fullWidthCTA">
-          <h3>Still got questions?</h3>
+          <h4>Still got questions?</h4>
           <a className="secondaryBtn scrollDown" href="/FAQ">
             Visit our FAQ page
             <LogoBG />
