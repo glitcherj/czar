@@ -98,7 +98,7 @@
   .ourBenefitsRow {
     @include flexbox(row, space-between, flex-start, 1.5em);
     @media (max-width: $screen-md) {
-      flex-wrap: wrap;
+      flex-direction: column;
     }
 
     .benefit {
@@ -191,6 +191,10 @@
 .fleet {
   @include flexbox(column, center, stretch, 1.5em);
 
+  .vehicleCard {
+    margin: 4px;
+  }
+
   .sortMode {
     @include flexbox(row, flex-start, center, 1em);
     width: 100%;
@@ -224,6 +228,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
     grid-gap: 1.5em;
+  }
+
+  .swiper {
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 25%;
+    }
   }
 }
 

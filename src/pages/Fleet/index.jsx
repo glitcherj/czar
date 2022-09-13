@@ -1,14 +1,10 @@
 import React from "react";
-import { useRef } from "react";
+import { useState, useRef } from "react";
 
 // ---Assets---
-import EVFleetHero from "../../assets/images/evFleetHero.png";
+import fleetHero from "../../assets/images/fleetHero.png";
 import trustpilotMini from "../../assets/images/trustpilotMini.png";
 import { ReactComponent as LogoBG } from "../../assets/LogoBG.svg";
-import { ReactComponent as EVCharge } from "../../assets/icons/EVCharge.svg";
-import { ReactComponent as EVEfficiency } from "../../assets/icons/EVEfficiency.svg";
-import { ReactComponent as EVFuel } from "../../assets/icons/EVFuel.svg";
-import { ReactComponent as EVPollution } from "../../assets/icons/EVPollution.svg";
 import { ReactComponent as Contact } from "../../assets/contact.svg";
 
 //  ---StaticData---
@@ -16,10 +12,11 @@ import { VehicleData } from "../../Static/VehicleData";
 import { BlogData } from "../../Static/BlogCardData";
 
 //  ---Components---
-import { TitleSection, VehicleCard, BlogCard } from "../../components";
+import { VehicleCard, BlogCard } from "../../components";
 
 export function Fleet() {
   const evFleet = useRef(null);
+  const [SortMode, setSortMode] = useState("fuel");
 
   return (
     <div className="Home evFleet Fleet">
@@ -28,11 +25,8 @@ export function Fleet() {
           <div className="heroText">
             <h1>Our Fleet</h1>
             <span>
-              The future of the taxi industry is electric, why not try it now?
-            </span>
-            <span>
-              We are here to help you. Choose a car from our diverse fleet of
-              vehicles which suits you the most.
+              Choose a car from our broad range of vehicles which suits you the
+              most. Contact us anytime for more information.
             </span>
           </div>
           <img
@@ -54,80 +48,60 @@ export function Fleet() {
           </button>
         </div>
         <img
-          src={EVFleetHero}
+          src={fleetHero}
           className="homeHeroImg"
-          alt="Happy Czar PCO customer"
+          alt="Electric vehicles fleet page hero"
         />
       </div>
-      <div className="blog ourBenefits whyEV notBanner" ref={evFleet}>
-        <TitleSection
-          title={"Why electric vehicles are better"}
-          description={"Discover more about our Full-Electric fleet"}
-        />
-        <div className="ourBenefitsRow">
-          <div className="benefit">
-            <EVCharge />
-            <div className="benefitText">
-              <span className="benefitTitle">
-                No ULEZ and Congestion Charge fee.
-              </span>
-              <span className="benefitDescription">
-                One of the biggest bonuses of renting an electric vehicle (EV)
-                is that you are not required to pay the Congestion Charge and
-                ULEZ fees. Drivers can save up to £150 per week from Congestion
-                Charges and ULEZ fees.
-              </span>
-            </div>
-          </div>
-          <div className="benefit">
-            <EVFuel />
-            <div className="benefitText">
-              <span className="benefitTitle">Fuel Costs</span>
-              <span className="benefitDescription">
-                Amid current high fuel prices, it is more reasonable to switch
-                to full electric vehicles. Most utility providers offer
-                residential electric rates that cost only a few cents per hour.
-                Moreover, on average, it will cost drivers approximately £12-£15
-                to fully charge their electric vehicle.
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="ourBenefitsRow">
-          <div className="benefit">
-            <EVPollution />
-            <div className="benefitText">
-              <span className="benefitTitle">Noise Pollution</span>
-              <span className="benefitDescription">
-                One of the major benefits of electric vehicles is the
-                contribution that they can make towards improving air quality in
-                towns and cities and protecting the environment.
-              </span>
-            </div>
-          </div>
-          <div className="benefit">
-            <EVEfficiency />
-            <div className="benefitText">
-              <span className="benefitTitle">Vehicle Efficiency</span>
-              <span className="benefitDescription">
-                BEVs are, on average, over twice as efficient as gas vehicles.
-                While gas vehicles are only able to convert about 12 - 30% of
-                the energy stored in gasoline into driving power, BEVs are able
-                to convert over 77% of the electrical energy from the grid to
-                power the wheels.
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="fleet notBanner">
-        <TitleSection
-          title={"Our Full-Electric fleet"}
-          // description={"Discover more about our Full-Electric fleet"}
-        />
 
+      <div className="fleet notBanner">
+        <div className="sortMode">
+          <span className="sortMode__title">Sort by:</span>
+          <div className="sortMode__items">
+            <button
+              className={SortMode === "fuel" ? "primaryBtn" : "ghostBtn"}
+              onClick={() => setSortMode("fuel")}
+            >
+              Fuel type
+            </button>
+            <button
+              className={
+                SortMode === "price_high_to_low" ? "primaryBtn" : "ghostBtn"
+              }
+              onClick={() => setSortMode("price_high_to_low")}
+            >
+              Price: High to low
+            </button>
+            <button
+              className={
+                SortMode === "price_low_to_high" ? "primaryBtn" : "ghostBtn"
+              }
+              onClick={() => setSortMode("price_low_to_high")}
+            >
+              Price: Low to high
+            </button>
+          </div>
+        </div>
         <div className="fleetRow">
-          {VehicleData.sort((a, b) => b.price - a.price).map((car) => (
+          {VehicleData.sort(
+            (a, b) =>
+              ({
+                price_high_to_low: b.price - a.price,
+                price_low_to_high: a.price - b.price,
+                fuel:
+                  a.fuel === "Full-Electric" && b.fuel === "Full-Electric"
+                    ? a.price < b.price
+                      ? 1
+                      : -1
+                    : a.fuel === "Full-Electric" && b.fuel !== "Full-Electric"
+                    ? -1
+                    : a.fuel !== "Full-Electric" && b.fuel === "Full-Electric"
+                    ? 1
+                    : a.fuel.toLowerCase() < b.fuel.toLowerCase()
+                    ? -1
+                    : 1,
+              }[SortMode])
+          ).map((car) => (
             <VehicleCard
               img={car.img}
               name={car.name}

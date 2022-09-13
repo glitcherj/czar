@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 //  ---Swiperjs---
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,7 +41,6 @@ import { FAQData } from "../../Static/FAQ";
 
 export function Home() {
   const benefitsRef = useRef(null);
-  const [SortMode, setSortMode] = useState("fuel");
   return (
     <div className="Home">
       <div className="hero notBanner">
@@ -173,7 +172,7 @@ export function Home() {
           </div>
         </div>
         <div className="fullWidthCTA">
-          <h4>Send your documents to reserve a car now</h4>
+          <h4>Send us your documents to reserve a car now</h4>
           <a
             className="secondaryBtn whatsapp"
             href="https://wa.me/+4407701727142"
@@ -185,69 +184,51 @@ export function Home() {
       </div>
       <div className="fleet notBanner">
         <TitleSection
-          title={"Our fleet"}
-          description={
-            "Choose a car from our broad range of vehicles which suits you the most. Contact us anytime for more information."
-          }
+          title={"Our featured PCO vehicles"}
+          // description={""}
         />
-        <div className="sortMode">
-          <span className="sortMode__title">Sort by:</span>
-          <div className="sortMode__items">
-            <button
-              className={SortMode === "fuel" ? "primaryBtn" : "ghostBtn"}
-              onClick={() => setSortMode("fuel")}
-            >
-              Fuel type
-            </button>
-            <button
-              className={
-                SortMode === "price_high_to_low" ? "primaryBtn" : "ghostBtn"
-              }
-              onClick={() => setSortMode("price_high_to_low")}
-            >
-              Price: High to low
-            </button>
-            <button
-              className={
-                SortMode === "price_low_to_high" ? "primaryBtn" : "ghostBtn"
-              }
-              onClick={() => setSortMode("price_low_to_high")}
-            >
-              Price: Low to high
-            </button>
-          </div>
-        </div>
-        <div className="fleetRow">
-          {VehicleData.sort(
-            (a, b) =>
-              ({
-                price_high_to_low: b.price - a.price,
-                price_low_to_high: a.price - b.price,
-                fuel:
-                  a.fuel === "Full-Electric" && b.fuel === "Full-Electric"
-                    ? a.price < b.price
-                      ? 1
-                      : -1
-                    : a.fuel === "Full-Electric" && b.fuel !== "Full-Electric"
-                    ? -1
-                    : a.fuel !== "Full-Electric" && b.fuel === "Full-Electric"
-                    ? 1
-                    : a.fuel.toLowerCase() < b.fuel.toLowerCase()
-                    ? -1
-                    : 1,
-              }[SortMode])
-          ).map((car) => (
-            <VehicleCard
-              img={car.img}
-              name={car.name}
-              fuel={car.fuel}
-              seats={car.seats}
-              transmission={car.transmission}
-              year={car.year}
-              price={car.price}
-              link={car.link}
-            />
-          ))}
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          spaceBetween={16}
+          autoplay={{
+            delay: 3000,
+            pauseOnMouseEnter: true,
+          }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1200: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {VehicleData.filter((car) => car.fuel === "Full-Electric")
+            .sort((a, b) => b.price - a.price)
+            .map((car) => (
+              <SwiperSlide>
+                <VehicleCard
+                  img={car.img}
+                  name={car.name}
+                  fuel={car.fuel}
+                  seats={car.seats}
+                  transmission={car.transmission}
+                  year={car.year}
+                  price={car.price}
+                  link={car.link}
+                />
+              </SwiperSlide>
+            ))}
+        </Swiper>
+        <div className="fullWidthCTA">
+          <h4>Visit our vast variety of PCO-ready vehicles.</h4>
+          <a className="primaryBtn scrollDown" href="/fleet">
+            Go to fleet page
+            <LogoBG />
+          </a>
         </div>
       </div>
       <section className="evBanner">
