@@ -8,19 +8,28 @@
 }
 
 .CTA_row {
-  @include flexbox(row, stretch, stretch, 8%);
-  padding-block: 2em;
+  @include flexbox(row, space-between, stretch, 3em);
+  padding-block: 3em;
   background-color: $color-primary-15;
+  .divider {
+    background-color: $color-primary-60;
+    width: 4px;
+  }
+
+  @media (max-width: $screen-lg) {
+    flex-direction: column;
+    gap: 2em;
+    .divider {
+      width: 0;
+      height: 0;
+    }
+  }
 }
 
 .scrollDown {
   @include flexbox(row, flex-start, null, 1em);
   font-weight: 600;
   max-width: 30em;
-  // svg {
-  //   height: 14px;
-  //   width: 14px;
-  // }
   :not(#Contact) {
     height: 14px;
     width: 14px;

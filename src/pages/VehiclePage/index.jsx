@@ -75,7 +75,7 @@ export function VehiclePage() {
           </div>
         </div>
         <div className="vehicleImgWrapper">
-          <img src={car.img} alt="Happy Czar PCO customer" />
+          <img src={car.img} alt={car.name} />
         </div>
       </div>
       <div className="vehicleDetailsRow notBanner">

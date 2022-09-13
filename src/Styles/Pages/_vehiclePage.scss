@@ -13,8 +13,8 @@
       align-items: flex-start;
     }
     .vehicleImgWrapper {
-      width: 60%;
-      overflow-x: hidden;
+      height: 32em;
+      overflow: hidden;
       @media (max-width: $screen-lg) {
         width: 100%;
       }
@@ -22,6 +22,7 @@
       img {
         width: 130%;
         height: 100%;
+        object-fit: cover;
         @media (max-width: $screen-lg) {
           width: 100%;
         }
@@ -52,6 +53,7 @@
       flex: 1;
       padding: 2em;
       background-color: $color-grey-10;
+      border-radius: 0.5em;
 
       .pricingRow {
         @include flexbox(row, null, null, 2em);
@@ -96,7 +98,6 @@
       }
     }
     .Fin {
-      border-radius: 0.5em;
       background-color: $color-primary-10;
     }
 

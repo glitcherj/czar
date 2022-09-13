@@ -67,7 +67,7 @@ export function Footer() {
               <span className="footerColumnsContentTitle">Phone:</span>
               <a
                 className="footerColumnsContentDescription"
-                href="tel:02089009574"
+                href="tel:07701727142"
               >
                 077-0172-7142
               </a>
@@ -84,7 +84,7 @@ export function Footer() {
             <div className="footerColumnsContentRow">
               <span className="footerColumnsContentTitle">Opening hours:</span>
               <span className="footerColumnsContentDescription">
-                Monday to Friday From 9:00 to 17:00
+                Monday to Friday - From 9:00 to 17:00
               </span>
             </div>
           </div>
