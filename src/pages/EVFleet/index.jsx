@@ -51,11 +51,7 @@ export function EVFleet() {
             <LogoBG />
           </button>
         </div>
-        <img
-          src={EVFleetHero}
-          className="homeHeroImg"
-          alt="Happy Czar PCO customer"
-        />
+        <img src={EVFleetHero} className="homeHeroImg" alt="Fleet page hero" />
       </div>
       <div className="blog ourBenefits whyEV notBanner" ref={evFleet}>
         <TitleSection
