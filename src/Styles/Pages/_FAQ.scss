@@ -1,0 +1,69 @@
+.faqPage {
+  @include flexbox(column, null, stretch, clamp(3em, 2vw, 5em));
+  padding-block: 4em;
+
+  h1 {
+    align-self: center;
+  }
+
+  .titleSection {
+    h2 {
+      font-size: clamp(1.5em, 4vw, 2em);
+    }
+
+    .titleSectionMarker {
+      width: 0.5em;
+      height: clamp(1.4em, 4vw, 2em);
+      background-color: $color-primary-80;
+      border-radius: 3px 6px 6px 3px;
+    }
+  }
+
+  form {
+    position: relative;
+    display: inherit;
+    width: 100%;
+    max-width: 32em;
+    align-self: center;
+
+    input {
+      border-radius: 0.5em;
+      border: 1px solid $color-grey-40;
+      background-color: #fafafa80;
+      color: $color-grey-100;
+      padding: 1.15em;
+
+      &::placeholder {
+        color: $color-grey-100;
+        opacity: 0.8;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    #input {
+      width: 100%;
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      padding: 1em;
+      cursor: pointer;
+      background-color: $color-primary-100;
+      border: 1px solid $color-primary-100;
+      color: $color-primary-10;
+      border-radius: 0 0.5em 0.5em 0;
+      border-left: 0;
+      margin: 0;
+      line-height: 0;
+      min-width: 8vw;
+    }
+  }
+
+  .sortMode {
+    justify-content: center !important;
+  }
+}
