@@ -35,5 +35,12 @@
     a {
       color: $color-primary-80;
     }
+
+    :first-child {
+      margin-block-start: 0;
+    }
+    :last-child {
+      margin-block-end: 0;
+    }
   }
 }
