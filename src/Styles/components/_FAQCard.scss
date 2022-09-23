@@ -2,12 +2,39 @@
   @include flexbox(row, null, null, 1em);
   padding: 1em;
   border: 1px solid $color-primary-20;
+  background-color: $color-grey-00;
+
+  @media (max-width: $screen-sm) {
+    svg {
+      display: none;
+    }
+  }
 
   .faqItem__Content {
     @include flexbox(column, null, null, 0.5em);
-    width: fit-content;
+    width: 100%;
   }
   .faqItem__Answer {
     font-size: 0.875em;
+
+    p {
+      margin-block: 8px;
+    }
+    ol,
+    ul {
+      padding-inline-start: 2em;
+      li {
+        padding: 0.25em 0.5em;
+      }
+    }
+
+    i {
+      opacity: 0.8;
+    }
+
+    a {
+      color: $color-primary-80;
+      white-space: wrap;
+    }
   }
 }
