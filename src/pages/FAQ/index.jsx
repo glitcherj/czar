@@ -18,7 +18,7 @@ function omit(obj, ...props) {
 }
 
 export function FAQ() {
-  const [filterState, setFilterState] = useState(FAQData);
+  const [filterState, setFilterState] = useState(omit(FAQData, "HomepageFAQ"));
 
   const handleBtn = (e) => {
     const word = e.target.textContent;
