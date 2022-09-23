@@ -44,7 +44,7 @@ export function EVFleet() {
             onClick={() =>
               evFleet.current.scrollIntoView({
                 behavior: "smooth",
-                block: "center",
+                block: "nearest",
               })
             }
           >

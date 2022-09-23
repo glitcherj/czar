@@ -15,7 +15,7 @@ import { BlogData } from "../../Static/BlogCardData";
 import { VehicleCard, BlogCard } from "../../components";
 
 export function Fleet() {
-  const evFleet = useRef(null);
+  const Fleet = useRef(null);
   const [SortMode, setSortMode] = useState("fuel");
 
   return (
@@ -37,9 +37,9 @@ export function Fleet() {
           <button
             className="secondaryBtn scrollDown"
             onClick={() =>
-              evFleet.current.scrollIntoView({
+              Fleet.current.scrollIntoView({
                 behavior: "smooth",
-                block: "center",
+                block: "start",
               })
             }
           >
@@ -54,7 +54,7 @@ export function Fleet() {
         />
       </div>
 
-      <div className="fleet notBanner">
+      <div className="fleet notBanner" ref={Fleet}>
         <div className="sortMode">
           <span className="sortMode__title">Sort by:</span>
           <div className="sortMode__items">
