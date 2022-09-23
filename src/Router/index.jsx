@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Header, Footer } from "../components";
+import { Header, Footer, ScrollToTop } from "../components";
 
 import {
   AboutUs,
@@ -15,6 +15,7 @@ import {
 export function MainRouter() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="" element={<Home />} />
