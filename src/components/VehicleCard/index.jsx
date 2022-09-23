@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+// ---Assets---
 import { ReactComponent as Fuel } from "../../assets/icons/Fuel.svg";
 import { ReactComponent as Seats } from "../../assets/icons/Seats.svg";
 import { ReactComponent as Transmission } from "../../assets/icons/Transmission.svg";
@@ -15,7 +18,7 @@ export function VehicleCard({
   link,
 }) {
   return (
-    <a href={`/fleet/${link}`} className="vehicleCard">
+    <Link className="vehicleCard" to={`/fleet/${link}`}>
       <img src={img} alt={name} />
       <div className="vehicleCardContents">
         <h3>{name}</h3>
@@ -55,6 +58,6 @@ export function VehicleCard({
           </div>
         ) : null}
       </div>
-    </a>
+    </Link>
   );
 }

@@ -141,10 +141,10 @@ export function EVFleet() {
       <div className="CTA_row notBanner">
         <div className="fullWidthCTA">
           <h4>Contact us for renting car</h4>
-          <a className="secondaryBtn scrollDown" href="/FAQ">
+          <Link className="secondaryBtn scrollDown" to="/FAQ">
             <Contact id="Contact" />
             Contact us
-          </a>
+          </Link>
         </div>
         <div className="divider"></div>
         <div className="fullWidthCTA">

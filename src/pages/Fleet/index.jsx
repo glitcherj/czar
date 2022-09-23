@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 // ---Assets---
 import fleetHero from "../../assets/images/fleetHero.png";
@@ -124,10 +125,10 @@ export function Fleet() {
             best Electric Vehicles for the Ride-Hailing market and supporting
             drivers every step of the way.
           </span>
-          <a className="secondaryBtn Link" href="/ev-fleet">
+          <Link className="secondaryBtn Link" to="/ev-fleet">
             <span>Visit our EV fleet</span>
             <LogoBG />
-          </a>
+          </Link>
         </div>
         <div className="evBanner__cards">
           {BlogData.slice(0, 2).map((blog) => (
@@ -144,7 +145,7 @@ export function Fleet() {
       <div className="CTA_row notBanner">
         <div className="fullWidthCTA">
           <h4>Contact us for renting car</h4>
-          <a className="secondaryBtn scrollDown" href="/FAQ">
+          <a className="secondaryBtn scrollDown" href="tel:07701727142">
             <Contact id="Contact" />
             Contact us
           </a>
@@ -152,10 +153,10 @@ export function Fleet() {
         <div className="divider"></div>
         <div className="fullWidthCTA">
           <h4>Got any questions?</h4>
-          <a className="secondaryBtn scrollDown" href="/FAQ">
+          <Link className="secondaryBtn scrollDown" to="/FAQ">
             Visit our FAQ page
             <LogoBG />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

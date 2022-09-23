@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 // ---Assets---
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { ReactComponent as Whatsapp } from "../../assets/socials/whatsapp.svg";
@@ -12,11 +13,12 @@ export function Header() {
 
   return (
     <header
-      className={
-        window.location.pathname !== "/blog"
-          ? "headerWhite"
-          : "headerTransparent"
-      }
+      className="headerWhite"
+      // className={
+      //   window.location.pathname !== "/blog"
+      //     ? "headerWhite"
+      //     : "headerTransparent"
+      // }
     >
       <head>
         <title>
@@ -29,44 +31,25 @@ export function Header() {
           content={HeaderData[path] ? HeaderData[path][1].description : null}
         />
       </head>
-      <a href="/" className="appLogo">
+      <Link to="/" className="appLogo">
         <Logo />
-      </a>
+      </Link>
       <div className="menu">
-        <a className="menuItems" href="/" id={path === "/" ? "active" : ""}>
+        <Link to="/" className="menuItems">
           Home
-        </a>
-        <a
-          className="menuItems"
-          href="/fleet"
-          id={path === "/fleet" ? "active" : ""}
-        >
+        </Link>
+        <Link to="/fleet" className="menuItems">
           Fleet
-        </a>
-        <a
-          className="menuItems"
-          href="/ev-fleet"
-          id={path === "/ev-fleet" ? "active" : ""}
-        >
+        </Link>
+        <Link to="/ev-fleet" className="menuItems">
           EV Fleet
-        </a>
-        <a
-          className="menuItems"
-          href="/blog"
-          id={path === "/blog" ? "active" : ""}
-        >
+        </Link>
+        <Link to="/blog" className="menuItems">
           Blog & news
-        </a>
-        <a
-          className="menuItems"
-          href="/faq"
-          id={path === "/faq" ? "active" : ""}
-        >
+        </Link>
+        <Link to="/faq" className="menuItems">
           FAQ
-        </a>
-        {/* <a className="menuItems" href="/about-us">
-          About us
-        </a> */}
+        </Link>
       </div>
       <div className="links">
         <a
@@ -77,15 +60,7 @@ export function Header() {
           <Whatsapp />
           <span>Message us</span>
         </a>
-        <a
-          className={
-            window.location.pathname !== "/blog"
-              ? "primaryBtn btn"
-              : "secondaryBtn btn"
-          }
-          id="contact"
-          href="tel:02089009574"
-        >
+        <a className="primaryBtn btn" id="contact" href="tel:07701727142">
           <Contact />
           <span>Contact us</span>
         </a>

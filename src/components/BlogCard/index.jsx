@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 export function BlogCard({ img, date, title, description, link, tags }) {
   return (
-    <a className="blogCard" href={link}>
+    <Link className="blogCard" to={link}>
       <div className="imgWrapper">
         <img src={img} alt={title} />
       </div>
@@ -19,6 +20,6 @@ export function BlogCard({ img, date, title, description, link, tags }) {
           Read this article {">"}
         </span>
       </div>
-    </a>
+    </Link>
   );
 }
