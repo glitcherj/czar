@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 //  ---Assets---
@@ -11,19 +10,15 @@ import { FAQCard, TitleSection } from "../../components";
 import { FAQData } from "../../Static/FAQ";
 
 export function FAQ() {
-  const navigate = useNavigate();
-  const [SortMode, setSortMode] = useState("All");
   delete FAQData.HomepageFAQ;
+  const [filterState, setFilterState] = useState(FAQData);
 
-  const [query, setQuery] = useState("");
-  const onSearch = (value) => console.log(value);
-  const [state, setState] = useState(FAQData);
   const handleBtn = (e) => {
     const word = e.target.textContent;
 
-    if (word === "All") setState(FAQData);
+    if (word === "All") setFilterState(FAQData);
     else
-      setState(
+      setFilterState(
         Object.keys(FAQData)
           .filter((key) => key.includes(e.target.textContent))
           .reduce((cur, key) => {
@@ -33,24 +28,25 @@ export function FAQ() {
   };
 
   return (
-    <div className="faqPage">
+    <div className="faqPage Home">
       <div className="notBanner fleet">
         <h1>Frequently asked questions</h1>
         <span style={{ alignSelf: "center" }}>How can we help you?</span>
         <form
           onSubmit={(e) => {
-            navigate(`/faq?${document.getElementById("input").value}`);
+            window.find(document.getElementById("input").value);
           }}
+          // onSubmit={(e) =>{window.find(document.getElementById("input").value}}
         >
           <input
-            type={"text"}
+            type="text"
             placeholder="Ask your question here..."
             id="input"
           />
           <button
             type="button"
             onClick={(e) => {
-              navigate(`/faq?${document.getElementById("input").value}`);
+              window.find(document.getElementById("input").value);
             }}
           >
             <Search />
@@ -61,14 +57,19 @@ export function FAQ() {
           <span className="sortMode__title">Filter by topic:</span>
           <div className="sortMode__items">
             <button
-              className={SortMode === "All" ? "primaryBtn" : "ghostBtn"}
+              className={
+                Object.keys(filterState).length > 2 ? "primaryBtn" : "ghostBtn"
+              }
               onClick={handleBtn}
             >
               All
             </button>
             <button
               className={
-                SortMode === "Registration" ? "primaryBtn" : "ghostBtn"
+                Object.keys(filterState).length < 2 &&
+                Object.keys(filterState)[0] === "Registration"
+                  ? "primaryBtn"
+                  : "ghostBtn"
               }
               onClick={handleBtn}
             >
@@ -76,27 +77,39 @@ export function FAQ() {
             </button>
             <button
               className={
-                SortMode === "Rental_terms" ? "primaryBtn" : "ghostBtn"
+                Object.keys(filterState)[0] === "Rental terms"
+                  ? "primaryBtn"
+                  : "ghostBtn"
               }
               onClick={handleBtn}
             >
               Rental terms
             </button>
             <button
-              className={SortMode === "Vehicles" ? "primaryBtn" : "ghostBtn"}
+              className={
+                Object.keys(filterState)[0] === "Vehicles"
+                  ? "primaryBtn"
+                  : "ghostBtn"
+              }
               onClick={handleBtn}
             >
               Vehicles
             </button>
             <button
-              className={SortMode === "Payments" ? "primaryBtn" : "ghostBtn"}
+              className={
+                Object.keys(filterState)[0] === "Payments"
+                  ? "primaryBtn"
+                  : "ghostBtn"
+              }
               onClick={handleBtn}
             >
               Payments
             </button>
             <button
               className={
-                SortMode === "Working_With_Uber" ? "primaryBtn" : "ghostBtn"
+                Object.keys(filterState)[0] === "Working with Uber"
+                  ? "primaryBtn"
+                  : "ghostBtn"
               }
               onClick={handleBtn}
             >
@@ -106,7 +119,7 @@ export function FAQ() {
         </div>
       </div>
       <div className="faqItems notBanner faq">
-        {Object.entries(state).map((item) => (
+        {Object.entries(filterState).map((item) => (
           <div>
             <TitleSection title={item[0]} />
             <div className="faqList">
@@ -116,17 +129,6 @@ export function FAQ() {
             </div>
           </div>
         ))}
-
-        {/* {Object.entries(FAQData).map((item) => (
-          <div>
-            <TitleSection title={item[0]} />
-            <div className="faqList">
-              {item[1].map((faqItem) => (
-                <FAQCard question={faqItem.question} answer={faqItem.answer} />
-              ))}
-            </div>
-          </div>
-        ))} */}
       </div>
     </div>
   );

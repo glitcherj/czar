@@ -165,25 +165,25 @@ export const FAQData = {
               4404.
             </li>
             <li>
-              Alternatively, you can visit your nearest Halfords Autocentre
-              Branch. Please note that it must be an autocentre, not just a
-              regular Halfords!
+              Alternatively, you can visit your nearest Autocentre Branch.
+              Please note that it must be an Autocentre, not just a regular
+              repair shop!
             </li>
           </ol>
           <p>
             <i>
               We recommend that you have the car serviced between Monday -
-              Friday. If you visit a Halfords Autocentres over the weekend, it
-              can take a few days to complete.
+              Friday. If you visit a Autocentres over the weekend, it can take a
+              few days to complete.
             </i>
           </p>
         </>
       ),
     },
     {
-      question: [
+      question:
         "I've picked up my car and it has more scuffs/dents than expected.",
-      ],
+
       answer: (
         <>
           If you have picked up the vehicle and immediately notice some minor
@@ -218,7 +218,7 @@ export const FAQData = {
         <>
           <p>
             Please arrange with whoever is on-site at the address to have your
-            car cleaned. They will provide you an Czar Car Cleaning voucher :)
+            car cleaned. They will provide you an Czar Car Cleaning voucher 👍
           </p>
           <p>
             If the car is in inadequate condition due to an unexpected scuff or
@@ -355,8 +355,9 @@ export const FAQData = {
             The Fleet Provider pay the tickets as soon as they receive them, in
             order to avoid going over the discounted cost of the ticket.
             Therefore, we cannot transfer liability onto your name. If you want
-            to appeal, please email ask@brunel.com , who will issue a letter
-            granting you permission to challenge the ticket.
+            to appeal, please email{" "}
+            <a href="mailto:ask@brunel.com">ask@brunel.com</a> , who will issue
+            a letter granting you permission to challenge the ticket.
           </p>
 
           <p>
@@ -413,7 +414,7 @@ export const FAQData = {
       answer: (
         <>
           <p>
-            ,Uber, technically speaking, can take up to 24 hours to approve your
+            Uber, technically speaking, can take up to 24 hours to approve your
             documents. Having said this, in our experience, it takes customers
             between 0.5 - 5 hours. Czar PCO can't compensate for this as it is
             not something we can control.
