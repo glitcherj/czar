@@ -105,6 +105,11 @@ strong {
 .blogPosts {
   @include flexbox(column, null, stretch, 1.5em);
   padding: 3em 8%;
+  background-image: radial-gradient(
+    hsl(0deg 0% 83% / 40%) 0.8px,
+    $color-grey-00 0px
+  );
+  background-size: 16px 16px;
 
   .blogItems {
     display: grid;
