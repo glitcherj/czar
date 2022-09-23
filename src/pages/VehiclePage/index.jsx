@@ -37,7 +37,7 @@ export function VehiclePage() {
   const testimonial = VehiclePageTestimonials[id];
 
   return (
-    <div className="vehiclePage">
+    <div className="vehiclePage Home">
       <div className="hero notBanner">
         <div className="heroTextArea">
           <div className="heroText">

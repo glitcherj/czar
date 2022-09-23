@@ -1,6 +1,6 @@
 .vehiclePage {
   @include flexbox(column, null, stretch, clamp(3em, 2vw, 5em));
-  margin-block-start: 2.5em;
+  padding-block-start: 2.5em;
 
   @media (max-width: $screen-lg) {
     .blog {
@@ -17,14 +17,17 @@
       overflow: hidden;
       @media (max-width: $screen-lg) {
         width: 100%;
+        height: auto;
       }
 
       img {
         width: 130%;
         height: 100%;
         object-fit: cover;
+        object-position: left;
         @media (max-width: $screen-lg) {
           width: 100%;
+          height: auto;
         }
       }
     }
