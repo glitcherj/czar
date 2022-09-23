@@ -55,7 +55,6 @@ export function Fleet() {
       </div>
 
       <div className="fleet notBanner">
-        {console.log(SortMode)}
         <div className="sortMode">
           <span className="sortMode__title">Sort by:</span>
           <div className="sortMode__items">
