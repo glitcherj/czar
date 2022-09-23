@@ -9,6 +9,7 @@ import { HeaderData } from "../../Static/HeaderTitles";
 export function Header() {
   const path = window.location.pathname;
   const headerTitle = " | Czar PCO";
+
   return (
     <header
       className={
@@ -32,24 +33,40 @@ export function Header() {
         <Logo />
       </a>
       <div className="menu">
-        <a className="menuItems" href="/">
+        <a className="menuItems" href="/" id={path === "/" ? "active" : ""}>
           Home
         </a>
-        <a className="menuItems" href="/fleet">
+        <a
+          className="menuItems"
+          href="/fleet"
+          id={path === "/fleet" ? "active" : ""}
+        >
           Fleet
         </a>
-        <a className="menuItems" href="/ev-fleet">
+        <a
+          className="menuItems"
+          href="/ev-fleet"
+          id={path === "/ev-fleet" ? "active" : ""}
+        >
           EV Fleet
         </a>
-        <a className="menuItems" href="/blog">
+        <a
+          className="menuItems"
+          href="/blog"
+          id={path === "/blog" ? "active" : ""}
+        >
           Blog & news
         </a>
-        <a className="menuItems" href="/faq">
+        <a
+          className="menuItems"
+          href="/faq"
+          id={path === "/faq" ? "active" : ""}
+        >
           FAQ
         </a>
-        <a className="menuItems" href="/about-us">
+        {/* <a className="menuItems" href="/about-us">
           About us
-        </a>
+        </a> */}
       </div>
       <div className="links">
         <a
