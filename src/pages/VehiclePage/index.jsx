@@ -108,7 +108,7 @@ export function VehiclePage() {
               <Whatsapp />
               Send us your documents
             </a>
-            <a className="secondaryBtn btn" id="contact" href="tel:02089009574">
+            <a className="secondaryBtn btn" id="contact" href="tel:07701727142">
               <Contact />
               <span>Contact us</span>
             </a>

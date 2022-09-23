@@ -55,11 +55,13 @@
   .homeHeroImg {
     width: 40%;
     @media (max-width: $screen-lg) {
-      width: 100%;
+      // width: 100%;
+      display: none;
     }
   }
   .trustpilotMini {
     margin-inline: -1em;
+    mix-blend-mode: darken;
   }
 }
 

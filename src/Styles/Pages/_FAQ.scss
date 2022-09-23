@@ -39,7 +39,10 @@
       }
 
       &:focus {
-        outline: 0;
+        outline-color: $color-primary-60;
+        &::placeholder {
+          opacity: 0.4;
+        }
       }
     }
 

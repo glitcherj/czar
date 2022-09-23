@@ -94,10 +94,6 @@ Header {
       box-shadow: 0 10px 0 -8px $color-primary-100;
     }
   }
-  #active {
-    color: $color-primary-100;
-    box-shadow: 0 10px 0 -8px $color-primary-100;
-  }
 }
 
 .headerTransparent {
@@ -129,10 +125,6 @@ Header {
         box-shadow: 0 10px 0 -8px $color-grey-10;
       }
     }
-  }
-  #active {
-    color: $color-primary-10;
-    box-shadow: 0 10px 0 -8px $color-grey-10;
   }
   .links {
     .btn {
