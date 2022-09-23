@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Header, Footer } from "../components";
 
 import {
   AboutUs,
@@ -14,6 +15,7 @@ import {
 export function MainRouter() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="about-us" element={<AboutUs />} />
@@ -27,6 +29,7 @@ export function MainRouter() {
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms" element={<Terms />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
