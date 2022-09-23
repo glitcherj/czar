@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 // ---Assets---
 import EVFleetHero from "../../assets/images/evFleetHero.png";
@@ -145,12 +146,18 @@ export function EVFleet() {
             Contact us
           </a>
         </div>
+        <div className="divider"></div>
         <div className="fullWidthCTA">
           <h4>Got any questions?</h4>
-          <a className="secondaryBtn scrollDown" href="/FAQ">
+          {/* <a className="secondaryBtn scrollDown" href="/FAQ">
             Visit our FAQ page
             <LogoBG />
-          </a>
+          </a> */}
+
+          <Link to="/faq" className="secondaryBtn scrollDown">
+            Visit our FAQ page
+            <LogoBG />
+          </Link>
         </div>
       </div>
     </div>
