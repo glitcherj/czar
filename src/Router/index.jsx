@@ -11,6 +11,7 @@ import {
   Home,
   PrivacyPolicy,
   Terms,
+  NotFound,
 } from "../pages";
 export function MainRouter() {
   return (
@@ -29,6 +30,7 @@ export function MainRouter() {
         <Route path="FAQ" element={<FAQ />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>

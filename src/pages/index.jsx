@@ -7,3 +7,4 @@ export { VehiclePage } from "./VehiclePage";
 export { Home } from "./Home";
 export { PrivacyPolicy } from "./PrivacyPolicy";
 export { Terms } from "./Terms";
+export { NotFound } from "./NotFound";
