@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Header, Footer, ScrollToTop } from "../components";
 
 import {
   AboutUs,
@@ -10,10 +11,13 @@ import {
   Home,
   PrivacyPolicy,
   Terms,
+  NotFound,
 } from "../pages";
 export function MainRouter() {
   return (
     <Router>
+      <ScrollToTop />
+      <Header />
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="about-us" element={<AboutUs />} />
@@ -26,7 +30,9 @@ export function MainRouter() {
         <Route path="FAQ" element={<FAQ />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

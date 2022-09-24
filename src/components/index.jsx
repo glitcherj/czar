@@ -7,3 +7,4 @@ export { TestimonialCard } from "./TestimonialCard";
 export { FAQCard } from "./FAQCard";
 export { BlogArticleSlideshow } from "./BlogArticleSlideshow";
 export { MiniTestimonialCard } from "./MiniTestimonialCard";
+export { ScrollToTop } from "./ScrollToTop";

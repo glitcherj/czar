@@ -1,0 +1,25 @@
+.notFound {
+  @include flexbox(column, null, center, 2em);
+  color: $color-grey-100;
+  background-image: radial-gradient(
+    hsl(0deg 0% 83% / 40%) 0.8px,
+    $color-grey-00 0px
+  );
+  background-size: 16px 16px;
+  padding-block: clamp(3em, 4vw, 5em);
+  text-align: center;
+
+  svg {
+    @media (max-width: $screen-sm) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  sub {
+    margin-block-start: -1.5em;
+    a {
+      color: $color-primary-80;
+    }
+  }
+}

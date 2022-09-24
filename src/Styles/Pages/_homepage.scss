@@ -2,6 +2,11 @@
   padding-block-start: 2.5em;
   @include flexbox(column, null, stretch, clamp(3em, 2vw, 5em));
   color: $color-grey-100;
+  background-image: radial-gradient(
+    hsl(0deg 0% 83% / 40%) 0.8px,
+    $color-grey-00 0px
+  );
+  background-size: 16px 16px;
 }
 
 .notBanner {
@@ -15,6 +20,7 @@
   @include flexbox(row, space-between, center, clamp(2em, 4vw, 8em));
   @media (max-width: $screen-lg) {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .heroTextArea {
@@ -39,6 +45,7 @@
       @include flexbox(row, center, center, 1em);
       font-weight: 600;
       max-width: 30em;
+      background-color: $color-grey-00;
       svg {
         height: 14px;
         width: 14px;
@@ -49,11 +56,13 @@
   .homeHeroImg {
     width: 40%;
     @media (max-width: $screen-lg) {
-      width: 100%;
+      // width: 100%;
+      display: none;
     }
   }
   .trustpilotMini {
     margin-inline: -1em;
+    mix-blend-mode: darken;
   }
 }
 
@@ -96,7 +105,7 @@
 .ourBenefits {
   @include flexbox(column, center, center, 1.5em);
   .ourBenefitsRow {
-    @include flexbox(row, space-between, flex-start, 1.5em);
+    @include flexbox(row, space-between, stretch, 1.5em);
     @media (max-width: $screen-md) {
       flex-direction: column;
     }
@@ -105,6 +114,7 @@
       @include flexbox(row, center, flex-start, 1em);
       flex: 1;
       padding: 1em;
+      background-color: $color-grey-00;
 
       .benefitText {
         @include flexbox(column, center, flex-start, 0.5em);
@@ -228,6 +238,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
     grid-gap: 1.5em;
+    z-index: 2;
   }
 
   .swiper {
@@ -340,6 +351,7 @@
   .scrollDown {
     @include flexbox(row, center, center, 1em);
     font-weight: 600;
+    background-color: $color-grey-00;
     svg {
       height: 14px;
       width: 14px;

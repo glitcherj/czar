@@ -31,7 +31,7 @@ Header {
     @include flexbox(row, null, center, clamp(1em, 2vw, 1.5em));
     order: 2;
 
-    @media (max-width: $screen-xl) {
+    @media (max-width: 1069px) {
       order: 4;
     }
     @media (max-width: $screen-sm) {
@@ -79,8 +79,9 @@ Header {
   z-index: 100;
   @media (max-width: $screen-md) {
     padding: 0.5em 4%;
-    .appLogo img {
-      margin-inline-start: 0.5em;
+    .appLogo svg {
+      margin-inline-start: -0.5em;
+      height: clamp(3em, 10vw, 4em);
     }
   }
 
@@ -140,8 +141,6 @@ Header {
 
     #contact {
       background-color: #004fa333;
-      &:hover {
-      }
     }
   }
 }

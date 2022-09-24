@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 //  ---Swiperjs---
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -225,10 +226,10 @@ export function Home() {
         </Swiper>
         <div className="fullWidthCTA">
           <h4>Visit our vast variety of PCO-ready vehicles.</h4>
-          <a className="primaryBtn scrollDown" href="/fleet">
+          <Link className="primaryBtn scrollDown" to="/fleet">
             Go to fleet page
             <LogoBG />
-          </a>
+          </Link>
         </div>
       </div>
       <section className="evBanner">
@@ -240,10 +241,10 @@ export function Home() {
             best Electric Vehicles for the Ride-Hailing market and supporting
             drivers every step of the way.
           </span>
-          <a className="secondaryBtn Link" href="/ev-fleet">
+          <Link className="secondaryBtn Link" to="/ev-fleet">
             <span>Visit our EV fleet</span>
             <LogoBG />
-          </a>
+          </Link>
         </div>
         <div className="evBanner__cards">
           {BlogData.slice(0, 2).map((blog) => (
@@ -295,10 +296,10 @@ export function Home() {
         </div>
         <div className="fullWidthCTA">
           <h4>Still got questions?</h4>
-          <a className="secondaryBtn scrollDown" href="/FAQ">
+          <Link className="secondaryBtn scrollDown" to="/FAQ">
             Visit our FAQ page
             <LogoBG />
-          </a>
+          </Link>
         </div>
       </div>
       <div className="blog">
@@ -318,10 +319,10 @@ export function Home() {
           ))}
         </div>
         <div className="fullWidthCTA">
-          <a className="secondaryBtn scrollDown" href="/blog">
-            Visit our Blog page
+          <Link className="secondaryBtn scrollDown" to="/blog">
+            Visit our FAQ page
             <LogoBG />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

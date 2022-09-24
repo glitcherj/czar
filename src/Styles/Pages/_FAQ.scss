@@ -1,9 +1,9 @@
 .faqPage {
   @include flexbox(column, null, stretch, clamp(3em, 2vw, 5em));
-  padding-block: 4em;
+  padding-block: clamp(2em, 4vw, 4em) !important;
 
   h1 {
-    align-self: center;
+    text-align: center;
   }
 
   .titleSection {
@@ -29,7 +29,7 @@
     input {
       border-radius: 0.5em;
       border: 1px solid $color-grey-40;
-      background-color: #fafafa80;
+      background-color: $color-grey-10;
       color: $color-grey-100;
       padding: 1.15em;
 
@@ -39,7 +39,10 @@
       }
 
       &:focus {
-        outline: 0;
+        outline-color: $color-primary-60;
+        &::placeholder {
+          opacity: 0.4;
+        }
       }
     }
 
@@ -49,17 +52,15 @@
 
     button {
       position: absolute;
+      background-color: transparent;
+      border: 0;
       right: 0;
-      padding: 1em;
+      padding: 1em 1.25em;
       cursor: pointer;
-      background-color: $color-primary-100;
-      border: 1px solid $color-primary-100;
-      color: $color-primary-10;
+      color: $color-grey-40;
       border-radius: 0 0.5em 0.5em 0;
-      border-left: 0;
       margin: 0;
       line-height: 0;
-      min-width: 8vw;
     }
   }
 

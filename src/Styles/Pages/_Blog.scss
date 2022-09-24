@@ -54,7 +54,7 @@
       button {
         position: absolute;
         right: 0;
-        padding: 1em;
+        padding: 1em 1.25em;
         cursor: pointer;
         background-color: $color-grey-10;
         border: 1px solid $color-grey-10;
@@ -63,7 +63,6 @@
         border-left: 0;
         margin: 0;
         line-height: 0;
-        min-width: 8vw;
       }
     }
 
@@ -105,6 +104,11 @@ strong {
 .blogPosts {
   @include flexbox(column, null, stretch, 1.5em);
   padding: 3em 8%;
+  background-image: radial-gradient(
+    hsl(0deg 0% 83% / 40%) 0.8px,
+    $color-grey-00 0px
+  );
+  background-size: 16px 16px;
 
   .blogItems {
     display: grid;

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 // ---Assets---
 import { ReactComponent as LogoBW } from "../../assets/logoBW.svg";
 import { ReactComponent as LogoBG } from "../../assets/LogoBG.svg";
@@ -21,9 +22,9 @@ export function Footer() {
       </section>
       <section className="footerContainer">
         <div className="aboutCompany">
-          <a href="/">
+          <Link to="/">
             <LogoBW />
-          </a>
+          </Link>
           <span>
             CZAR PCO Ltd. is a leading London taxi hire firm established in
             2006, and since then they have helped various taxi drivers get on
@@ -35,11 +36,18 @@ export function Footer() {
             <strong>Sitemap</strong>
           </span>
           <div className="footerColumnsContent">
-            <a href="/">Home</a>
-            <a href="/fleet">Fleet</a>
-            <a href="/ev-fleet">EV Fleet</a>
-            <a href="/blog">Blog & news</a>
-            <a href="/about-us">About us</a>
+            <Link to="/" className="menuItems">
+              Home
+            </Link>
+            <Link to="/fleet" className="menuItems">
+              Fleet
+            </Link>
+            <Link to="/ev-fleet" className="menuItems">
+              EV Fleet
+            </Link>
+            <Link to="/blog" className="menuItems">
+              Blog & news
+            </Link>
           </div>
         </div>
         <div className="footerColumns">
@@ -47,9 +55,15 @@ export function Footer() {
             <strong>Support</strong>
           </span>
           <div className="footerColumnsContent">
-            <a href="/faq">FAQ</a>
-            <a href="/privacy-policy">Privacy policy</a>
-            <a href="/terms">Terms & Conditions</a>
+            <Link to="/faq" className="menuItems">
+              FAQ
+            </Link>
+            <Link to="/privacy-policy" className="menuItems">
+              Privacy policy
+            </Link>
+            <Link to="/terms" className="menuItems">
+              Terms & Conditions
+            </Link>
           </div>
         </div>
         <div className="footerColumns">

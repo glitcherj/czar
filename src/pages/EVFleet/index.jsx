@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 // ---Assets---
 import EVFleetHero from "../../assets/images/evFleetHero.png";
@@ -43,7 +44,7 @@ export function EVFleet() {
             onClick={() =>
               evFleet.current.scrollIntoView({
                 behavior: "smooth",
-                block: "center",
+                block: "nearest",
               })
             }
           >
@@ -140,17 +141,23 @@ export function EVFleet() {
       <div className="CTA_row notBanner">
         <div className="fullWidthCTA">
           <h4>Contact us for renting car</h4>
-          <a className="secondaryBtn scrollDown" href="/FAQ">
+          <Link className="secondaryBtn scrollDown" to="/FAQ">
             <Contact id="Contact" />
             Contact us
-          </a>
+          </Link>
         </div>
+        <div className="divider"></div>
         <div className="fullWidthCTA">
           <h4>Got any questions?</h4>
-          <a className="secondaryBtn scrollDown" href="/FAQ">
+          {/* <a className="secondaryBtn scrollDown" href="/FAQ">
             Visit our FAQ page
             <LogoBG />
-          </a>
+          </a> */}
+
+          <Link to="/faq" className="secondaryBtn scrollDown">
+            Visit our FAQ page
+            <LogoBG />
+          </Link>
         </div>
       </div>
     </div>
