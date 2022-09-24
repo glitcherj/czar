@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/czar/static/css/main.b75f3dae.css",
-    "main.js": "/czar/static/js/main.3ab243e6.js",
+    "main.js": "/czar/static/js/main.95b1f637.js",
     "static/js/787.9a569a9c.chunk.js": "/czar/static/js/787.9a569a9c.chunk.js",
     "static/media/KiaNiro_3.jpg": "/czar/static/media/KiaNiro_3.fa6bde9450e10dd9c764.jpg",
     "static/media/KiaNiro_4.jpg": "/czar/static/media/KiaNiro_4.c200d73e161f94762dbe.jpg",
@@ -117,11 +117,11 @@
     "static/media/arrowRight.svg": "/czar/static/media/arrowRight.515046e322557c4f23d3.svg",
     "static/media/youtube.svg": "/czar/static/media/youtube.5fff10d00320f44d703085db15ceefda.svg",
     "main.b75f3dae.css.map": "/czar/static/css/main.b75f3dae.css.map",
-    "main.3ab243e6.js.map": "/czar/static/js/main.3ab243e6.js.map",
+    "main.95b1f637.js.map": "/czar/static/js/main.95b1f637.js.map",
     "787.9a569a9c.chunk.js.map": "/czar/static/js/787.9a569a9c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b75f3dae.css",
-    "static/js/main.3ab243e6.js"
+    "static/js/main.95b1f637.js"
   ]
 }
