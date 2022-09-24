@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 export function BlogCard({ img, date, title, description, link, tags }) {
   return (
-    <Link className="blogCard" to={link}>
+    <Link className="blogCard" to={"/czar" + link}>
       <div className="imgWrapper">
         <img src={img} alt={title} />
       </div>

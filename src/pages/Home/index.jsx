@@ -226,7 +226,7 @@ export function Home() {
         </Swiper>
         <div className="fullWidthCTA">
           <h4>Visit our vast variety of PCO-ready vehicles.</h4>
-          <Link className="primaryBtn scrollDown" to="/fleet">
+          <Link className="primaryBtn scrollDown" to="/czar/fleet">
             Go to fleet page
             <LogoBG />
           </Link>
@@ -241,7 +241,7 @@ export function Home() {
             best Electric Vehicles for the Ride-Hailing market and supporting
             drivers every step of the way.
           </span>
-          <Link className="secondaryBtn Link" to="/ev-fleet">
+          <Link className="secondaryBtn Link" to="/czar/ev-fleet">
             <span>Visit our EV fleet</span>
             <LogoBG />
           </Link>
@@ -296,7 +296,7 @@ export function Home() {
         </div>
         <div className="fullWidthCTA">
           <h4>Still got questions?</h4>
-          <Link className="secondaryBtn scrollDown" to="/FAQ">
+          <Link className="secondaryBtn scrollDown" to="/czar/FAQ">
             Visit our FAQ page
             <LogoBG />
           </Link>
@@ -319,7 +319,7 @@ export function Home() {
           ))}
         </div>
         <div className="fullWidthCTA">
-          <Link className="secondaryBtn scrollDown" to="/blog">
+          <Link className="secondaryBtn scrollDown" to="/czar/blog">
             Visit our FAQ page
             <LogoBG />
           </Link>

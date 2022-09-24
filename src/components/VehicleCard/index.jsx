@@ -18,7 +18,7 @@ export function VehicleCard({
   link,
 }) {
   return (
-    <Link className="vehicleCard" to={`/fleet/${link}`}>
+    <Link className="vehicleCard" to={`/czar/fleet/${link}`}>
       <img src={img} alt={name} />
       <div className="vehicleCardContents">
         <h3>{name}</h3>

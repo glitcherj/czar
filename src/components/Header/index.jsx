@@ -31,23 +31,23 @@ export function Header() {
           content={HeaderData[path] ? HeaderData[path][1].description : null}
         />
       </head>
-      <Link to="/" className="appLogo">
+      <Link to="/czar/" className="appLogo">
         <Logo />
       </Link>
       <div className="menu">
-        <Link to="/" className="menuItems">
+        <Link to="/czar/" className="menuItems">
           Home
         </Link>
-        <Link to="/fleet" className="menuItems">
+        <Link to="/czar/fleet" className="menuItems">
           Fleet
         </Link>
-        <Link to="/ev-fleet" className="menuItems">
+        <Link to="/czar/ev-fleet" className="menuItems">
           EV Fleet
         </Link>
-        <Link to="/blog" className="menuItems">
+        <Link to="/czar/blog" className="menuItems">
           Blog & news
         </Link>
-        <Link to="/faq" className="menuItems">
+        <Link to="/czar/faq" className="menuItems">
           FAQ
         </Link>
       </div>

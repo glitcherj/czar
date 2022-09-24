@@ -22,7 +22,7 @@ export function Footer() {
       </section>
       <section className="footerContainer">
         <div className="aboutCompany">
-          <Link to="/">
+          <Link to="/czar/">
             <LogoBW />
           </Link>
           <span>
@@ -36,16 +36,16 @@ export function Footer() {
             <strong>Sitemap</strong>
           </span>
           <div className="footerColumnsContent">
-            <Link to="/" className="menuItems">
+            <Link to="/czar/" className="menuItems">
               Home
             </Link>
-            <Link to="/fleet" className="menuItems">
+            <Link to="/czar/fleet" className="menuItems">
               Fleet
             </Link>
-            <Link to="/ev-fleet" className="menuItems">
+            <Link to="/czar/ev-fleet" className="menuItems">
               EV Fleet
             </Link>
-            <Link to="/blog" className="menuItems">
+            <Link to="/czar/blog" className="menuItems">
               Blog & news
             </Link>
           </div>
@@ -55,13 +55,13 @@ export function Footer() {
             <strong>Support</strong>
           </span>
           <div className="footerColumnsContent">
-            <Link to="/faq" className="menuItems">
+            <Link to="/czar/faq" className="menuItems">
               FAQ
             </Link>
-            <Link to="/privacy-policy" className="menuItems">
+            <Link to="/czar/privacy-policy" className="menuItems">
               Privacy policy
             </Link>
-            <Link to="/terms" className="menuItems">
+            <Link to="/czar/terms" className="menuItems">
               Terms & Conditions
             </Link>
           </div>

@@ -19,7 +19,7 @@ export function NotFound() {
         <br />
         Or the the page does not exist.
       </span>
-      <Link className="secondaryBtn scrollDown" to="/">
+      <Link className="secondaryBtn scrollDown" to="/czar/">
         Return to home page
       </Link>
     </div>

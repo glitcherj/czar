@@ -125,7 +125,7 @@ export function Fleet() {
             best Electric Vehicles for the Ride-Hailing market and supporting
             drivers every step of the way.
           </span>
-          <Link className="secondaryBtn Link" to="/ev-fleet">
+          <Link className="secondaryBtn Link" to="/czar/ev-fleet">
             <span>Visit our EV fleet</span>
             <LogoBG />
           </Link>
@@ -153,7 +153,7 @@ export function Fleet() {
         <div className="divider"></div>
         <div className="fullWidthCTA">
           <h4>Got any questions?</h4>
-          <Link className="secondaryBtn scrollDown" to="/FAQ">
+          <Link className="secondaryBtn scrollDown" to="/czar/FAQ">
             Visit our FAQ page
             <LogoBG />
           </Link>
