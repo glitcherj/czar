@@ -137,7 +137,7 @@ export function PrivacyPolicy() {
               </li>
               <li>
                 When we restructure or sell our business or its assets or have a
-                merger or reorganisation; and
+                merger or reorganisation;
               </li>
               <li>
                 Anyone else where we have your consent or as required by law.
@@ -169,7 +169,7 @@ export function PrivacyPolicy() {
             <ul>
               <li>
                 Retention in case of claims. We’ll retain your personal data for
-                as long as you might legally bring claims against us; and
+                as long as you might legally bring claims against us;
               </li>
               <li>
                 Retention in accordance with legal and regulatory requirements.

@@ -78,7 +78,7 @@ export function Terms() {
                     Please read our{" "}
                     <Link to="/czar/privacy-policy">Privacy Policy</Link>{" "}
                     carefully as it contains important information about how we
-                    collect and use your personal information; and
+                    collect and use your personal information;
                   </li>
                   <li style={{ listStyle: "disc" }}>
                     The Terms of Use of the Site
