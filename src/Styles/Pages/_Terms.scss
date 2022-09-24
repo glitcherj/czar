@@ -1,7 +1,7 @@
 .terms {
   @include flexbox(column, null, stretch, 0);
   padding-block: clamp(2em, 4vw, 4em) !important;
-  font-size: 0.875em;
+  font-size: small;
 
   h1 {
     text-align: center;
@@ -33,11 +33,6 @@
     li {
       padding-inline: clamp(1em, 4vw, 1.5em) 0.5em;
       margin-block: 1em;
-      list-style: decimal-leading-zero;
-      text-align: justify;
-      @media (max-width: $screen-sm) {
-        text-align: start;
-      }
 
       table {
         margin-block: 1em 3em;
