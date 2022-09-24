@@ -34,17 +34,6 @@
       padding-inline: clamp(1em, 4vw, 1.5em) 0.5em;
       margin-block: 1em;
       text-align: justify;
-
-      table {
-        margin-block: 1em 3em;
-        padding: 0;
-        text-align: start;
-
-        td {
-          outline: 1px solid $color-grey-100;
-          padding: 1em;
-        }
-      }
     }
     ul li {
       list-style: disc;
