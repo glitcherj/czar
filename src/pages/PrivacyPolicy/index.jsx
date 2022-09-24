@@ -1,8 +1,22 @@
+// ---Components---
+import { TitleSection } from "../../components";
+
 export function PrivacyPolicy() {
   return (
-    <div className="privacyPolicy">
-      <h2>Privacy policy</h2>
-      <span>content</span>
-    </div>
+    <>
+      <head>
+        <title>Privacy policy | Czar PCO</title>
+        <meta
+          name="description"
+          content="Get to know about how we collect your personal information and how do we use it."
+        />
+      </head>
+      <div className="privacyPolicy Home notBanner">
+        <TitleSection
+          title="Czar PCO Privacy policy"
+          description="A complete guide on how we collect your personal information and how do we use it"
+        />
+      </div>
+    </>
   );
 }
