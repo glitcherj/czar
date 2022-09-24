@@ -5,11 +5,11 @@ import { ReactComponent as Whatsapp } from "../../assets/socials/whatsapp.svg";
 import { ReactComponent as Contact } from "../../assets/contact.svg";
 
 // ---Static Data---
-import { HeaderData } from "../../Static/HeaderTitles";
+// import { HeaderData } from "../../Static/HeaderTitles";
 
 export function Header() {
-  const path = window.location.pathname;
-  const headerTitle = " | Czar PCO";
+  // const path = window.location.pathname;
+  // const headerTitle = " | Czar PCO";
 
   return (
     <header
@@ -20,7 +20,7 @@ export function Header() {
       //     : "headerTransparent"
       // }
     >
-      <head>
+      {/* <head>
         <title>
           {HeaderData[path]
             ? HeaderData[path][0].title + headerTitle
@@ -30,7 +30,7 @@ export function Header() {
           name="description"
           content={HeaderData[path] ? HeaderData[path][1].description : null}
         />
-      </head>
+      </head> */}
       <Link to="/czar/" className="appLogo">
         <Logo />
       </Link>
