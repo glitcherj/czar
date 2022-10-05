@@ -29,7 +29,7 @@ export function VehicleCard({
           </div>
           <div className="vehicleCardContents__info__item">
             <Seats />
-            {seats} seats
+            {seats} Seats
           </div>
           <div className="vehicleCardContents__info__item">
             <Transmission />
