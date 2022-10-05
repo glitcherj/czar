@@ -7,16 +7,19 @@
 
   .bgContent {
     @include flexbox(column, center, null, 2em);
-    padding-inline: 8%;
+    padding-inline: 16%;
     padding-block: 16vw 12vw;
     background-image: radial-gradient(
       circle at 80%,
       transparent 20%,
       black 110%
     );
+    @media (max-width: $screen-xl) {
+      padding-inline: 8%;
+    }
 
     @media (max-width: $screen-lg) {
-      padding-inline: 8%;
+      padding-inline: 4%;
       padding-block: 22em 2.5em;
     }
 
@@ -103,7 +106,7 @@ strong {
 
 .blogPosts {
   @include flexbox(column, null, stretch, 1.5em);
-  padding: 3em 8%;
+  padding-block: 3em;
   background-image: radial-gradient(
     hsl(0deg 0% 83% / 40%) 0.8px,
     $color-grey-00 0px

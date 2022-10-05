@@ -211,7 +211,7 @@ export function Home() {
               768: {
                 slidesPerView: 2,
               },
-              1200: {
+              1440: {
                 slidesPerView: 3,
               },
             }}
