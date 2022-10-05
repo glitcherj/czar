@@ -1,7 +1,10 @@
 Header {
-  @include flexbox(row, space-between, center, clamp(1em, 2vw, 1.5em));
+  @include flexbox(row, null, center, clamp(1em, 2vw, 1.5em));
   @media (max-width: $screen-xl) {
     flex-wrap: wrap;
+  }
+  :last-child {
+    margin-inline-start: auto;
   }
 
   .appLogo {
@@ -41,6 +44,10 @@ Header {
       justify-content: space-between;
       .menuItems {
         font-size: 0.75em;
+      }
+
+      .menuItems {
+        margin: 0;
       }
     }
 
