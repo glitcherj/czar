@@ -10,7 +10,10 @@
 }
 
 .notBanner {
-  padding-inline: 8%;
+  padding-inline: 16%;
+  @media (max-width: $screen-xl) {
+    padding-inline: 8%;
+  }
   @media (max-width: $screen-md) {
     padding-inline: 4%;
   }
@@ -68,13 +71,14 @@
 
 .trustedBy {
   @include flexbox(row, space-between, center, 1.5em);
+  position: relative;
+  padding: 3em 16%;
+  background-color: $color-primary-10;
   @media (max-width: $screen-xl) {
     flex-direction: column;
     align-items: flex-start;
+    padding-inline: 8%;
   }
-  position: relative;
-  padding: 3em 8%;
-  background-color: $color-primary-10;
 
   span {
     font-weight: 700;
@@ -247,10 +251,13 @@
     $color-primary-100 0%,
     $color-primary-60 100%
   );
-  padding: 3em 8%;
-  @media (max-width: $screen-xl) {
+  padding: 3em 16%;
+  @media (max-width: 1440px) {
     flex-direction: column;
     align-items: stretch;
+  }
+  @media (max-width: $screen-xl) {
+    padding-inline: 8%;
   }
 
   &::before {
@@ -351,7 +358,7 @@
 
 .blog {
   @include flexbox(column, null, stretch, 1.5em);
-  padding: 3em 8%;
+  padding: 3em 16%;
   background-color: $color-primary-15;
 
   .blogItems {
@@ -362,6 +369,9 @@
       overflow: auto;
       padding-bottom: 1em;
     }
+  }
+  @media (max-width: $screen-xl) {
+    padding-inline: 8%;
   }
   @media (max-width: $screen-lg) {
     .blogItems::-webkit-scrollbar {

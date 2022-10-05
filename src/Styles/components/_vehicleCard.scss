@@ -42,7 +42,7 @@
     padding: 2em 1em 1em 1em;
 
     .vehicleCardContents__info {
-      @include flexbox(row, center, flex-start, 1em);
+      @include flexbox(row, space-evenly, flex-start, 0.5em);
 
       .vehicleCardContents__info__item {
         @include flexbox(column, center, center, 0.5em);

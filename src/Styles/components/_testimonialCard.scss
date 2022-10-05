@@ -1,13 +1,11 @@
 .testimonialCard {
-  @include flexbox(row, center, stretch, 2em);
-  margin: 0 8%;
+  @include flexbox(column, center, stretch, 2em);
+  margin: 0 16%;
   flex: 1;
 
   @media (max-width: $screen-lg) {
-    flex-direction: column;
     img {
-      width: 100% !important;
-      height: 64vw !important;
+      height: 40vw !important;
     }
     gap: 1em;
     padding: 0;
@@ -15,7 +13,7 @@
   }
 
   img {
-    width: 30vw;
+    width: 100%;
     height: 24vw;
     object-fit: cover;
     transition: 0.3s all ease;
