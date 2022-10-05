@@ -6,6 +6,28 @@ footer {
   font-size: 14px;
   @include flexbox(column, null, null, 40px);
   overflow: hidden;
+
+  &::before {
+    content: url("../../assets/LogoBG.svg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.1;
+    filter: invert(1);
+  }
+  &::after {
+    content: url("../../assets/LogoBG.svg");
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-68%, 68%);
+    opacity: 0.1;
+    filter: invert(1);
+  }
+
+  svg {
+    color: white;
+  }
 }
 
 .footerContainer {
@@ -96,23 +118,6 @@ footer {
     opacity: 0.6;
     font-size: 0.8em;
   }
-}
-
-.TR {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0.1;
-  color: $color-grey-10;
-}
-
-.BL {
-  position: absolute;
-  bottom: 0;
-  left: 0%;
-  transform: translate(-68%, 68%);
-  opacity: 0.1;
-  color: $color-grey-10;
 }
 
 .backTop {

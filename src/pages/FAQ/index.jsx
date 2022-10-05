@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 //  ---Assets---
+import { ReactComponent as Contact } from "../../assets/contact.svg";
+import { ReactComponent as Whatsapp } from "../../assets/socials/whatsapp.svg";
 import { ReactComponent as Search } from "../../assets/icons/search.svg";
 
 // ---Components---
@@ -43,15 +45,14 @@ export function FAQ() {
           content="Find the answer to the most asked questions here. Feel free to contact us for more help."
         />
       </head>
-      <div className="faqPage Home">
-        <div className="notBanner fleet">
+      <div className="faqPage Home notBanner">
+        <div className="fleet">
           <h1>Frequently asked questions</h1>
           <span style={{ alignSelf: "center" }}>How can we help you?</span>
           <form
             onSubmit={(e) => {
               window.find(document.getElementById("input").value);
             }}
-            // onSubmit={(e) =>{window.find(document.getElementById("input").value}}
           >
             <input
               type="text"
@@ -135,7 +136,7 @@ export function FAQ() {
             </div>
           </div>
         </div>
-        <div className="faqItems notBanner faq">
+        <div className="faqItems faq">
           {Object.entries(filterState).map((item) => (
             <div>
               <TitleSection title={item[0]} />
@@ -149,6 +150,22 @@ export function FAQ() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="fullWidthCTA ">
+          <h4>Still got questions?</h4>
+          <div className="faqPageCTA">
+            <a
+              className="secondaryBtn whatsapp"
+              href="https://wa.me/+4407701727142"
+            >
+              <Whatsapp />
+              Send us your questions
+            </a>
+            <a className="secondaryBtn btn" id="contact" href="tel:07701727142">
+              <Contact />
+              <span>Contact us</span>
+            </a>
+          </div>
         </div>
       </div>
     </>

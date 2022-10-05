@@ -67,13 +67,13 @@
 }
 
 .trustedBy {
-  @include flexbox(row, space-around, center, 1.5em);
+  @include flexbox(row, space-between, center, 1.5em);
   @media (max-width: $screen-xl) {
     flex-direction: column;
     align-items: flex-start;
   }
   position: relative;
-  padding: 3.5em;
+  padding: 3em 8%;
   background-color: $color-primary-10;
 
   span {
@@ -90,16 +90,6 @@
       flex-wrap: wrap;
     }
   }
-}
-
-.BLL {
-  position: absolute;
-  top: 0;
-  right: 0;
-  rotate: 180deg;
-  opacity: 0.1;
-  color: $color-primary-100;
-  line-height: 0;
 }
 
 .ourBenefits {
