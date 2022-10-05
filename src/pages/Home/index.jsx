@@ -93,9 +93,6 @@ export function Home() {
             <img src={rideSharing_ola} alt="Ride Sharing: Ola" />
             <img src={rideSharing_freenow} alt="Ride Sharing: Freenow" />
           </div>
-          <div className="BLL">
-            <LogoBG />
-          </div>
         </section>
         <div className="ourBenefits notBanner" ref={benefitsRef}>
           <TitleSection
@@ -332,7 +329,7 @@ export function Home() {
           </div>
           <div className="fullWidthCTA">
             <Link className="secondaryBtn scrollDown" to="/czar/blog">
-              Visit our FAQ page
+              Visit our blog page
               <LogoBG />
             </Link>
           </div>
