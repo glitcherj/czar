@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 //  ---Assets---
 import { ReactComponent as Contact } from "../../assets/contact.svg";

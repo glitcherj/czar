@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 // ---Assets---
 import { ReactComponent as LogoBW } from "../../assets/logoBW.svg";
-import { ReactComponent as LogoBG } from "../../assets/LogoBG.svg";
 import { ReactComponent as Facebook } from "../../assets/socials/facebook.svg";
 import { ReactComponent as Instagram } from "../../assets/socials/instagram.svg";
 import { ReactComponent as Twitter } from "../../assets/socials/twitter.svg";
