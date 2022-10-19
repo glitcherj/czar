@@ -85,11 +85,6 @@
   color: $color-grey-100;
 }
 
-.blogLink {
-  color: $color-primary-100;
-  font-weight: 600;
-}
-
 strong {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -138,9 +133,5 @@ strong {
 
   .blogCard {
     background-color: $color-primary-10;
-
-    strong {
-      font-size: 1.2em !important;
-    }
   }
 }
