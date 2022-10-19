@@ -52,7 +52,7 @@ export function EVFleet() {
               onClick={() =>
                 evFleet.current.scrollIntoView({
                   behavior: "smooth",
-                  block: "nearest",
+                  block: "center",
                 })
               }
             >
@@ -104,7 +104,7 @@ export function EVFleet() {
             <div className="benefit">
               <EVPollution />
               <div className="benefitText">
-                <span className="benefitTitle">Noise Pollution</span>
+                <span className="benefitTitle">Environment friendly</span>
                 <span className="benefitDescription">
                   One of the major benefits of electric vehicles is the
                   contribution that they can make towards improving air quality
