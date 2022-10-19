@@ -52,7 +52,7 @@
     }
 
     .vehicleDetails {
-      @include flexbox(column, null, null, 1em);
+      @include flexbox(column, space-between, null, 1em);
       flex: 1;
       padding: 2em;
       background-color: $color-grey-10;
@@ -85,19 +85,7 @@
       }
 
       .vehiclePageCTA {
-        @include flexbox(row, space-between, center, 1em);
-        white-space: nowrap;
-        .whatsapp {
-          width: 100%;
-        }
-
-        @media (max-width: $screen-md) {
-          flex-direction: column;
-          align-items: stretch;
-          .whatsapp {
-            width: auto;
-          }
-        }
+        @include flexbox(column, null, stretch, 1em);
       }
     }
     .Fin {

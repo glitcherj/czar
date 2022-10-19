@@ -39,13 +39,13 @@ export function Footer() {
               Home
             </Link>
             <Link to="/czar/fleet" className="menuItems">
-              Fleet
+              Our Fleet
             </Link>
             <Link to="/czar/ev-fleet" className="menuItems">
-              EV Fleet
+              Our EV Fleet
             </Link>
             <Link to="/czar/blog" className="menuItems">
-              Blog & news
+              Blog & News
             </Link>
           </div>
         </div>
