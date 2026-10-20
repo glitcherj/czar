@@ -9,7 +9,7 @@
 
 .CTA_row {
   @include flexbox(row, space-between, stretch, 3em);
-  padding-block: 3em;
+  padding-block: clamp(2rem, 3vw, 2.75rem);
   background-color: $color-primary-15;
   .divider {
     background-color: $color-primary-60;

@@ -10,6 +10,7 @@ import { ReactComponent as Contact } from "../../assets/contact.svg";
 
 //  ---StaticData---
 import { VehicleData } from "../../Static/VehicleData";
+import { scrollToElement } from "../../utils/scrollToElement";
 import { BlogData } from "../../Static/BlogCardData";
 
 //  ---Components---
@@ -45,12 +46,7 @@ export function Fleet() {
             />
             <button
               className="secondaryBtn scrollDown"
-              onClick={() =>
-                Fleet.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                })
-              }
+              onClick={() => scrollToElement(Fleet.current)}
             >
               <span id="Contact">Discover more</span>
               <LogoBG />

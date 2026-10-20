@@ -1,0 +1,13 @@
+export function scrollToElement(element) {
+  if (!element) return;
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  element.scrollIntoView({
+    behavior: prefersReducedMotion ? "auto" : "smooth",
+    block: "start",
+    inline: "nearest",
+  });
+}

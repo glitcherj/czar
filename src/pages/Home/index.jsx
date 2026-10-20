@@ -39,6 +39,7 @@ import { VehicleData } from "../../Static/VehicleData";
 import { BlogData } from "../../Static/BlogCardData";
 import { TestimonialData } from "../../Static/HomepageTestimonials";
 import { FAQData } from "../../Static/FAQ";
+import { scrollToElement } from "../../utils/scrollToElement";
 
 export function Home() {
   const benefitsRef = useRef(null);
@@ -68,12 +69,7 @@ export function Home() {
             />
             <button
               className="secondaryBtn scrollDown"
-              onClick={() =>
-                benefitsRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                })
-              }
+              onClick={() => scrollToElement(benefitsRef.current)}
             >
               <span id="Contact">Discover more about us</span>
               <LogoBG />

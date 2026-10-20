@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Header, Footer, ScrollToTop } from "../components";
+import { Header, Footer, ScrollToTop, ScrollReveal } from "../components";
 
 import {
   AboutUs,
@@ -17,6 +17,7 @@ export function MainRouter() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollReveal />
       <Header />
       <Routes>
         <Route path="czar/" element={<Home />} />
@@ -24,7 +25,7 @@ export function MainRouter() {
         <Route path="czar/blog" element={<Blog />} />
         <Route path="czar/ev-fleet" element={<EVFleet />} />
         <Route path="czar/fleet">
-          <Route index="czar/fleet" element={<Fleet />} />
+          <Route index element={<Fleet />} />
           <Route path=":id" element={<VehiclePage />} />
         </Route>
         <Route path="czar/FAQ" element={<FAQ />} />

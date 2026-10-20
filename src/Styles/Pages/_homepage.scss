@@ -1,6 +1,6 @@
 .Home {
-  padding-block-start: 2.5em;
-  @include flexbox(column, null, stretch, clamp(3em, 2vw, 5em));
+  padding-block-start: clamp(1.5rem, 3vw, 2.5rem);
+  @include flexbox(column, null, stretch, clamp(2.25rem, 4vw, 3.5rem));
   color: $color-grey-100;
   background-image: radial-gradient(
     hsl(0deg 0% 83% / 40%) 0.8px,
@@ -10,13 +10,7 @@
 }
 
 .notBanner {
-  padding-inline: 16%;
-  @media (max-width: $screen-xl) {
-    padding-inline: 8%;
-  }
-  @media (max-width: $screen-md) {
-    padding-inline: 4%;
-  }
+  padding-inline: max(4%, calc((100% - 76rem) / 2));
 }
 
 .hero {

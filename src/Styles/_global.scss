@@ -1,13 +1,11 @@
-// Base
-@import "./Base/_base.scss";
-@import "./Base/_typography.scss";
-
-// Layout
-
 // Abstract
 @import "./Abstract/_colors.scss";
 @import "./Abstract/_mixins.scss";
 @import "./Abstract/_variables.scss";
+
+// Base
+@import "./Base/_base.scss";
+@import "./Base/_typography.scss";
 
 // Components
 @import "./components/_blogCard.scss";
@@ -87,5 +85,33 @@
     background-color: $color-primary-15;
     transition: 0.2s all ease;
     cursor: pointer;
+  }
+}
+
+#root.reveal-ready .notBanner,
+#root.reveal-ready .blog,
+#root.reveal-ready .bg,
+#root.reveal-ready .faqItems > div {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+#root.reveal-ready .notBanner.is-visible,
+#root.reveal-ready .blog.is-visible,
+#root.reveal-ready .bg.is-visible,
+#root.reveal-ready .faqItems > div.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

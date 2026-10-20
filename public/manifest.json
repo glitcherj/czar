@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "CZAR PCO",
+  "name": "CZAR PCO | London PCO car hire",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +8,8 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": ".",
+  "start_url": "/czar/",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#004fa3",
   "background_color": "#ffffff"
 }
