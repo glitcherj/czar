@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# CZAR PCO Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The CZAR PCO public website is a responsive React application for the company's PCO vehicle hire service. It includes the home, fleet, electric fleet, company information, FAQ, and blog pages.
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+- Node.js 18 or newer
+- npm (the repository uses `package-lock.json`)
 
-### `npm start`
+## Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install the locked dependencies and start the development server:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```sh
+npm ci
+npm start
+```
 
-### `npm test`
+The app opens at <http://localhost:3000/czar/>. The development server supports hot reload.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Available commands
 
-### `npm run build`
+| Command | Purpose |
+| --- | --- |
+| `npm start` | Run the local development server. |
+| `npm run build` | Create an optimized production build in `build/`. |
+| `npm test` | Run the Create React App test runner in watch mode. |
+| `npm run deploy` | Build and publish `build/` to GitHub Pages using `gh-pages`. |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm run deploy` publishes to the GitHub Pages project site configured by the `homepage` value in `package.json`. It requires GitHub credentials and the `gh-pages` branch publishing setup.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+public/                 Static HTML shell, app manifest, favicon, robots.txt
+src/
+  assets/               Logos, icons, and local image assets
+  components/           Shared page components
+  pages/                Route-level pages, including blog articles
+  Router/               React Router route definitions
+  Static/               Vehicle, FAQ, testimonial, and blog content
+  Styles/               Sass foundations, component styles, and page styles
+```
 
-### `npm run eject`
+The app uses React 18, React Router 6, Sass, and Swiper. The production build is managed by Create React App (`react-scripts`).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Routes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Routes use the `/czar` base path to match the GitHub Pages project site:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `/czar/` — home
+- `/czar/fleet` and `/czar/fleet/:id` — fleet and vehicle details
+- `/czar/ev-fleet` — electric fleet
+- `/czar/blog` and `/czar/blog/:slug` — blog and article pages
+- `/czar/faq` — searchable, topic-filtered FAQs
+- `/czar/about-us`, `/czar/privacy-policy`, `/czar/terms`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+When adding a route, keep its path in `src/Router/index.jsx` aligned with this base path and with the links used by the site.
 
-## Learn More
+## Updating site content
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Blog cards and published article copy live in `src/Static/BlogCardData.js`. An article needs a unique `link`, a matching route slug, and `content` paragraphs to render as a full article page.
+- FAQ topics and answers live in `src/Static/FAQ.js`.
+- Fleet inventory and vehicle details live in the related files under `src/Static/`.
+- Local images should be imported from `src/assets/` so the production bundler can fingerprint them.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Accessibility and motion
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Interactive elements use semantic controls and visible keyboard focus. Section reveals and smooth in-page scrolling honor the user's `prefers-reduced-motion` setting. Keep new animations optional and preserve keyboard access when changing components.

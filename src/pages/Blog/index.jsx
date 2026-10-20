@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 //  ---Assets---
 import { ReactComponent as Search } from "../../assets/icons/search.svg";
@@ -18,7 +19,17 @@ import { TitleSection, BlogCard, BlogArticleSlideshow } from "../../components";
 
 export function Blog() {
   const navigate = useNavigate();
-
+  const [searchParams] = useSearchParams();
+  const searchInput = useRef(null);
+  const searchValue = searchParams.get("search")?.trim() || "";
+  const searchTerm = searchValue.toLocaleLowerCase();
+  const articlesToShow = (searchTerm ? BlogData : BlogData.slice(4)).filter((article) => {
+    if (!searchTerm) return true;
+    return [article.title, article.description, ...(article.tags || [])]
+      .join(" ")
+      .toLocaleLowerCase()
+      .includes(searchTerm);
+  });
   return (
     <>
       <head>
@@ -36,21 +47,22 @@ export function Blog() {
               <span>Stay updated with the latest PCO articles and news</span>
             </section>
             <form
-              onSubmit={(e) => {
-                navigate(`/blog?${document.getElementById("input").value}`);
+              role="search"
+              onSubmit={(event) => {
+                event.preventDefault();
+                const value = searchInput.current.value.trim();
+                navigate(`/czar/blog${value ? `?search=${encodeURIComponent(value)}` : ""}`);
               }}
             >
               <input
-                type={"text"}
+                type="search"
                 placeholder="Search among our articles"
-                id="input"
+                id="blog-search"
+                defaultValue={searchValue}
+                ref={searchInput}
+                aria-label="Search blog articles"
               />
-              <button
-                type="button"
-                onClick={(e) => {
-                  navigate(`/blog?${document.getElementById("input").value}`);
-                }}
-              >
+              <button type="submit" aria-label="Search articles">
                 <Search />
               </button>
             </form>
@@ -79,7 +91,7 @@ export function Blog() {
             }}
           >
             {BlogData.slice(1, 4).map((testimonial) => (
-              <SwiperSlide>
+              <SwiperSlide key={testimonial.link}>
                 <BlogArticleSlideshow
                   img={testimonial.img}
                   date={testimonial.date}
@@ -93,12 +105,13 @@ export function Blog() {
         </div>
         <div className="blogPosts notBanner">
           <TitleSection
-            title={"Latest blog articles"}
+            title={searchTerm ? `Search results for “${searchValue}”` : "Latest blog articles"}
             description={"Stay at the top of the PCO news."}
           />
           <div className="blogItems">
-            {BlogData.slice(4).map((blogArticle) => (
+            {articlesToShow.map((blogArticle) => (
               <BlogCard
+                key={blogArticle.link}
                 img={blogArticle.img}
                 date={blogArticle.date}
                 title={blogArticle.title}
@@ -107,6 +120,7 @@ export function Blog() {
                 tags={blogArticle.tags}
               />
             ))}
+            {articlesToShow.length === 0 && <p>No articles match that search.</p>}
           </div>
         </div>
       </div>

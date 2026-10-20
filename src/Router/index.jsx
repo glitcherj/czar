@@ -4,6 +4,7 @@ import { Header, Footer, ScrollToTop, ScrollReveal } from "../components";
 import {
   AboutUs,
   Blog,
+  BlogArticle,
   EVFleet,
   Fleet,
   VehiclePage,
@@ -23,6 +24,7 @@ export function MainRouter() {
         <Route path="czar/" element={<Home />} />
         <Route path="czar/about-us" element={<AboutUs />} />
         <Route path="czar/blog" element={<Blog />} />
+        <Route path="czar/blog/:slug" element={<BlogArticle />} />
         <Route path="czar/ev-fleet" element={<EVFleet />} />
         <Route path="czar/fleet">
           <Route index element={<Fleet />} />

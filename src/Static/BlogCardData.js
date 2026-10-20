@@ -11,6 +11,8 @@ import blogPost10 from "../assets/images/blogPosts/blogPost10.png";
 import blogPost11 from "../assets/images/blogPosts/blogPost11.png";
 import blogPost12 from "../assets/images/blogPosts/blogPost12.png";
 import blogPost13 from "../assets/images/blogPosts/blogPost13.png";
+import fleetHero from "../assets/images/fleetHero.png";
+import evFleetHero from "../assets/images/evFleetHero.png";
 
 export const BlogData = [
   {
@@ -132,5 +134,50 @@ export const BlogData = [
       "Working as a PCO driver has become a lucrative and reliable career for many driving professionals. Drivers can make a large amount of money when working during busy periods such as holidays and weekends. Despite the hours being antisocial, it is a great opportunity to drive various clients to their destination, some of which may become long-term customers and rely on your services regularly.",
     link: "/blog/benefits-of-becoming-a-pco-driver-in-london",
     tags: ["Bolt car hire", "OLA car hire"],
+  },
+  {
+    img: fleetHero,
+    title: "How to choose a PCO car that fits your working week",
+    date: "20 October 2026",
+    description:
+      "A practical checklist for comparing vehicle space, charging or fuel, comfort and hire terms before choosing your next PCO car.",
+    link: "/blog/choose-a-pco-car",
+    tags: ["PCO car hire", "Driver tips"],
+    content: [
+      "The right car depends on how and when you drive. Before comparing models, think about your typical shift, the journeys you take and the passengers or luggage you carry.",
+      "Check the details that affect your day-to-day work: passenger and boot space, visibility, seat comfort, automatic transmission and the vehicle's fuel or charging needs. If you are considering an electric car, plan where you can charge during your usual working week.",
+      "Then compare the hire terms alongside the vehicle. Confirm what is included, what documents are needed, how maintenance is handled and who to contact if you need support. Ask the provider to explain anything that is unclear before you commit.",
+      "A short written checklist makes it easier to compare options fairly and choose a car that suits your routine, rather than relying on headline price alone.",
+    ],
+  },
+  {
+    img: evFleetHero,
+    title: "A simple guide to planning EV charging around your shifts",
+    date: "20 October 2026",
+    description:
+      "Build a charging routine around your routes, breaks and available charging points before taking an electric vehicle on the road.",
+    link: "/blog/planning-ev-charging-around-shifts",
+    tags: ["Electric vehicle", "Driver tips"],
+    content: [
+      "A little planning can make driving an electric vehicle feel more predictable. Start by checking the vehicle's range information and the charging options near the places where you regularly work, rest or finish a shift.",
+      "Use a trusted charging map or network app to check connector types, access details and live availability. Keep a second charging option in mind for busy periods, and allow time for charging as part of your shift plan.",
+      "Charging speed varies by vehicle, charger and conditions, so follow the vehicle guidance and the instructions shown at the charging point. If you hire your car, ask the provider how charging costs and equipment are handled under your agreement.",
+      "Review your routine after a few shifts. Your own routes and break patterns will help you decide which charging locations are the most convenient.",
+    ],
+  },
+  {
+    img: blogPost11,
+    title: "What to check before starting a PCO car hire",
+    date: "20 October 2026",
+    description:
+      "Get ready for a smoother handover by checking your documents, the vehicle and the key details in your rental agreement.",
+    link: "/blog/pco-hire-handover-checklist",
+    tags: ["PCO car hire", "Checklist"],
+    content: [
+      "Before arranging a vehicle, make a list of the documents the provider needs and check that each is current and easy to read. Requirements can differ, so confirm the list directly with the company.",
+      "Read the rental agreement carefully. Make sure you understand the payment schedule, what is included, how servicing is arranged, and what to do if the vehicle needs attention. Keep the provider's contact details somewhere easy to find.",
+      "At handover, take time to inspect the car and note any existing marks or concerns with the provider. Check that you have the keys, any supplied equipment and the information you need to use the vehicle safely.",
+      "If anything is uncertain, ask before you drive away. A clear handover helps both you and the provider start the rental with the same understanding.",
+    ],
   },
 ];
