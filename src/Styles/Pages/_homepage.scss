@@ -33,6 +33,7 @@
 
     img {
       width: 14em;
+      height: auto;
       @media (max-width: $screen-md) {
         width: 12em;
       }
@@ -52,6 +53,7 @@
   }
   .homeHeroImg {
     width: 40%;
+    height: auto;
     @media (max-width: $screen-lg) {
       // width: 100%;
       display: none;
