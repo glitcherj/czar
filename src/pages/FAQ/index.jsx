@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { isValidElement, useMemo, useState } from "react";
 
 //  ---Assets---
 import { ReactComponent as Contact } from "../../assets/contact.svg";
@@ -11,30 +11,41 @@ import { FAQCard, TitleSection } from "../../components";
 // ---Static Data---
 import { FAQData } from "../../Static/FAQ";
 
-function omit(obj, ...props) {
-  const result = { ...obj };
-  props.forEach(function (prop) {
-    delete result[prop];
-  });
-  return result;
+const topics = [
+  "All",
+  "Registration",
+  "Rental terms",
+  "Vehicles",
+  "Payments",
+  "Working with Uber",
+];
+
+function getAnswerText(answer) {
+  if (typeof answer === "string" || typeof answer === "number") return `${answer}`;
+  if (Array.isArray(answer)) return answer.map(getAnswerText).join(" ");
+  if (isValidElement(answer)) return getAnswerText(answer.props.children);
+  return "";
 }
 
 export function FAQ() {
-  const [filterState, setFilterState] = useState(omit(FAQData, "HomepageFAQ"));
-
-  const handleBtn = (e) => {
-    const word = e.target.textContent;
-
-    if (word === "All") setFilterState(omit(FAQData, "HomepageFAQ"));
-    else
-      setFilterState(
-        Object.keys(FAQData)
-          .filter((key) => key.includes(e.target.textContent))
-          .reduce((cur, key) => {
-            return Object.assign(cur, { [key]: FAQData[key] });
-          }, {})
-      );
-  };
+  const [activeTopic, setActiveTopic] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
+  const visibleFAQs = useMemo(() => {
+    const normalizedTerm = searchTerm.trim().toLocaleLowerCase();
+    return Object.entries(FAQData)
+      .filter(([topic]) => topic !== "HomepageFAQ")
+      .filter(([topic]) => activeTopic === "All" || topic === activeTopic)
+      .map(([topic, entries]) => [
+        topic,
+        entries.filter(({ question, answer }) => {
+          if (!normalizedTerm) return true;
+          return `${question} ${getAnswerText(answer)}`
+            .toLocaleLowerCase()
+            .includes(normalizedTerm);
+        }),
+      ])
+      .filter(([, entries]) => entries.length > 0);
+  }, [activeTopic, searchTerm]);
 
   return (
     <>
@@ -49,22 +60,16 @@ export function FAQ() {
         <div className="fleet">
           <h1>Frequently asked questions</h1>
           <span style={{ alignSelf: "center" }}>How can we help you?</span>
-          <form
-            onSubmit={(e) => {
-              window.find(document.getElementById("input").value);
-            }}
-          >
+          <form onSubmit={(event) => event.preventDefault()} role="search">
             <input
-              type="text"
+              type="search"
               placeholder="Ask your question here..."
               id="input"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              aria-label="Search frequently asked questions"
             />
-            <button
-              type="button"
-              onClick={(e) => {
-                window.find(document.getElementById("input").value);
-              }}
-            >
+            <button type="submit" aria-label="Search questions">
               <Search />
             </button>
           </form>
@@ -72,84 +77,42 @@ export function FAQ() {
           <div className="sortMode">
             <span className="sortMode__title">Filter by topic:</span>
             <div className="sortMode__items">
-              <button
-                className={
-                  Object.keys(filterState).length > 2
-                    ? "primaryBtn"
-                    : "ghostBtn"
-                }
-                onClick={handleBtn}
-              >
-                All
-              </button>
-              <button
-                className={
-                  Object.keys(filterState).length < 2 &&
-                  Object.keys(filterState)[0] === "Registration"
-                    ? "primaryBtn"
-                    : "ghostBtn"
-                }
-                onClick={handleBtn}
-              >
-                Registration
-              </button>
-              <button
-                className={
-                  Object.keys(filterState)[0] === "Rental terms"
-                    ? "primaryBtn"
-                    : "ghostBtn"
-                }
-                onClick={handleBtn}
-              >
-                Rental terms
-              </button>
-              <button
-                className={
-                  Object.keys(filterState)[0] === "Vehicles"
-                    ? "primaryBtn"
-                    : "ghostBtn"
-                }
-                onClick={handleBtn}
-              >
-                Vehicles
-              </button>
-              <button
-                className={
-                  Object.keys(filterState)[0] === "Payments"
-                    ? "primaryBtn"
-                    : "ghostBtn"
-                }
-                onClick={handleBtn}
-              >
-                Payments
-              </button>
-              <button
-                className={
-                  Object.keys(filterState)[0] === "Working with Uber"
-                    ? "primaryBtn"
-                    : "ghostBtn"
-                }
-                onClick={handleBtn}
-              >
-                Working with Uber
-              </button>
+              {topics.map((topic) => (
+                <button
+                  key={topic}
+                  type="button"
+                  className={activeTopic === topic ? "primaryBtn" : "ghostBtn"}
+                  aria-pressed={activeTopic === topic}
+                  onClick={() => setActiveTopic(topic)}
+                >
+                  {topic}
+                </button>
+              ))}
             </div>
           </div>
         </div>
         <div className="faqItems faq">
-          {Object.entries(filterState).map((item) => (
-            <div>
-              <TitleSection title={item[0]} />
-              <div className="faqList">
-                {item[1].map((faqItem) => (
-                  <FAQCard
-                    question={faqItem.question}
-                    answer={faqItem.answer}
-                  />
-                ))}
+          {visibleFAQs.length > 0 ? (
+            visibleFAQs.map(([topic, entries]) => (
+              <div key={topic} data-reveal>
+                <TitleSection title={topic} />
+                <div className="faqList">
+                  {entries.map((faqItem) => (
+                    <FAQCard
+                      key={faqItem.question}
+                      question={faqItem.question}
+                      answer={faqItem.answer}
+                      accordion
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="faqEmptyState">
+              No questions match that search. Try a different phrase or topic.
+            </p>
+          )}
         </div>
         <div className="fullWidthCTA ">
           <h4>Still got questions?</h4>
