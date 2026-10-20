@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opening CZAR PCO</title>
+    <script>
+      // Pages has no server-side SPA rewrites. Load the app shell and carry
+      // the requested URL through a query parameter for it to restore.
+      var requestedPath = location.pathname + location.search + location.hash;
+      location.replace(
+        "/czar/?__pages_path=" + encodeURIComponent(requestedPath)
+      );
+    </script>
+  </head>
+  <body>
+    <p>Opening CZAR PCO. <a href="/czar/">Go to the home page</a>.</p>
+  </body>
+</html>
