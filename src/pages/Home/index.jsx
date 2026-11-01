@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 //  ---Swiperjs---
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 
