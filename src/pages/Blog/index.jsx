@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 
 //  ---Static Data---
 import { BlogData } from "../../Static/BlogCardData";

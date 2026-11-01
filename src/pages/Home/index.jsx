@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import "swiper/css/autoplay";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 
 //  ---Assets---
 import HomeHero from "../../assets/images/HomeHero.png";
